@@ -10,7 +10,6 @@
 		A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */; };
 		A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */; };
 		A4B8840A2BCA1AB2005F79D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884092BCA1AB2005F79D4 /* ViewController.swift */; };
-		A4B8840D2BCA1AB2005F79D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A4B8840C2BCA1AB2005F79D4 /* Base */; };
 		A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */; };
 		A4B884122BCA1AB2005F79D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B884112BCA1AB2005F79D4 /* Assets.xcassets */; };
 		A4B884152BCA1AB2005F79D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A4B884142BCA1AB2005F79D4 /* Base */; };
@@ -41,7 +40,6 @@
 		A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		A4B884092BCA1AB2005F79D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A4B8840C2BCA1AB2005F79D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4B8840F2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoGeo.xcdatamodel; sourceTree = "<group>"; };
 		A4B884112BCA1AB2005F79D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4B884142BCA1AB2005F79D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -104,7 +102,6 @@
 				A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */,
 				A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */,
 				A4B884092BCA1AB2005F79D4 /* ViewController.swift */,
-				A4B8840B2BCA1AB2005F79D4 /* Main.storyboard */,
 				A4B884112BCA1AB2005F79D4 /* Assets.xcassets */,
 				A4B884132BCA1AB2005F79D4 /* LaunchScreen.storyboard */,
 				A4B884162BCA1AB2005F79D4 /* Info.plist */,
@@ -236,7 +233,6 @@
 			files = (
 				A4B884122BCA1AB2005F79D4 /* Assets.xcassets in Resources */,
 				A4B884152BCA1AB2005F79D4 /* Base in Resources */,
-				A4B8840D2BCA1AB2005F79D4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +297,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A4B8840B2BCA1AB2005F79D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4B8840C2BCA1AB2005F79D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A4B884132BCA1AB2005F79D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,11 +434,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoGeo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -477,11 +465,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoGeo/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
