@@ -1,5 +1,5 @@
 {
-  "originHash" : "d424390abe0902f694ff1b61cfd96e4fabf9f365085731a485a2e3c75e6c3f76",
+  "originHash" : "93f33422a964810c69da74887f08f868c4786739deb885903c98ae57fa43fb96",
   "pins" : [
     {
       "identity" : "reactorkit",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "8fa33f09c6f6621a2aa536d739956d53b84dd139",
         "version" : "3.2.0"
+      }
+    },
+    {
+      "identity" : "rxflow",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/RxSwiftCommunity/RxFlow.git",
+      "state" : {
+        "revision" : "d8d4e53d05239f1ec1bd8bec173907868afa0fa1",
+        "version" : "2.13.0"
       }
     },
     {
