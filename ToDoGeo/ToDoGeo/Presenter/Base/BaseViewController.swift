@@ -9,7 +9,7 @@ import UIKit.UIViewController
 import class RxSwift.DisposeBag
 
 class BaseViewController: UIViewController {
-    var disposeBag: DisposeBag = DisposeBag()
+    let disposeBag: DisposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
