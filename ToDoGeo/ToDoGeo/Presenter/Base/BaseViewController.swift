@@ -14,12 +14,5 @@ class BaseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupLayout()
-        setupAttribute()
     }
-    
-    /// 레이아웃, addSubview 등
-    func setupLayout() {}
-    /// 각 UI의 특성을 추가
-    func setupAttribute() {}
 }
