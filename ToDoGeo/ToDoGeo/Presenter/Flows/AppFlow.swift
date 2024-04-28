@@ -21,7 +21,10 @@ final class AppFlow: Flow {
     }
     
     func navigate(to step: Step) -> RxFlow.FlowContributors {
-        guard let step = step as? AppStep else { return .none }
+        guard let step = step as? AppStep else {
+            return .none
+        }
+        
         switch step {
         case .signInRequired:
             return self.navigateToSignin()
