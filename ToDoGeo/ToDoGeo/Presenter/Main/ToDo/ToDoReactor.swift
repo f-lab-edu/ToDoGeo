@@ -20,10 +20,10 @@ final class ToDoReactor: Reactor, Stepper {
     }
     
     struct State {
-        // TODO: 프로퍼티 추가 예정
+        //TODO: 프로퍼티 추가 예정
     }
     
     enum Action {
-        // TODO: 프로퍼티 추가 예정
+        //TODO: 프로퍼티 추가 예정
     }
 }
