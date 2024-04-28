@@ -15,8 +15,7 @@ final class ToDoFlow: Flow {
     }
     
     private lazy var rootViewController: UINavigationController = {
-        let viewController = UINavigationController()
-        return viewController
+        return UINavigationController()
     }()
     
     func navigate(to step: Step) -> FlowContributors {
