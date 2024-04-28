@@ -9,11 +9,13 @@ import RxFlow
 
 /// 화면 이동 로직
 enum AppStep: Step {
+    //MARK: 회원가입/로그인 관련 이동 case
     /// sign In 화면으로 이동
     case signInRequired
     /// sign up 화면으로 이동
     case signUpRequired
     
+    //MARK: todo 화면 이동 로직 case
     /// todo 화면으로 이동
     case toDoRequired
 }
