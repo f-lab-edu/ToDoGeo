@@ -20,6 +20,11 @@
 		A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B52BD52B1D00800468 /* SignInViewController.swift */; };
 		A4AA82B82BD52FE700800468 /* ToDoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B72BD52FE700800468 /* ToDoReactor.swift */; };
 		A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B92BD5308700800468 /* SignInReactor.swift */; };
+		A4AA82BC2BDCF5E100800468 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82BB2BDCF5E100800468 /* Target.swift */; };
+		A4AA82BF2BDE2EEF00800468 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82BE2BDE2EEF00800468 /* Alamofire */; };
+		A4AA82C12BDE585100800468 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82C02BDE585100800468 /* API.swift */; };
+		A4AA82C32BDE592400800468 /* NetworkEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82C22BDE592400800468 /* NetworkEventLogger.swift */; };
+		A4AA82C52BDE595E00800468 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82C42BDE595E00800468 /* APIService.swift */; };
 		A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */; };
 		A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */; };
 		A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */; };
@@ -58,6 +63,10 @@
 		A4AA82B52BD52B1D00800468 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		A4AA82B72BD52FE700800468 /* ToDoReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoReactor.swift; sourceTree = "<group>"; };
 		A4AA82B92BD5308700800468 /* SignInReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactor.swift; sourceTree = "<group>"; };
+		A4AA82BB2BDCF5E100800468 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Target.swift; sourceTree = "<group>"; };
+		A4AA82C02BDE585100800468 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = API.swift; sourceTree = "<group>"; };
+		A4AA82C22BDE592400800468 /* NetworkEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkEventLogger.swift; sourceTree = "<group>"; };
+		A4AA82C42BDE595E00800468 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoGeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -78,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */,
+				A4AA82BF2BDE2EEF00800468 /* Alamofire in Frameworks */,
 				A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */,
 				A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */,
 			);
@@ -222,6 +232,10 @@
 		A4AA829E2BCA7E8000800468 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A4AA82BB2BDCF5E100800468 /* Target.swift */,
+				A4AA82C02BDE585100800468 /* API.swift */,
+				A4AA82C22BDE592400800468 /* NetworkEventLogger.swift */,
+				A4AA82C42BDE595E00800468 /* APIService.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -332,6 +346,7 @@
 				A4AA82952BCA7A2F00800468 /* RxCocoa */,
 				A4AA82982BCA7A4100800468 /* ReactorKit */,
 				A4AA82A72BD4FC2D00800468 /* RxFlow */,
+				A4AA82BE2BDE2EEF00800468 /* Alamofire */,
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -409,6 +424,7 @@
 				A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */,
+				A4AA82BD2BDE2EEF00800468 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = A4B884032BCA1AB2005F79D4 /* Products */;
 			projectDirPath = "";
@@ -452,9 +468,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AA82C52BDE595E00800468 /* APIService.swift in Sources */,
 				A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */,
 				A4AA82932BCA769800800468 /* BaseViewController.swift in Sources */,
+				A4AA82BC2BDCF5E100800468 /* Target.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
+				A4AA82C12BDE585100800468 /* API.swift in Sources */,
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
 				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
 				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
@@ -465,6 +484,7 @@
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
 				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,
+				A4AA82C32BDE592400800468 /* NetworkEventLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -831,6 +851,14 @@
 				minimumVersion = 2.13.0;
 			};
 		};
+		A4AA82BD2BDE2EEF00800468 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -848,6 +876,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */;
 			productName = RxFlow;
+		};
+		A4AA82BE2BDE2EEF00800468 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4AA82BD2BDE2EEF00800468 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 
