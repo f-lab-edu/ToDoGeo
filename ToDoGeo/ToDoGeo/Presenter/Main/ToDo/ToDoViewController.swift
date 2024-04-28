@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ToDoViewController: BaseViewController {
+final class ToDoViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue

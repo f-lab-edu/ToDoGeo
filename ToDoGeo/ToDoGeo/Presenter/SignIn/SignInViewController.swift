@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class SignInViewController: BaseViewController {
+final class SignInViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .red
