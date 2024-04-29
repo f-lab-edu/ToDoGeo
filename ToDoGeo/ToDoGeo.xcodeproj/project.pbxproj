@@ -7,10 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
+		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
+		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
+		A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82A92BD500AE00800468 /* AppFlow.swift */; };
+		A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AB2BD5067800800468 /* AppStepper.swift */; };
+		A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AD2BD506D000800468 /* AppStep.swift */; };
+		A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AF2BD50BB500800468 /* SignInFlow.swift */; };
+		A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B12BD50BBE00800468 /* ToDoFlow.swift */; };
+		A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B32BD52ADC00800468 /* ToDoViewController.swift */; };
+		A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B52BD52B1D00800468 /* SignInViewController.swift */; };
+		A4AA82B82BD52FE700800468 /* ToDoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B72BD52FE700800468 /* ToDoReactor.swift */; };
+		A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B92BD5308700800468 /* SignInReactor.swift */; };
 		A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */; };
 		A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */; };
-		A4B8840A2BCA1AB2005F79D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884092BCA1AB2005F79D4 /* ViewController.swift */; };
-		A4B8840D2BCA1AB2005F79D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A4B8840C2BCA1AB2005F79D4 /* Base */; };
 		A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */; };
 		A4B884122BCA1AB2005F79D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B884112BCA1AB2005F79D4 /* Assets.xcassets */; };
 		A4B884152BCA1AB2005F79D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A4B884142BCA1AB2005F79D4 /* Base */; };
@@ -37,11 +47,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
+		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
+		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
+		A4AA82AF2BD50BB500800468 /* SignInFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFlow.swift; sourceTree = "<group>"; };
+		A4AA82B12BD50BBE00800468 /* ToDoFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFlow.swift; sourceTree = "<group>"; };
+		A4AA82B32BD52ADC00800468 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		A4AA82B52BD52B1D00800468 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		A4AA82B72BD52FE700800468 /* ToDoReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoReactor.swift; sourceTree = "<group>"; };
+		A4AA82B92BD5308700800468 /* SignInReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactor.swift; sourceTree = "<group>"; };
 		A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoGeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A4B884092BCA1AB2005F79D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A4B8840C2BCA1AB2005F79D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4B8840F2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ToDoGeo.xcdatamodel; sourceTree = "<group>"; };
 		A4B884112BCA1AB2005F79D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4B884142BCA1AB2005F79D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,6 +75,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */,
+				A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */,
+				A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +98,166 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4AA82882BCA75FE00800468 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA829F2BCA7E8C00800468 /* Dto */,
+				A4AA829E2BCA7E8000800468 /* Network */,
+				A4AA829D2BCA7E7500800468 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		A4AA82892BCA760600800468 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA829C2BCA7E4B00800468 /* Entity */,
+				A4AA829B2BCA7E3F00800468 /* Repository */,
+				A4AA829A2BCA7E3800800468 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		A4AA828A2BCA760D00800468 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA82A22BCBAA5700800468 /* Flows */,
+				A4AA82912BCA768B00800468 /* Base */,
+				A4AA82902BCA766700800468 /* Main */,
+				A4AA828F2BCA766000800468 /* SignIn */,
+				A4AA828E2BCA765400800468 /* SignUp */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		A4AA828B2BCA761A00800468 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA828C2BCA762700800468 /* Resource */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		A4AA828C2BCA762700800468 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				A4B884112BCA1AB2005F79D4 /* Assets.xcassets */,
+				A4B884162BCA1AB2005F79D4 /* Info.plist */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A4AA828D2BCA763200800468 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */,
+				A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */,
+			);
+			path = System;
+			sourceTree = "<group>";
+		};
+		A4AA828E2BCA765400800468 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		A4AA828F2BCA766000800468 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA82B52BD52B1D00800468 /* SignInViewController.swift */,
+				A4AA82B92BD5308700800468 /* SignInReactor.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A4AA82902BCA766700800468 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA82A12BCAC38C00800468 /* Map */,
+				A4AA82A02BCAC37E00800468 /* ToDo */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		A4AA82912BCA768B00800468 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A4AA829A2BCA7E3800800468 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		A4AA829B2BCA7E3F00800468 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A4AA829C2BCA7E4B00800468 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		A4AA829D2BCA7E7500800468 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		A4AA829E2BCA7E8000800468 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		A4AA829F2BCA7E8C00800468 /* Dto */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dto;
+			sourceTree = "<group>";
+		};
+		A4AA82A02BCAC37E00800468 /* ToDo */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA82B32BD52ADC00800468 /* ToDoViewController.swift */,
+				A4AA82B72BD52FE700800468 /* ToDoReactor.swift */,
+			);
+			path = ToDo;
+			sourceTree = "<group>";
+		};
+		A4AA82A12BCAC38C00800468 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Map;
+			sourceTree = "<group>";
+		};
+		A4AA82A22BCBAA5700800468 /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				A4AA82A92BD500AE00800468 /* AppFlow.swift */,
+				A4AA82AB2BD5067800800468 /* AppStepper.swift */,
+				A4AA82AD2BD506D000800468 /* AppStep.swift */,
+				A4AA82AF2BD50BB500800468 /* SignInFlow.swift */,
+				A4AA82B12BD50BBE00800468 /* ToDoFlow.swift */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
 		A4B883F92BCA1AB2005F79D4 = {
 			isa = PBXGroup;
 			children = (
@@ -101,13 +281,12 @@
 		A4B884042BCA1AB2005F79D4 /* ToDoGeo */ = {
 			isa = PBXGroup;
 			children = (
-				A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */,
-				A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */,
-				A4B884092BCA1AB2005F79D4 /* ViewController.swift */,
-				A4B8840B2BCA1AB2005F79D4 /* Main.storyboard */,
-				A4B884112BCA1AB2005F79D4 /* Assets.xcassets */,
+				A4AA828D2BCA763200800468 /* System */,
+				A4AA828B2BCA761A00800468 /* Common */,
+				A4AA82882BCA75FE00800468 /* Data */,
+				A4AA82892BCA760600800468 /* Domain */,
+				A4AA828A2BCA760D00800468 /* Presenter */,
 				A4B884132BCA1AB2005F79D4 /* LaunchScreen.storyboard */,
-				A4B884162BCA1AB2005F79D4 /* Info.plist */,
 				A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */,
 			);
 			path = ToDoGeo;
@@ -146,6 +325,11 @@
 			dependencies = (
 			);
 			name = ToDoGeo;
+			packageProductDependencies = (
+				A4AA82952BCA7A2F00800468 /* RxCocoa */,
+				A4AA82982BCA7A4100800468 /* ReactorKit */,
+				A4AA82A72BD4FC2D00800468 /* RxFlow */,
+			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
 			productType = "com.apple.product-type.application";
@@ -218,6 +402,11 @@
 				Base,
 			);
 			mainGroup = A4B883F92BCA1AB2005F79D4;
+			packageReferences = (
+				A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */,
+				A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */,
+			);
 			productRefGroup = A4B884032BCA1AB2005F79D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -236,7 +425,6 @@
 			files = (
 				A4B884122BCA1AB2005F79D4 /* Assets.xcassets in Resources */,
 				A4B884152BCA1AB2005F79D4 /* Base in Resources */,
-				A4B8840D2BCA1AB2005F79D4 /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,10 +449,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B8840A2BCA1AB2005F79D4 /* ViewController.swift in Sources */,
+				A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */,
+				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
+				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
+				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
+				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
+				A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */,
+				A4AA82B82BD52FE700800468 /* ToDoReactor.swift in Sources */,
+				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
+				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,14 +497,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A4B8840B2BCA1AB2005F79D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A4B8840C2BCA1AB2005F79D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A4B884132BCA1AB2005F79D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -446,11 +634,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoGeo/Info.plist;
+				INFOPLIST_FILE = ToDoGeo/Common/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -477,11 +665,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = ToDoGeo/Info.plist;
+				INFOPLIST_FILE = ToDoGeo/Common/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -613,6 +801,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.6.0;
+			};
+		};
+		A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactorKit/ReactorKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.2.0;
+			};
+		};
+		A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxFlow.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4AA82952BCA7A2F00800468 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		A4AA82982BCA7A4100800468 /* ReactorKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */;
+			productName = ReactorKit;
+		};
+		A4AA82A72BD4FC2D00800468 /* RxFlow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */;
+			productName = RxFlow;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */ = {
