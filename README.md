@@ -10,6 +10,9 @@ Data Layer
   - 외부 Server나 DB로 데이터 요청
 - Nerwork
   - 외부 Server와 통신 역할
+  - 네트워크 시퀀스 다이어그램
+<img width="1395" alt="image" src="https://github.com/f-lab-edu/ToDoGeo/assets/72551674/dd940c48-1eee-4a4e-bb43-bce7ba4a4da0">
+
 - DTO
   - 외부로 부터 받은 데이터를 맵핑하는 객체
  
