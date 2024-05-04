@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A48D48BB2BE5D852004867C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */; };
+		A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */; };
+		A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */; };
+		A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48C12BE5D895004867C6 /* FirebaseAuth */; };
 		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
 		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
 		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
@@ -47,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
 		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
@@ -76,8 +81,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */,
+				A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */,
 				A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */,
+				A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */,
 				A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */,
+				A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,6 +151,7 @@
 			children = (
 				A4B884112BCA1AB2005F79D4 /* Assets.xcassets */,
 				A4B884162BCA1AB2005F79D4 /* Info.plist */,
+				A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -329,6 +338,9 @@
 				A4AA82952BCA7A2F00800468 /* RxCocoa */,
 				A4AA82982BCA7A4100800468 /* ReactorKit */,
 				A4AA82A72BD4FC2D00800468 /* RxFlow */,
+				A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */,
+				A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */,
+				A48D48C12BE5D895004867C6 /* FirebaseAuth */,
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -406,6 +418,7 @@
 				A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */,
+				A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = A4B884032BCA1AB2005F79D4 /* Products */;
 			projectDirPath = "";
@@ -425,6 +438,7 @@
 			files = (
 				A4B884122BCA1AB2005F79D4 /* Assets.xcassets in Resources */,
 				A4B884152BCA1AB2005F79D4 /* Base in Resources */,
+				A48D48BB2BE5D852004867C6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -803,6 +817,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
 		A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -830,6 +852,21 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		A48D48C12BE5D895004867C6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
 		A4AA82952BCA7A2F00800468 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */;
