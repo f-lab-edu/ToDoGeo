@@ -6,6 +6,7 @@
 //
 import Foundation
 
+import FirebaseAuth
 import ReactorKit
 import RxFlow
 import RxCocoa
@@ -40,8 +41,10 @@ final class SignInReactor: Reactor, Stepper {
     enum Action {
         /// email 입력창 완료 버튼 클릭
         case didTappedDoneButtonInEmailTextField
-        /// 비밀번호l 입력창 완료 버튼 클릭
+        /// 비밀번호 입력창 완료 버튼 클릭
         case didTappedDoneButtonInPasswordTextField
+        /// 로그인 버튼 클릭
+        case didTappedSignInButton
         /// email 입력
         case inputEmail(email: String)
         /// 비밀번호 입력
@@ -62,6 +65,10 @@ final class SignInReactor: Reactor, Stepper {
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
+        case .didTappedSignInButton:
+            requestSignIn(email: currentState.emailInput, password: currentState.passwordInput)
+            
+            return .empty()
         case .didTappedDoneButtonInEmailTextField:
             return Observable.just(Mutation.checkValidationForEmail)
             
@@ -137,5 +144,20 @@ extension SignInReactor {
         let passwordRegEx = "(?=.*[A-Za-z])(?=.*[0-9]).{8,20}"
         
         return Utility.checkRegEx(input: password, regEx: passwordRegEx)
+    }
+}
+
+// TODO: - Repository로 옮겨야함
+extension SignInReactor {
+    func requestSignIn(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            if authResult != nil {
+                print("로그인 성공")
+                self?.steps.accept(AppStep.toDoRequired)
+            } else {
+                print("로그인 실패")
+                print(error.debugDescription)
+            }
+        }
     }
 }

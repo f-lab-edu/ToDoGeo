@@ -79,6 +79,11 @@ final class SignInViewController: UIViewController, View {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
+        signInButton.rx.tap
+            .map({ SignInReactor.Action.didTappedSignInButton })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         // MARK: - Bind State
         reactor.state.map({ $0.isEnableSignInButton })
             .asDriver(onErrorRecover: { _ in return .never() })

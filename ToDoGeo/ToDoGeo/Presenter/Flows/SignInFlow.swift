@@ -26,6 +26,9 @@ final class SignInFlow: Flow {
         switch step {
         case .signInRequired:
             return self.navigateToSignIn()
+            
+        case .toDoRequired:
+            return .end(forwardToParentFlowWithStep: AppStep.toDoRequired)
         default:
             return .none
         }
