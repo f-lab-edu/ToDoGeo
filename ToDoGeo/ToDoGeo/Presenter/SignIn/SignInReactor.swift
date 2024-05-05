@@ -33,6 +33,8 @@ final class SignInReactor: Reactor, Stepper {
         var isValidEmail: Bool = false
         /// password 유효성 체크 관련 플래그
         var isValidPassword: Bool = false
+        
+        var isEnableSignInButton: Bool = false
     }
     
     enum Action {
@@ -83,8 +85,12 @@ final class SignInReactor: Reactor, Stepper {
             
             if newState.isValidEmail == false {
                 newState.errorMessageForEmailInput = "올바른 이메일 형식이 아닙니다."
+                newState.isEnableSignInButton = false
             } else {
                 newState.errorMessageForEmailInput = ""
+                if newState.isValidPassword == true {
+                    newState.isEnableSignInButton = true
+                }
             }
             
         case .checkValidationForPassword:
@@ -92,8 +98,12 @@ final class SignInReactor: Reactor, Stepper {
             
             if newState.isValidPassword == false {
                 newState.errorMessageForPasswordInput = "올바른 비밀번호 형식이 아닙니다."
+                newState.isEnableSignInButton = false
             } else {
                 newState.errorMessageForPasswordInput = ""
+                if newState.isValidEmail == true {
+                    newState.isEnableSignInButton = true
+                }
             }
             
         case .setEmailInput(let email):

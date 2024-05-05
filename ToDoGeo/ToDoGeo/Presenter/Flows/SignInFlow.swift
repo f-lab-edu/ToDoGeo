@@ -38,6 +38,7 @@ extension SignInFlow {
     func navigateToSignIn() -> FlowContributors {
         let viewController = SignInViewController()
         let reactor = SignInReactor(initialState: .init())
+        viewController.bind(reactor: reactor)
         self.rootViewController.setViewControllers([viewController], animated: true)
         
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))

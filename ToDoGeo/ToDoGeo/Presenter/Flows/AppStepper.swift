@@ -17,6 +17,6 @@ final class AppStepper: Stepper {
     let disposeBag = DisposeBag()
     
     var initialStep: Step {
-        return AppStep.toDoRequired
+        return AppStep.signInRequired
     }
 }
