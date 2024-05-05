@@ -11,6 +11,8 @@
 		A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */; };
 		A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */; };
 		A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48C12BE5D895004867C6 /* FirebaseAuth */; };
+		A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */; };
+		A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C92BE760D5004867C6 /* Utility.swift */; };
 		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
 		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
 		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
@@ -28,7 +30,6 @@
 		A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */; };
 		A4B884122BCA1AB2005F79D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B884112BCA1AB2005F79D4 /* Assets.xcassets */; };
 		A4B884152BCA1AB2005F79D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A4B884142BCA1AB2005F79D4 /* Base */; };
-		A4B884202BCA1AB3005F79D4 /* ToDoGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8841F2BCA1AB3005F79D4 /* ToDoGeoTests.swift */; };
 		A4B8842A2BCA1AB3005F79D4 /* ToDoGeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884292BCA1AB3005F79D4 /* ToDoGeoUITests.swift */; };
 		A4B8842C2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,8 @@
 
 /* Begin PBXFileReference section */
 		A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactorTests.swift; sourceTree = "<group>"; };
+		A48D48C92BE760D5004867C6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
 		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
@@ -69,7 +72,6 @@
 		A4B884142BCA1AB2005F79D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B884162BCA1AB2005F79D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4B8841B2BCA1AB3005F79D4 /* ToDoGeoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoGeoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4B8841F2BCA1AB3005F79D4 /* ToDoGeoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoTests.swift; sourceTree = "<group>"; };
 		A4B884252BCA1AB3005F79D4 /* ToDoGeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoGeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B884292BCA1AB3005F79D4 /* ToDoGeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoUITests.swift; sourceTree = "<group>"; };
 		A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -106,6 +108,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A48D48C32BE5FB12004867C6 /* ReactorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */,
+			);
+			path = ReactorTests;
+			sourceTree = "<group>";
+		};
 		A4AA82882BCA75FE00800468 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				A4AA828C2BCA762700800468 /* Resource */,
+				A48D48C92BE760D5004867C6 /* Utility.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -304,7 +315,7 @@
 		A4B8841E2BCA1AB3005F79D4 /* ToDoGeoTests */ = {
 			isa = PBXGroup;
 			children = (
-				A4B8841F2BCA1AB3005F79D4 /* ToDoGeoTests.swift */,
+				A48D48C32BE5FB12004867C6 /* ReactorTests */,
 			);
 			path = ToDoGeoTests;
 			sourceTree = "<group>";
@@ -397,6 +408,7 @@
 					};
 					A4B8841A2BCA1AB3005F79D4 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 						TestTargetID = A4B884012BCA1AB2005F79D4;
 					};
 					A4B884242BCA1AB3005F79D4 = {
@@ -463,6 +475,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */,
 				A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
@@ -482,7 +495,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B884202BCA1AB3005F79D4 /* ToDoGeoTests.swift in Sources */,
+				A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -708,16 +721,23 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoGeo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoGeo";
 			};
 			name = Debug;
@@ -727,16 +747,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoGeo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoGeo";
 			};
 			name = Release;
@@ -745,15 +771,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = ToDoGeo;
 			};
 			name = Debug;
@@ -762,15 +794,21 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = ToDoGeo;
 			};
 			name = Release;
