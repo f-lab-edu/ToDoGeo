@@ -55,46 +55,6 @@ final class SignInViewController: UIViewController, View {
         setupLayout()
     }
     
-    func bind(reactor: SignInReactor) {
-        // MARK: - Bind Action
-        emailTextField.rx.text
-            .orEmpty
-            .map({ SignInReactor.Action.inputEmail(input: $0) })
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
-        emailTextField.rx.controlEvent(.editingDidEndOnExit)
-            .map({ SignInReactor.Action.didTappedDoneButtonInEmailTextField })
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
-        passwordTextField.rx.text
-            .orEmpty
-            .map({ SignInReactor.Action.inputPassword(input: $0) })
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
-        passwordTextField.rx.controlEvent(.editingDidEndOnExit)
-            .map({ SignInReactor.Action.didTappedDoneButtonInPasswordTextField })
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
-        signInButton.rx.tap
-            .map({ SignInReactor.Action.didTappedSignInButton })
-            .bind(to: reactor.action)
-            .disposed(by: disposeBag)
-        
-        // MARK: - Bind State
-        reactor.state.map({ $0.isEnableSignInButton })
-            .asDriver(onErrorRecover: { _ in return .never() })
-            .drive(with: self, onNext: { owner, isEnabled in
-                owner.signInButton.isEnabled = isEnabled
-                owner.signInButton.backgroundColor = isEnabled ? .blue : .gray
-            })
-            .disposed(by: self.disposeBag)
-        
-    }
-    
     func setupLayout() {
         view.backgroundColor = .white
         [emailTextField,
@@ -124,6 +84,56 @@ final class SignInViewController: UIViewController, View {
             signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 8.0),
             signUpButton.heightAnchor.constraint(equalToConstant: 48.0)
         ])
+        
+    }
+}
+
+// MARK: - Binding
+extension SignInViewController {
+    func bind(reactor: SignInReactor) {
+        bindAction(reactor: reactor)
+        bindState(reactor: reactor)
+    }
+    
+    // MARK: - Bind Action
+    func bindAction(reactor: SignInReactor) {
+        emailTextField.rx.text
+            .orEmpty
+            .map({ SignInReactor.Action.inputEmail(input: $0) })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        emailTextField.rx.controlEvent(.editingDidEndOnExit)
+            .map({ SignInReactor.Action.didTappedDoneButtonInEmailTextField })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        passwordTextField.rx.text
+            .orEmpty
+            .map({ SignInReactor.Action.inputPassword(input: $0) })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        passwordTextField.rx.controlEvent(.editingDidEndOnExit)
+            .map({ SignInReactor.Action.didTappedDoneButtonInPasswordTextField })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        signInButton.rx.tap
+            .map({ SignInReactor.Action.didTappedSignInButton })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+    }
+    
+    // MARK: - Bind State
+    func bindState(reactor: SignInReactor) {
+        reactor.state.map({ $0.isEnableSignInButton })
+            .asDriver(onErrorRecover: { _ in return .never() })
+            .drive(with: self, onNext: { owner, isEnabled in
+                owner.signInButton.isEnabled = isEnabled
+                owner.signInButton.backgroundColor = isEnabled ? .blue : .gray
+            })
+            .disposed(by: self.disposeBag)
         
     }
 }
