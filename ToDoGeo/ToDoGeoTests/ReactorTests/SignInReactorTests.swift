@@ -60,9 +60,9 @@ final class SignInReactorTests: XCTestCase {
         
         reactor.action.onNext(.didTappedDoneButtonInPasswordTextField)
         
-        XCTAssertEqual(reactor.currentState.passwordInput, "")
+        XCTAssertEqual(reactor.currentState.pwInput, "")
         XCTAssertEqual(reactor.currentState.isValidPassword, false)
-        XCTAssertEqual(reactor.currentState.errorMessageForPasswordInput, "올바른 비밀번호 형식이 아닙니다.")
+        XCTAssertEqual(reactor.currentState.errorMessageForPWInput, "올바른 비밀번호 형식이 아닙니다.")
     }
     
     func testPasswordInput_WhenPasswordInputIsOnlyLetters_PasswordInputIsInvalid() {
@@ -70,9 +70,9 @@ final class SignInReactorTests: XCTestCase {
         
         reactor.action.onNext(.didTappedDoneButtonInPasswordTextField)
         
-        XCTAssertEqual(reactor.currentState.passwordInput, "ggggggggg")
+        XCTAssertEqual(reactor.currentState.pwInput, "ggggggggg")
         XCTAssertEqual(reactor.currentState.isValidPassword, false)
-        XCTAssertEqual(reactor.currentState.errorMessageForPasswordInput, "올바른 비밀번호 형식이 아닙니다.")
+        XCTAssertEqual(reactor.currentState.errorMessageForPWInput, "올바른 비밀번호 형식이 아닙니다.")
     }
     
     func testPasswordInput_WhenPasswordInputIsOnlyNumbers_PasswordInputIsInvalid() {
@@ -80,9 +80,9 @@ final class SignInReactorTests: XCTestCase {
         
         reactor.action.onNext(.didTappedDoneButtonInPasswordTextField)
         
-        XCTAssertEqual(reactor.currentState.passwordInput, "123433524857")
+        XCTAssertEqual(reactor.currentState.pwInput, "123433524857")
         XCTAssertEqual(reactor.currentState.isValidPassword, false)
-        XCTAssertEqual(reactor.currentState.errorMessageForPasswordInput, "올바른 비밀번호 형식이 아닙니다.")
+        XCTAssertEqual(reactor.currentState.errorMessageForPWInput, "올바른 비밀번호 형식이 아닙니다.")
     }
     
     func testPasswordInput_WhenPasswordInputIsPasswordFormat_PasswordInputIsValid() {
@@ -90,9 +90,9 @@ final class SignInReactorTests: XCTestCase {
         
         reactor.action.onNext(.didTappedDoneButtonInPasswordTextField)
         
-        XCTAssertEqual(reactor.currentState.passwordInput, "gggg123456")
+        XCTAssertEqual(reactor.currentState.pwInput, "gggg123456")
         XCTAssertEqual(reactor.currentState.isValidPassword, true)
-        XCTAssertEqual(reactor.currentState.errorMessageForPasswordInput, "")
+        XCTAssertEqual(reactor.currentState.errorMessageForPWInput, "")
     }
     
     

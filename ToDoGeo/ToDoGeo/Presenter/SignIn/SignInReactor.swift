@@ -27,9 +27,9 @@ final class SignInReactor: Reactor, Stepper {
         /// email 입력값에 대한 오류 메시지
         var errorMessageForEmailInput: String = ""
         /// email 입력값에 대한 오류 메시지
-        var errorMessageForPasswordInput: String = ""
+        var errorMessageForPWInput: String = ""
         /// password input
-        var passwordInput: String = ""
+        var pwInput: String = ""
         /// email 유효성 체크 관련 플래그
         var isValidEmail: Bool = false
         /// password 유효성 체크 관련 플래그
@@ -57,16 +57,16 @@ final class SignInReactor: Reactor, Stepper {
         /// password 유효성체크 기능 추가
         case checkValidationForPassword
         /// email input mapping
-        case setEmailInput(email: String)
+        case setEmailInput(input: String)
         /// password input mapping
-        case setPasswordInput(password: String)
+        case setPasswordInput(input: String)
         
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .didTappedSignInButton:
-            requestSignIn(email: currentState.emailInput, password: currentState.passwordInput)
+            requestSignIn(email: currentState.emailInput, password: currentState.pwInput)
             
             return .empty()
         case .didTappedDoneButtonInEmailTextField:
@@ -76,10 +76,10 @@ final class SignInReactor: Reactor, Stepper {
             return Observable.just(Mutation.checkValidationForPassword)
             
         case .inputEmail(let email):
-            return Observable.just(Mutation.setEmailInput(email: email))
+            return Observable.just(Mutation.setEmailInput(input: email))
             
         case .inputPassword(let password):
-            return Observable.just(Mutation.setPasswordInput(password: password))
+            return Observable.just(Mutation.setPasswordInput(input: password))
         }
     }
     
@@ -88,7 +88,7 @@ final class SignInReactor: Reactor, Stepper {
         
         switch mutation {
         case .checkValidationForEmail:
-            newState.isValidEmail = checkValidationForEmail(email: newState.emailInput)
+            newState.isValidEmail = checkValidationForEmail(input: newState.emailInput)
             
             if newState.isValidEmail == false {
                 newState.errorMessageForEmailInput = "올바른 이메일 형식이 아닙니다."
@@ -101,13 +101,13 @@ final class SignInReactor: Reactor, Stepper {
             }
             
         case .checkValidationForPassword:
-            newState.isValidPassword = checkValidationForPassword(password: newState.passwordInput)
+            newState.isValidPassword = checkValidationForPassword(input: newState.pwInput)
             
             if newState.isValidPassword == false {
-                newState.errorMessageForPasswordInput = "올바른 비밀번호 형식이 아닙니다."
+                newState.errorMessageForPWInput = "올바른 비밀번호 형식이 아닙니다."
                 newState.isEnableSignInButton = false
             } else {
-                newState.errorMessageForPasswordInput = ""
+                newState.errorMessageForPWInput = ""
                 if newState.isValidEmail == true {
                     newState.isEnableSignInButton = true
                 }
@@ -117,7 +117,7 @@ final class SignInReactor: Reactor, Stepper {
             newState.emailInput = email
             
         case .setPasswordInput(let password):
-            newState.passwordInput = password
+            newState.pwInput = password
         }
         
         return newState
@@ -126,24 +126,24 @@ final class SignInReactor: Reactor, Stepper {
 
 extension SignInReactor {
     /// email 유효성 체크 함수
-    func checkValidationForEmail(email: String) -> Bool {
-        guard email.isEmpty == false else {
+    func checkValidationForEmail(input: String) -> Bool {
+        guard input.isEmpty == false else {
             return false
         }
         
-        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
        
-        return Utility.checkRegEx(input: email, regEx: emailRegEx)
+        return Utility.checkRegEx(input: input, regEx: regEx)
     }
     
-    func checkValidationForPassword(password: String) -> Bool {
-        guard password.isEmpty == false else {
+    func checkValidationForPassword(input: String) -> Bool {
+        guard input.isEmpty == false else {
             return false
         }
         
-        let passwordRegEx = "(?=.*[A-Za-z])(?=.*[0-9]).{8,20}"
+        let regEx = "(?=.*[A-Za-z])(?=.*[0-9]).{8,20}"
         
-        return Utility.checkRegEx(input: password, regEx: passwordRegEx)
+        return Utility.checkRegEx(input: input, regEx: regEx)
     }
 }
 
