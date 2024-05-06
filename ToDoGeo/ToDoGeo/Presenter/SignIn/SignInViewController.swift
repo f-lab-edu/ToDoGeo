@@ -59,7 +59,7 @@ final class SignInViewController: UIViewController, View {
         // MARK: - Bind Action
         emailTextField.rx.text
             .orEmpty
-            .map({ SignInReactor.Action.inputEmail(email: $0) })
+            .map({ SignInReactor.Action.inputEmail(input: $0) })
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
@@ -70,7 +70,7 @@ final class SignInViewController: UIViewController, View {
         
         passwordTextField.rx.text
             .orEmpty
-            .map({ SignInReactor.Action.inputPassword(password: $0) })
+            .map({ SignInReactor.Action.inputPassword(input: $0) })
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         

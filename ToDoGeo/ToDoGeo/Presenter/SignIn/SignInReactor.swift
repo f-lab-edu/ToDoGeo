@@ -46,9 +46,9 @@ final class SignInReactor: Reactor, Stepper {
         /// 로그인 버튼 클릭
         case didTappedSignInButton
         /// email 입력
-        case inputEmail(email: String)
+        case inputEmail(input: String)
         /// 비밀번호 입력
-        case inputPassword(password: String)
+        case inputPassword(input: String)
     }
     
     enum Mutation {

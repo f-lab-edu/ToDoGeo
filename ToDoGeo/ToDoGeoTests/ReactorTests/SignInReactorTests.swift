@@ -22,7 +22,7 @@ final class SignInReactorTests: XCTestCase {
     // MARK: - email 유효성 관련 테스트
     func testEmailInput_WhenEmailInputIsEmpty_EmailInputIsInvalid() {
         
-        reactor.action.onNext(.inputEmail(email: ""))
+        reactor.action.onNext(.inputEmail(input: ""))
         
         reactor.action.onNext(.didTappedDoneButtonInEmailTextField)
         
@@ -33,7 +33,7 @@ final class SignInReactorTests: XCTestCase {
     
     func testEmailInput_WhenEmailInputIsNotEmailFormat_EmailInputIsInvalid() {
         
-        reactor.action.onNext(.inputEmail(email: "ggg"))
+        reactor.action.onNext(.inputEmail(input: "ggg"))
         
         reactor.action.onNext(.didTappedDoneButtonInEmailTextField)
         
@@ -44,7 +44,7 @@ final class SignInReactorTests: XCTestCase {
     
     func testEmailInput_WhenEmailInputIsEmailFormat_EmailInputIsValid() {
         
-        reactor.action.onNext(.inputEmail(email: "wgt563@gmail.com"))
+        reactor.action.onNext(.inputEmail(input: "wgt563@gmail.com"))
         
         reactor.action.onNext(.didTappedDoneButtonInEmailTextField)
         
@@ -56,7 +56,7 @@ final class SignInReactorTests: XCTestCase {
     // MARK: - 비밀번호 유효성 체크 테스트
     func testPasswordInput_WhenPasswordInputIsEmpty_PasswordInputIsInvalid() {
         
-        reactor.action.onNext(.inputPassword(password: ""))
+        reactor.action.onNext(.inputPassword(input: ""))
         
         reactor.action.onNext(.didTappedDoneButtonInPasswordTextField)
         
@@ -66,7 +66,7 @@ final class SignInReactorTests: XCTestCase {
     }
     
     func testPasswordInput_WhenPasswordInputIsOnlyLetters_PasswordInputIsInvalid() {
-        reactor.action.onNext(.inputPassword(password: "ggggggggg"))
+        reactor.action.onNext(.inputPassword(input: "ggggggggg"))
         
         reactor.action.onNext(.didTappedDoneButtonInPasswordTextField)
         
@@ -76,7 +76,7 @@ final class SignInReactorTests: XCTestCase {
     }
     
     func testPasswordInput_WhenPasswordInputIsOnlyNumbers_PasswordInputIsInvalid() {
-        reactor.action.onNext(.inputPassword(password: "123433524857"))
+        reactor.action.onNext(.inputPassword(input: "123433524857"))
         
         reactor.action.onNext(.didTappedDoneButtonInPasswordTextField)
         
@@ -86,7 +86,7 @@ final class SignInReactorTests: XCTestCase {
     }
     
     func testPasswordInput_WhenPasswordInputIsPasswordFormat_PasswordInputIsValid() {
-        reactor.action.onNext(.inputPassword(password: "gggg123456"))
+        reactor.action.onNext(.inputPassword(input: "gggg123456"))
         
         reactor.action.onNext(.didTappedDoneButtonInPasswordTextField)
         
