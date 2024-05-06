@@ -90,12 +90,12 @@ final class SignInReactor: Reactor, Stepper {
         case .checkValidationForEmail:
             newState.isValidEmail = checkValidationForEmail(input: newState.emailInput)
             
-            if newState.isValidEmail == false {
+            if !newState.isValidEmail {
                 newState.errorMessageForEmailInput = "올바른 이메일 형식이 아닙니다."
                 newState.isEnableSignInButton = false
             } else {
                 newState.errorMessageForEmailInput = ""
-                if newState.isValidPassword == true {
+                if newState.isValidPassword {
                     newState.isEnableSignInButton = true
                 }
             }
@@ -103,12 +103,12 @@ final class SignInReactor: Reactor, Stepper {
         case .checkValidationForPassword:
             newState.isValidPassword = checkValidationForPassword(input: newState.pwInput)
             
-            if newState.isValidPassword == false {
+            if !newState.isValidPassword {
                 newState.errorMessageForPWInput = "올바른 비밀번호 형식이 아닙니다."
                 newState.isEnableSignInButton = false
             } else {
                 newState.errorMessageForPWInput = ""
-                if newState.isValidEmail == true {
+                if newState.isValidEmail {
                     newState.isEnableSignInButton = true
                 }
             }
@@ -127,7 +127,7 @@ final class SignInReactor: Reactor, Stepper {
 extension SignInReactor {
     /// email 유효성 체크 함수
     func checkValidationForEmail(input: String) -> Bool {
-        guard input.isEmpty == false else {
+        guard !input.isEmpty else {
             return false
         }
         
@@ -137,7 +137,7 @@ extension SignInReactor {
     }
     
     func checkValidationForPassword(input: String) -> Bool {
-        guard input.isEmpty == false else {
+        guard !input.isEmpty else {
             return false
         }
         

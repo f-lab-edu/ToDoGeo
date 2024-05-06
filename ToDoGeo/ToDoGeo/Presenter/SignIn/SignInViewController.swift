@@ -89,7 +89,7 @@ final class SignInViewController: UIViewController, View {
             .asDriver(onErrorRecover: { _ in return .never() })
             .drive(with: self, onNext: { owner, isEnabled in
                 owner.signInButton.isEnabled = isEnabled
-                owner.signInButton.backgroundColor = isEnabled == true ? .blue : .gray
+                owner.signInButton.backgroundColor = isEnabled ? .blue : .gray
             })
             .disposed(by: self.disposeBag)
         
