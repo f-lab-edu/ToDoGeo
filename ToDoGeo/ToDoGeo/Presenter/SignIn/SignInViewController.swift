@@ -19,6 +19,7 @@ final class SignInViewController: UIViewController, View {
         textField.placeholder = "이메일을 입력해 주세요."
         textField.borderStyle = .roundedRect
         textField.layer.borderColor = UIColor.black.cgColor
+        textField.returnKeyType = .done
         
         return textField
     }()
@@ -28,6 +29,8 @@ final class SignInViewController: UIViewController, View {
         textField.placeholder = "비밀번호를 입력해 주세요."
         textField.borderStyle = .roundedRect
         textField.layer.borderColor = UIColor.black.cgColor
+        textField.returnKeyType = .done
+        textField.isSecureTextEntry = true
         
         return textField
     }()
