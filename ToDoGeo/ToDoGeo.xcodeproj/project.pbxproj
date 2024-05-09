@@ -14,6 +14,8 @@
 		A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */; };
 		A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C92BE760D5004867C6 /* Utility.swift */; };
 		A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */; };
+		A48D48D12BECDEC3004867C6 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48D02BECDEC3004867C6 /* PinLayout */; };
+		A48D48D42BECDEF4004867C6 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48D32BECDEF4004867C6 /* FlexLayout */; };
 		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
 		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
 		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
@@ -89,7 +91,9 @@
 				A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */,
 				A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */,
 				A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */,
+				A48D48D12BECDEC3004867C6 /* PinLayout in Frameworks */,
 				A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */,
+				A48D48D42BECDEF4004867C6 /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,6 +359,8 @@
 				A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */,
 				A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */,
 				A48D48C12BE5D895004867C6 /* FirebaseAuth */,
+				A48D48D02BECDEC3004867C6 /* PinLayout */,
+				A48D48D32BECDEF4004867C6 /* FlexLayout */,
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -434,6 +440,8 @@
 				A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */,
 				A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */,
+				A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */,
 			);
 			productRefGroup = A4B884032BCA1AB2005F79D4 /* Products */;
 			projectDirPath = "";
@@ -867,6 +875,22 @@
 				minimumVersion = 10.25.0;
 			};
 		};
+		A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.5;
+			};
+		};
+		A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.7;
+			};
+		};
 		A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
@@ -908,6 +932,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAuth;
+		};
+		A48D48D02BECDEC3004867C6 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+		A48D48D32BECDEF4004867C6 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
 		};
 		A4AA82952BCA7A2F00800468 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;

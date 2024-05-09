@@ -1,5 +1,5 @@
 {
-  "originHash" : "08221f90fdded2d015ba5301b6224a32d31d8d76dcff55b07c16e6f9ba10734f",
+  "originHash" : "fe176956d9e29b3df1d6990955d56d2aa78cb5053b89f14f16098763f2e4aab4",
   "pins" : [
     {
       "identity" : "abseil-cpp-binary",
@@ -26,6 +26,15 @@
       "state" : {
         "revision" : "97940381e57703c07f31a8058d8f39ec53b7c272",
         "version" : "10.25.0"
+      }
+    },
+    {
+      "identity" : "flexlayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/layoutBox/FlexLayout",
+      "state" : {
+        "revision" : "ad20f2874f0fe87300e89caed2f03d5c9525c3c0",
+        "version" : "2.0.7"
       }
     },
     {
@@ -98,6 +107,15 @@
       "state" : {
         "revision" : "b7e1104502eca3a213b46303391ca4d3bc8ddec1",
         "version" : "2.30910.0"
+      }
+    },
+    {
+      "identity" : "pinlayout",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/layoutBox/PinLayout",
+      "state" : {
+        "revision" : "8eaa3a15e4dcabaca4c95aea4c0ff0c9b4a67213",
+        "version" : "1.10.5"
       }
     },
     {
