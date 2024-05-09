@@ -16,7 +16,7 @@ final class APIService: APIServiceProtocol {
     /// api request 함수
     func request<Target: URLRequestConvertible, Response: Codable>(request: Target, response: Response.Type) -> Observable<Response> {
         return Observable.create({ observer -> Disposable in
-            API.makeDataRequest(request)
+            API.requestToAlamofire(request)
                 .validate()
                 .responseDecodable(of: response.self) { response in
                     switch response.result {
