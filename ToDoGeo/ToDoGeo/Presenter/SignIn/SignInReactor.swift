@@ -23,19 +23,19 @@ final class SignInReactor: Reactor, Stepper {
     
     struct State {
         /// email input
-        var emailInput: String = ""
+        var emailInput = ""
         /// email 입력값에 대한 오류 메시지
-        var errorMessageForEmailInput: String = ""
+        var errorMessageForEmailInput = ""
         /// email 입력값에 대한 오류 메시지
-        var errorMessageForPWInput: String = ""
+        var errorMessageForPWInput = ""
         /// password input
-        var pwInput: String = ""
+        var pwInput = ""
         /// email 유효성 체크 관련 플래그
-        var isValidEmail: Bool = false
+        var isValidEmail = false
         /// password 유효성 체크 관련 플래그
-        var isValidPassword: Bool = false
+        var isValidPassword = false
         
-        var isEnableSignInButton: Bool = false
+        var isEnableSignInButton = false
     }
     
     enum Action {
