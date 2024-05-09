@@ -114,6 +114,7 @@ final class SignInReactor: Reactor, Stepper {
     }
 }
 
+// MARK: - methods
 extension SignInReactor {
     /// email 유효성 체크 함수
     func checkValidationForEmail(input: String) -> Bool {
