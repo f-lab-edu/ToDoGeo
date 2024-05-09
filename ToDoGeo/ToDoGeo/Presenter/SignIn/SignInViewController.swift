@@ -7,6 +7,7 @@
 
 import UIKit
 
+import PinLayout
 import ReactorKit
 import RxSwift
 import RxCocoa
@@ -55,38 +56,40 @@ final class SignInViewController: UIViewController, View {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        addSubviews()
+    }
+    
+    override func viewDidLayoutSubviews() {
         setupLayout()
     }
     
-    func setupLayout() {
+    private func addSubviews() {
         view.backgroundColor = .white
-        [emailTextField,
-        passwordTextField,
-        signInButton,
-         signUpButton].forEach({
+        [emailTextField, passwordTextField, signInButton, signUpButton].forEach({
             view.addSubview($0)
             $0.translatesAutoresizingMaskIntoConstraints = false
         })
+    }
+    
+    private func setupLayout() {
+        emailTextField.pin.top(view.safeAreaInsets.top + 48.0)
+            .horizontally(16.0)
         
-        NSLayoutConstraint.activate([
-            emailTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16.0),
-            emailTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16.0),
-            emailTextField.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 48.0),
-            
-            passwordTextField.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16.0),
-            passwordTextField.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16.0),
-            passwordTextField.topAnchor.constraint(equalTo: emailTextField.bottomAnchor, constant: 8.0),
-            
-            signInButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16.0),
-            signInButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16.0),
-            signInButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 16.0),
-            signInButton.heightAnchor.constraint(equalToConstant: 48.0),
-            
-            signUpButton.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 16.0),
-            signUpButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -16.0),
-            signUpButton.topAnchor.constraint(equalTo: signInButton.bottomAnchor, constant: 8.0),
-            signUpButton.heightAnchor.constraint(equalToConstant: 48.0)
-        ])
+        passwordTextField.pin.below(of: emailTextField)
+            .horizontally(16.0)
+            .marginTop(8.0)
+        
+        signUpButton.pin.below(of: passwordTextField)
+            .horizontally(16.0)
+            .marginTop(8.0)
+            .height(48.0)
+        
+        signInButton.pin.below(of: signUpButton)
+            .horizontally(16.0)
+            .marginTop(8.0)
+            .height(48.0)
+        
+
         
     }
 }
