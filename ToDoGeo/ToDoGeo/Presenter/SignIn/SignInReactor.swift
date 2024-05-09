@@ -120,10 +120,8 @@ extension SignInReactor {
         guard !input.isEmpty else {
             return false
         }
-        
-        let regEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
        
-        return Utility.checkRegEx(input: input, regEx: regEx)
+        return Utility.checkRegEx(input: input, regEx: RegExConstant.email)
     }
     
     func checkValidationForPassword(input: String) -> Bool {
@@ -131,9 +129,7 @@ extension SignInReactor {
             return false
         }
         
-        let regEx = "(?=.*[A-Za-z])(?=.*[0-9]).{8,20}"
-        
-        return Utility.checkRegEx(input: input, regEx: regEx)
+        return Utility.checkRegEx(input: input, regEx: RegExConstant.password)
     }
 }
 

@@ -13,6 +13,7 @@
 		A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48C12BE5D895004867C6 /* FirebaseAuth */; };
 		A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */; };
 		A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C92BE760D5004867C6 /* Utility.swift */; };
+		A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */; };
 		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
 		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
 		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
@@ -55,6 +56,7 @@
 		A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactorTests.swift; sourceTree = "<group>"; };
 		A48D48C92BE760D5004867C6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExConstant.swift; sourceTree = "<group>"; };
 		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
 		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 			children = (
 				A4AA828C2BCA762700800468 /* Resource */,
 				A48D48C92BE760D5004867C6 /* Utility.swift */,
+				A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -488,6 +491,7 @@
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
 				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,
+				A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
