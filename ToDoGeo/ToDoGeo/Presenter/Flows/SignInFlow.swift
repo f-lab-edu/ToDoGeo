@@ -29,6 +29,7 @@ final class SignInFlow: Flow {
             
         case .toDoRequired:
             return .end(forwardToParentFlowWithStep: AppStep.toDoRequired)
+            
         default:
             return .none
         }
