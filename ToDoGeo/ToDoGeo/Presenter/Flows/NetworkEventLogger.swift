@@ -20,7 +20,7 @@ final class NetworkEventLogger: EventMonitor {
         debugPrint("URL: " + (request.request?.url?.absoluteString ?? ""))
         debugPrint("Method: " + (request.request?.httpMethod ?? ""))
         debugPrint("Headers: " + "\(request.request?.allHTTPHeaderFields ?? [:])")
-        debugPrint("Body: " + (request.request?.httpBody?.toPrettyPrintedString ?? ""))
+        debugPrint("Body: " + (request.request?.httpBody?.toPrettyString ?? ""))
         debugPrint("======= 🛰 NETWORK Reqeust LOG End =======")
         
     }
@@ -31,18 +31,19 @@ final class NetworkEventLogger: EventMonitor {
         debugPrint("URL: " + (request.request?.url?.absoluteString ?? ""))
         debugPrint("Result: " + "\(response.result)")
         debugPrint("StatusCode: " + "\(response.response?.statusCode ?? 0)")
-        debugPrint("Data: \(response.data?.toPrettyPrintedString ?? "")")
+        debugPrint("Data: \(response.data?.toPrettyString ?? "")")
         debugPrint("======= 🛰 NETWORK Response LOG End =======")
     }
 }
 
 extension Data {
-    var toPrettyPrintedString: String? {
+    var toPrettyString: String? {
         guard let object = try? JSONSerialization.jsonObject(with: self, options: []),
               let data = try? JSONSerialization.data(withJSONObject: object, options: [.prettyPrinted]),
               let prettyPrintedString = NSString(data: data, encoding: String.Encoding.utf8.rawValue) else {
             return nil
         }
+        
         return prettyPrintedString as String
     }
 }
