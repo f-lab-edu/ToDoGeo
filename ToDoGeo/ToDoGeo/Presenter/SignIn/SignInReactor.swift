@@ -67,8 +67,8 @@ final class SignInReactor: Reactor, Stepper {
         switch action {
         case .didTappedSignInButton:
             requestSignIn(email: currentState.emailInput, password: currentState.pwInput)
-            
             return .empty()
+            
         case .didTappedDoneButtonInEmailTextField:
             return Observable.just(Mutation.checkValidationForEmail)
             
