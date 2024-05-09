@@ -56,6 +56,8 @@ final class SignInReactor: Reactor, Stepper {
         case checkValidationForEmail
         /// password 유효성체크 기능 추가
         case checkValidationForPassword
+        /// 로그인 버튼 활성화 체크
+        case checkSignInButtonActive
         /// email input mapping
         case setEmailInput(input: String)
         /// password input mapping
@@ -76,10 +78,12 @@ final class SignInReactor: Reactor, Stepper {
             return Observable.just(Mutation.checkValidationForPassword)
             
         case .inputEmail(let email):
-            return Observable.just(Mutation.setEmailInput(input: email))
+            return Observable.concat(.just(Mutation.setEmailInput(input: email)),
+                                     .just(Mutation.checkSignInButtonActive))
             
         case .inputPassword(let password):
-            return Observable.just(Mutation.setPasswordInput(input: password))
+            return Observable.concat(.just(Mutation.setPasswordInput(input: password)),
+                                     .just(Mutation.checkSignInButtonActive))
         }
     }
     
@@ -89,29 +93,15 @@ final class SignInReactor: Reactor, Stepper {
         switch mutation {
         case .checkValidationForEmail:
             newState.isValidEmail = checkValidationForEmail(input: newState.emailInput)
-            
-            if !newState.isValidEmail {
-                newState.errorMessageForEmailInput = "올바른 이메일 형식이 아닙니다."
-                newState.isEnableSignInButton = false
-            } else {
-                newState.errorMessageForEmailInput = ""
-                if newState.isValidPassword {
-                    newState.isEnableSignInButton = true
-                }
-            }
+            newState.errorMessageForEmailInput = newState.isValidEmail ? "" : "올바른 이메일 형식이 아닙니다."
             
         case .checkValidationForPassword:
             newState.isValidPassword = checkValidationForPassword(input: newState.pwInput)
+            newState.errorMessageForPWInput = newState.isValidPassword ? "" : "올바른 비밀번호 형식이 아닙니다."
             
-            if !newState.isValidPassword {
-                newState.errorMessageForPWInput = "올바른 비밀번호 형식이 아닙니다."
-                newState.isEnableSignInButton = false
-            } else {
-                newState.errorMessageForPWInput = ""
-                if newState.isValidEmail {
-                    newState.isEnableSignInButton = true
-                }
-            }
+        case .checkSignInButtonActive:
+            newState.isEnableSignInButton = checkValidationForPassword(input: newState.pwInput) && 
+            checkValidationForEmail(input: newState.emailInput)
             
         case .setEmailInput(let email):
             newState.emailInput = email
