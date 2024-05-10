@@ -88,9 +88,6 @@ final class SignInViewController: UIViewController, View {
             .horizontally(16.0)
             .marginTop(8.0)
             .height(48.0)
-        
-
-        
     }
 }
 
@@ -140,6 +137,5 @@ extension SignInViewController {
                 owner.signInButton.backgroundColor = isEnabled ? .blue : .gray
             })
             .disposed(by: self.disposeBag)
-        
     }
 }

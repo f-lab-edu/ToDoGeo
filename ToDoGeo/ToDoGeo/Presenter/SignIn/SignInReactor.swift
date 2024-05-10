@@ -139,11 +139,9 @@ extension SignInReactor {
     func requestSignIn(email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
             if authResult != nil {
-                print("로그인 성공")
                 self?.steps.accept(AppStep.toDoRequired)
             } else {
-                print("로그인 실패")
-                print(error.debugDescription)
+                AlertManager.shared.showInfoAlert(message: error?.localizedDescription ?? "")
             }
         }
     }
