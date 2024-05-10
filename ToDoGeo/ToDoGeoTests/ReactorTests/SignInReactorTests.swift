@@ -20,6 +20,7 @@ final class SignInReactorTests: XCTestCase {
     }
     
     // MARK: - email 유효성 관련 테스트
+    // email 유효성 관련 테스트(이메일이 비어있을때 유효성 체크 실패 케이스)
     func testEmailInput_WhenEmailInputIsEmpty_EmailInputIsInvalid() {
         
         reactor.action.onNext(.inputEmail(input: ""))
@@ -31,6 +32,7 @@ final class SignInReactorTests: XCTestCase {
         XCTAssertEqual(reactor.currentState.errorMessageForEmailInput, "올바른 이메일 형식이 아닙니다.")
     }
     
+    // email 유효성 관련 테스트(이메일 포맷이 아닐 때 유효성 체크 실패 케이스)
     func testEmailInput_WhenEmailInputIsNotEmailFormat_EmailInputIsInvalid() {
         
         reactor.action.onNext(.inputEmail(input: "ggg"))
@@ -42,6 +44,7 @@ final class SignInReactorTests: XCTestCase {
         XCTAssertEqual(reactor.currentState.errorMessageForEmailInput, "올바른 이메일 형식이 아닙니다.")
     }
     
+    // email 유효성 관련 테스트(이메일이 정상 포맷일 떄 유효성 체크 성공 케이스)
     func testEmailInput_WhenEmailInputIsEmailFormat_EmailInputIsValid() {
         
         reactor.action.onNext(.inputEmail(input: "wgt563@gmail.com"))
@@ -54,6 +57,7 @@ final class SignInReactorTests: XCTestCase {
     }
     
     // MARK: - 비밀번호 유효성 체크 테스트
+    // 비밀번호 유효성 관련 테스트(비밀번호가 비어있을 떄 유효성 체크 실패 케이스)
     func testPasswordInput_WhenPasswordInputIsEmpty_PasswordInputIsInvalid() {
         
         reactor.action.onNext(.inputPassword(input: ""))
@@ -65,6 +69,7 @@ final class SignInReactorTests: XCTestCase {
         XCTAssertEqual(reactor.currentState.errorMessageForPWInput, "올바른 비밀번호 형식이 아닙니다.")
     }
     
+    // 비밀번호 유효성 관련 테스트(비밀번호가 알파벳만 있을 때 유효성 체크 실패 케이스)
     func testPasswordInput_WhenPasswordInputIsOnlyLetters_PasswordInputIsInvalid() {
         reactor.action.onNext(.inputPassword(input: "ggggggggg"))
         
@@ -75,6 +80,7 @@ final class SignInReactorTests: XCTestCase {
         XCTAssertEqual(reactor.currentState.errorMessageForPWInput, "올바른 비밀번호 형식이 아닙니다.")
     }
     
+    // 비밀번호 유효성 관련 테스트(비밀번호가 숫자만 있을 때 유효성 체크 실패 케이스)
     func testPasswordInput_WhenPasswordInputIsOnlyNumbers_PasswordInputIsInvalid() {
         reactor.action.onNext(.inputPassword(input: "123433524857"))
         
@@ -85,6 +91,7 @@ final class SignInReactorTests: XCTestCase {
         XCTAssertEqual(reactor.currentState.errorMessageForPWInput, "올바른 비밀번호 형식이 아닙니다.")
     }
     
+    // 비밀번호 유효성 관련 테스트(비밀번호가 정상 포맷일 떄 유효성 체크 성공 케이스)
     func testPasswordInput_WhenPasswordInputIsPasswordFormat_PasswordInputIsValid() {
         reactor.action.onNext(.inputPassword(input: "gggg123456"))
         
