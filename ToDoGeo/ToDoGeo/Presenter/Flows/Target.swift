@@ -35,12 +35,12 @@ extension Target {
     
     /// url에 쿼리 세팅
     private func makeUrlWithQuery(url: URL?, query: Encodable?) throws -> URL? {
-        guard let url = url else {
+        guard let urlInArgument = url else {
             return nil
         }
         let queryToParameter = try query?.toParameter()
         let queryItems = queryToParameter?.compactMap({ URLQueryItem(name: $0.key, value: "\($0.value)") })
-        var components = URLComponents(string: url.absoluteString)
+        var components = URLComponents(string: urlInArgument.absoluteString)
         components?.queryItems = queryItems
         
         return components?.url
