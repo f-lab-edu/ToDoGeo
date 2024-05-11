@@ -62,7 +62,6 @@ final class SignInReactor: Reactor, Stepper {
         case setEmailInput(input: String)
         /// password input mapping
         case setPasswordInput(input: String)
-        
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
