@@ -32,7 +32,7 @@ final class SignInReactorTests: XCTestCase {
         XCTAssertEqual(reactor.currentState.errorMessageForEmailInput, "올바른 이메일 형식이 아닙니다.")
     }
     
-    // email 유효성 관련 테스트(이메일 포맷이 아닐 때 유효성 체크 실패 케이스)
+    // email 유효성 관련 테스트(이메일 포맷이 아닐 때(ggg 입력) 유효성 체크 실패 케이스)
     func testEmailInput_WhenEmailInputIsNotEmailFormat_EmailInputIsInvalid() {
         
         reactor.action.onNext(.inputEmail(input: "ggg"))
