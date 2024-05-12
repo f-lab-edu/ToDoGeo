@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
 		A48D48BB2BE5D852004867C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */; };
 		A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */; };
 		A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */; };
@@ -19,6 +20,13 @@
 		A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48D52BEDEC7F004867C6 /* AlertManager.swift */; };
 		A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48D82BEDF90B004867C6 /* UIApplicationExtension.swift */; };
 		A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */; };
+
+		A48D48B12BE13168004867C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48B02BE13168004867C6 /* Alamofire */; };
+		A48D48B32BE1319D004867C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B22BE1319D004867C6 /* API.swift */; };
+		A48D48B52BE131AC004867C6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B42BE131AC004867C6 /* Target.swift */; };
+		A48D48B72BE131B4004867C6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B62BE131B4004867C6 /* APIService.swift */; };
+		A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */; };
+
 		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
 		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
 		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
@@ -58,6 +66,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
 		A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactorTests.swift; sourceTree = "<group>"; };
 		A48D48C92BE760D5004867C6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
@@ -65,6 +74,12 @@
 		A48D48D52BEDEC7F004867C6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		A48D48D82BEDF90B004867C6 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+
+		A48D48B22BE1319D004867C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ToDoGeo/Presenter/Flows/API.swift; sourceTree = SOURCE_ROOT; };
+		A48D48B42BE131AC004867C6 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = ToDoGeo/Presenter/Flows/Target.swift; sourceTree = SOURCE_ROOT; };
+		A48D48B62BE131B4004867C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ToDoGeo/Presenter/Flows/APIService.swift; sourceTree = SOURCE_ROOT; };
+		A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkEventLogger.swift; path = ToDoGeo/Presenter/Flows/NetworkEventLogger.swift; sourceTree = SOURCE_ROOT; };
+
 		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
 		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
@@ -93,7 +108,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */,
+
 				A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */,
+
+				A48D48B12BE13168004867C6 /* Alamofire in Frameworks */,
+
 				A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */,
 				A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */,
 				A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */,
@@ -263,6 +282,10 @@
 		A4AA829E2BCA7E8000800468 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				A48D48B22BE1319D004867C6 /* API.swift */,
+				A48D48B42BE131AC004867C6 /* Target.swift */,
+				A48D48B62BE131B4004867C6 /* APIService.swift */,
+				A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -373,11 +396,15 @@
 				A4AA82952BCA7A2F00800468 /* RxCocoa */,
 				A4AA82982BCA7A4100800468 /* ReactorKit */,
 				A4AA82A72BD4FC2D00800468 /* RxFlow */,
+
 				A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */,
 				A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */,
 				A48D48C12BE5D895004867C6 /* FirebaseAuth */,
 				A48D48D02BECDEC3004867C6 /* PinLayout */,
 				A48D48D32BECDEF4004867C6 /* FlexLayout */,
+
+				A48D48B02BE13168004867C6 /* Alamofire */,
+
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -456,9 +483,13 @@
 				A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */,
+
 				A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */,
 				A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */,
+
+				A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+
 			);
 			productRefGroup = A4B884032BCA1AB2005F79D4 /* Products */;
 			projectDirPath = "";
@@ -505,9 +536,15 @@
 			files = (
 				A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */,
 				A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */,
+
 				A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */,
+
+				A48D48B72BE131B4004867C6 /* APIService.swift in Sources */,
+				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
+				A48D48B52BE131AC004867C6 /* Target.swift in Sources */,
+
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
 				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
 				A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */,
@@ -515,11 +552,16 @@
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
 				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
 				A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */,
+				A48D48B32BE1319D004867C6 /* API.swift in Sources */,
 				A4AA82B82BD52FE700800468 /* ToDoReactor.swift in Sources */,
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
 				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,
+
 				A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */,
+
+				A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -693,7 +735,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WC4SMWCBL2;
+				DEVELOPMENT_TEAM = 7RA236ULK2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoGeo/Common/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -724,7 +766,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WC4SMWCBL2;
+				DEVELOPMENT_TEAM = 7RA236ULK2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoGeo/Common/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -756,7 +798,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WC4SMWCBL2;
+
+				DEVELOPMENT_TEAM = 7RA236ULK2;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -782,7 +826,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WC4SMWCBL2;
+
+				DEVELOPMENT_TEAM = 7RA236ULK2;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -806,7 +852,9 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WC4SMWCBL2;
+
+				DEVELOPMENT_TEAM = 7RA236ULK2;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoUITests;
@@ -829,7 +877,9 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WC4SMWCBL2;
+
+				DEVELOPMENT_TEAM = 7RA236ULK2;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoUITests;
@@ -887,6 +937,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+
 		A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -909,6 +960,14 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.7;
+	    };
+		};
+		A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
 			};
 		};
 		A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
@@ -938,6 +997,7 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+
 		A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -962,6 +1022,13 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */;
 			productName = FlexLayout;
+	
+		};
+		A48D48B02BE13168004867C6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+
 		};
 		A4AA82952BCA7A2F00800468 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
