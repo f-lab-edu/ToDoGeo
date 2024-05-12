@@ -26,6 +26,10 @@ final class SignInFlow: Flow {
         switch step {
         case .signInRequired:
             return self.navigateToSignIn()
+            
+        case .toDoRequired:
+            return .end(forwardToParentFlowWithStep: AppStep.toDoRequired)
+            
         default:
             return .none
         }
@@ -38,6 +42,7 @@ extension SignInFlow {
     func navigateToSignIn() -> FlowContributors {
         let viewController = SignInViewController()
         let reactor = SignInReactor(initialState: .init())
+        viewController.bind(reactor: reactor)
         self.rootViewController.setViewControllers([viewController], animated: true)
         
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))

@@ -7,11 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		A48D48BB2BE5D852004867C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */; };
+		A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */; };
+		A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */; };
+		A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48C12BE5D895004867C6 /* FirebaseAuth */; };
+		A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */; };
+		A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C92BE760D5004867C6 /* Utility.swift */; };
+		A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */; };
+		A48D48D12BECDEC3004867C6 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48D02BECDEC3004867C6 /* PinLayout */; };
+		A48D48D42BECDEF4004867C6 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48D32BECDEF4004867C6 /* FlexLayout */; };
+		A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48D52BEDEC7F004867C6 /* AlertManager.swift */; };
+		A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48D82BEDF90B004867C6 /* UIApplicationExtension.swift */; };
+		A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */; };
+
 		A48D48B12BE13168004867C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48B02BE13168004867C6 /* Alamofire */; };
 		A48D48B32BE1319D004867C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B22BE1319D004867C6 /* API.swift */; };
 		A48D48B52BE131AC004867C6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B42BE131AC004867C6 /* Target.swift */; };
 		A48D48B72BE131B4004867C6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B62BE131B4004867C6 /* APIService.swift */; };
 		A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */; };
+
 		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
 		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
 		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
@@ -29,7 +44,6 @@
 		A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */; };
 		A4B884122BCA1AB2005F79D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B884112BCA1AB2005F79D4 /* Assets.xcassets */; };
 		A4B884152BCA1AB2005F79D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A4B884142BCA1AB2005F79D4 /* Base */; };
-		A4B884202BCA1AB3005F79D4 /* ToDoGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8841F2BCA1AB3005F79D4 /* ToDoGeoTests.swift */; };
 		A4B8842A2BCA1AB3005F79D4 /* ToDoGeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884292BCA1AB3005F79D4 /* ToDoGeoUITests.swift */; };
 		A4B8842C2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */; };
 /* End PBXBuildFile section */
@@ -52,10 +66,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
+		A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactorTests.swift; sourceTree = "<group>"; };
+		A48D48C92BE760D5004867C6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
+		A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExConstant.swift; sourceTree = "<group>"; };
+		A48D48D52BEDEC7F004867C6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
+		A48D48D82BEDF90B004867C6 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+
 		A48D48B22BE1319D004867C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ToDoGeo/Presenter/Flows/API.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B42BE131AC004867C6 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = ToDoGeo/Presenter/Flows/Target.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B62BE131B4004867C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ToDoGeo/Presenter/Flows/APIService.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkEventLogger.swift; path = ToDoGeo/Presenter/Flows/NetworkEventLogger.swift; sourceTree = SOURCE_ROOT; };
+
 		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
 		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
@@ -73,7 +97,6 @@
 		A4B884142BCA1AB2005F79D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B884162BCA1AB2005F79D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A4B8841B2BCA1AB3005F79D4 /* ToDoGeoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoGeoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4B8841F2BCA1AB3005F79D4 /* ToDoGeoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoTests.swift; sourceTree = "<group>"; };
 		A4B884252BCA1AB3005F79D4 /* ToDoGeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoGeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B884292BCA1AB3005F79D4 /* ToDoGeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoUITests.swift; sourceTree = "<group>"; };
 		A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -85,9 +108,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */,
+
+				A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */,
+
 				A48D48B12BE13168004867C6 /* Alamofire in Frameworks */,
+
 				A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */,
+				A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */,
 				A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */,
+				A48D48D12BECDEC3004867C6 /* PinLayout in Frameworks */,
+				A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */,
+				A48D48D42BECDEF4004867C6 /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,6 +139,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A48D48C32BE5FB12004867C6 /* ReactorTests */ = {
+			isa = PBXGroup;
+			children = (
+				A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */,
+			);
+			path = ReactorTests;
+			sourceTree = "<group>";
+		};
+		A48D48D72BEDF0B7004867C6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				A48D48D82BEDF90B004867C6 /* UIApplicationExtension.swift */,
+				A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		A4AA82882BCA75FE00800468 /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +191,11 @@
 		A4AA828B2BCA761A00800468 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A48D48D72BEDF0B7004867C6 /* Extension */,
 				A4AA828C2BCA762700800468 /* Resource */,
+				A48D48C92BE760D5004867C6 /* Utility.swift */,
+				A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */,
+				A48D48D52BEDEC7F004867C6 /* AlertManager.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -153,6 +205,7 @@
 			children = (
 				A4B884112BCA1AB2005F79D4 /* Assets.xcassets */,
 				A4B884162BCA1AB2005F79D4 /* Info.plist */,
+				A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -309,7 +362,7 @@
 		A4B8841E2BCA1AB3005F79D4 /* ToDoGeoTests */ = {
 			isa = PBXGroup;
 			children = (
-				A4B8841F2BCA1AB3005F79D4 /* ToDoGeoTests.swift */,
+				A48D48C32BE5FB12004867C6 /* ReactorTests */,
 			);
 			path = ToDoGeoTests;
 			sourceTree = "<group>";
@@ -343,7 +396,15 @@
 				A4AA82952BCA7A2F00800468 /* RxCocoa */,
 				A4AA82982BCA7A4100800468 /* ReactorKit */,
 				A4AA82A72BD4FC2D00800468 /* RxFlow */,
+
+				A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */,
+				A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */,
+				A48D48C12BE5D895004867C6 /* FirebaseAuth */,
+				A48D48D02BECDEC3004867C6 /* PinLayout */,
+				A48D48D32BECDEF4004867C6 /* FlexLayout */,
+
 				A48D48B02BE13168004867C6 /* Alamofire */,
+
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -400,6 +461,7 @@
 					};
 					A4B8841A2BCA1AB3005F79D4 = {
 						CreatedOnToolsVersion = 15.3;
+						LastSwiftMigration = 1530;
 						TestTargetID = A4B884012BCA1AB2005F79D4;
 					};
 					A4B884242BCA1AB3005F79D4 = {
@@ -421,7 +483,13 @@
 				A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */,
+
+				A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */,
+				A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */,
+
 				A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */,
+
 			);
 			productRefGroup = A4B884032BCA1AB2005F79D4 /* Products */;
 			projectDirPath = "";
@@ -441,6 +509,7 @@
 			files = (
 				A4B884122BCA1AB2005F79D4 /* Assets.xcassets in Resources */,
 				A4B884152BCA1AB2005F79D4 /* Base in Resources */,
+				A48D48BB2BE5D852004867C6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,12 +534,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */,
 				A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */,
+
+				A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */,
+				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
+				A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */,
+
 				A48D48B72BE131B4004867C6 /* APIService.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A48D48B52BE131AC004867C6 /* Target.swift in Sources */,
+
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
 				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
+				A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */,
 				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
 				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
@@ -480,7 +557,11 @@
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
 				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,
+
+				A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */,
+
 				A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,7 +569,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4B884202BCA1AB3005F79D4 /* ToDoGeoTests.swift in Sources */,
+				A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -714,17 +795,25 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+
 				DEVELOPMENT_TEAM = 7RA236ULK2;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoGeo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoGeo";
 			};
 			name = Debug;
@@ -734,17 +823,24 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+
 				DEVELOPMENT_TEAM = 7RA236ULK2;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ToDoGeo.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ToDoGeo";
 			};
 			name = Release;
@@ -753,16 +849,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+
 				DEVELOPMENT_TEAM = 7RA236ULK2;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = ToDoGeo;
 			};
 			name = Debug;
@@ -771,16 +874,23 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+
 				DEVELOPMENT_TEAM = 7RA236ULK2;
+
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				TEST_TARGET_NAME = ToDoGeo;
 			};
 			name = Release;
@@ -827,6 +937,31 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+
+		A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.25.0;
+			};
+		};
+		A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/PinLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.10.5;
+			};
+		};
+		A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/layoutBox/FlexLayout";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.7;
+	    };
+		};
 		A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -862,10 +997,38 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+
+		A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		A48D48C12BE5D895004867C6 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A48D48D02BECDEC3004867C6 /* PinLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */;
+			productName = PinLayout;
+		};
+		A48D48D32BECDEF4004867C6 /* FlexLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */;
+			productName = FlexLayout;
+	
+		};
 		A48D48B02BE13168004867C6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+
 		};
 		A4AA82952BCA7A2F00800468 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;

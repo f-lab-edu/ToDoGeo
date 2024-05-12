@@ -26,6 +26,7 @@ final class ToDoFlow: Flow {
         switch step {
         case .toDoRequired:
             return self.navigateToToDo()
+            
         default:
             return .none
         }

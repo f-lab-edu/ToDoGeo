@@ -28,8 +28,10 @@ final class AppFlow: Flow {
         switch step {
         case .signInRequired:
             return self.navigateToSignin()
+            
         case .toDoRequired:
             return self.navigateToToDo()
+            
         default:
             return .none
         }
