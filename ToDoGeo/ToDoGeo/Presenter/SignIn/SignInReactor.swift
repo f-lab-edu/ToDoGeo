@@ -129,7 +129,7 @@ extension SignInReactor {
             return false
         }
         
-        return Utility.checkRegEx(input: input, regEx: RegExConstant.password)
+        return Utility.checkRegEx(input: input, regEx: RegExConstant.pw)
     }
 }
 
