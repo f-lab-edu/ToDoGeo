@@ -5,6 +5,7 @@ disabled_rules:
   - unused_closure_parameter
   - comment_spacing
   - trailing_newline
+  - identifier_name
   - colon
   - mark
   - todo
