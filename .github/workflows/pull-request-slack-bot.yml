@@ -4,10 +4,12 @@ name: Pull Request Slack Bot
 on:
   pull_request_review:
     types: [submitted]
-    branches: [feature]
+    branches: 
+      - 'feature/*'
   pull_request_review_comment:
     types: [created, edited]
-    branches: [feature]
+    branches: 
+      - 'feature/*'
 
 jobs:
   notify_slack:
