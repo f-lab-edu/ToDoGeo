@@ -3,8 +3,12 @@ name: Pull Request Slack Bot
 on:
   pull_request_review:
     types: [submitted]
+    branches: 
+      - 'feature/*'
   pull_request_review_comment:
     types: [created, edited]
+    branches: 
+      - 'feature/*'
 
 jobs:
   notify_slack:
@@ -15,7 +19,6 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: 'good'
-          title: 'Pull Request Approved'
           text: '코드 리뷰가 성공적으로 승인되었습니다.'
           fields: repo,actor,base_ref,head_ref
         env:
@@ -26,7 +29,6 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: 'danger'
-          title: 'Changes Requested in Pull Request'
           text: '코드 수정이 필요합니다. 확인해 주세요.'
           fields: repo,actor,base_ref,head_ref
         env:
@@ -37,7 +39,6 @@ jobs:
         uses: 8398a7/action-slack@v3
         with:
           status: 'good'
-          title: 'review comment'
           text: '리뷰 comment가 추가되었습니다.'
           fields: repo,actor,base_ref,head_ref
         env:
