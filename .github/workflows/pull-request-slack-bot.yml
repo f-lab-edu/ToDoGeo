@@ -2,14 +2,12 @@ name: Pull Request Slack Bot
 
 
 on:
-  pull_request_review:
+ pull_request_review:
     types: [submitted]
-    branches: 
-      - 'feature/*'
-  pull_request_review_comment:
+ pull_request_review_comment:
     types: [created, edited]
-    branches: 
-      - 'feature/*'
+ branches:
+    - 'feature/*'
 
 jobs:
   notify_slack:
@@ -38,7 +36,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           
       - name: Notify Slack on PR
-        if: github.event_name == 'pull_request_review_comment' 
+        if: github.event.action == 'pull_request_review_comment' 
         uses: 8398a7/action-slack@v3
         with:
           status: 'good'
