@@ -35,7 +35,6 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           
       - name: Notify Slack on PR Review Comment
-        if: startsWith(github.head_ref, 'feature/')
         uses: 8398a7/action-slack@v3
         with:
           status: 'good'
