@@ -5,7 +5,7 @@ on:
     types: [submitted]
     branches: 
       - 'feature/*'
-  issue_comment:
+  issue_comment:
     types: [created, edited]
     branches: 
       - 'feature/*'
