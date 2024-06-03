@@ -7,13 +7,15 @@ on:
       - 'feature/*'
   issue_comment:
     types: [created, edited]
+  pull_request_review_comment:
+    types: [created, edited]
 
 jobs:
   notify_slack:
     runs-on: ubuntu-latest
     steps:
-      - name: Notify Slack on PR
-        if: github.event.review.state == 'APPROVED'
+      - name: Notify Slack on PR Review Approval
+        if: github.event_name == 'pull_request_review' && github.event.review.state == 'APPROVED'
         uses: 8398a7/action-slack@v3
         with:
           status: 'good'
@@ -22,8 +24,8 @@ jobs:
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
-      - name: Notify Slack on PR
-        if: github.event.review.state == 'changes_requested' 
+      - name: Notify Slack on PR Review Changes Requested
+        if: github.event_name == 'pull_request_review' && github.event.review.state == 'changes_requested'
         uses: 8398a7/action-slack@v3
         with:
           status: 'danger'
@@ -31,9 +33,9 @@ jobs:
           fields: repo,actor,base_ref,head_ref
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-          
-      - name: Notify Slack on PR Review Comment
-        if: github.event_name == 'issue_comment'
+
+      - name: Notify Slack on PR Comment
+        if: github.event_name == 'issue_comment' || github.event_name == 'pull_request_review_comment'
         uses: 8398a7/action-slack@v3
         with:
           status: 'good'
