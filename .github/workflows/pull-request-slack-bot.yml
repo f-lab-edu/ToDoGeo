@@ -7,8 +7,6 @@ on:
       - 'feature/*'
   issue_comment:
     types: [created, edited]
-    branches: 
-      - 'feature/*'
 
 jobs:
   notify_slack:
@@ -35,6 +33,7 @@ jobs:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
           
       - name: Notify Slack on PR Review Comment
+        if: github.event_name == 'issue_comment'
         uses: 8398a7/action-slack@v3
         with:
           status: 'good'
@@ -42,5 +41,3 @@ jobs:
           fields: repo,actor,base_ref,head_ref
         env:
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
-
-          
