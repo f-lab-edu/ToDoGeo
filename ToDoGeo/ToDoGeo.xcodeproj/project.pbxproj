@@ -12,6 +12,8 @@
 		A4355BFF2C19E244002B210D /* StubSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355BFE2C19E244002B210D /* StubSignInUseCase.swift */; };
 		A4355C012C19E26F002B210D /* SignInRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C002C19E26F002B210D /* SignInRepositoryProtocol.swift */; };
 		A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C032C19E28E002B210D /* SignInUseCase.swift */; };
+		A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C052C19E67F002B210D /* SignInRepository.swift */; };
+		A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C082C1A6086002B210D /* AppleSignInError.swift */; };
 		A48D48B12BE13168004867C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48B02BE13168004867C6 /* Alamofire */; };
 		A48D48B32BE1319D004867C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B22BE1319D004867C6 /* API.swift */; };
 		A48D48B52BE131AC004867C6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B42BE131AC004867C6 /* Target.swift */; };
@@ -73,6 +75,8 @@
 		A4355BFE2C19E244002B210D /* StubSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StubSignInUseCase.swift; path = UseCase/SignIn/Stub/StubSignInUseCase.swift; sourceTree = SOURCE_ROOT; };
 		A4355C002C19E26F002B210D /* SignInRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInRepositoryProtocol.swift; path = Repository/Protocol/SignInRepositoryProtocol.swift; sourceTree = SOURCE_ROOT; };
 		A4355C032C19E28E002B210D /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInUseCase.swift; path = UseCase/SignIn/SignInUseCase.swift; sourceTree = SOURCE_ROOT; };
+		A4355C052C19E67F002B210D /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInRepository.swift; path = Repository/SignInRepository.swift; sourceTree = SOURCE_ROOT; };
+		A4355C082C1A6086002B210D /* AppleSignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInError.swift; sourceTree = "<group>"; };
 		A48D48B22BE1319D004867C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ToDoGeo/Presenter/Flows/API.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B42BE131AC004867C6 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = ToDoGeo/Presenter/Flows/Target.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B62BE131B4004867C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ToDoGeo/Presenter/Flows/APIService.swift; sourceTree = SOURCE_ROOT; };
@@ -182,6 +186,14 @@
 			path = Protocol;
 			sourceTree = "<group>";
 		};
+		A4355C072C1A607A002B210D /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				A4355C082C1A6086002B210D /* AppleSignInError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
 		A48D48C32BE5FB12004867C6 /* ReactorTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -234,6 +246,7 @@
 		A4AA828B2BCA761A00800468 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A4355C072C1A607A002B210D /* Error */,
 				A48D48D72BEDF0B7004867C6 /* Extension */,
 				A4AA828C2BCA762700800468 /* Resource */,
 				A48D48C92BE760D5004867C6 /* Utility.swift */,
@@ -321,6 +334,7 @@
 		A4AA829D2BCA7E7500800468 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A4355C052C19E67F002B210D /* SignInRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -580,10 +594,12 @@
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */,
 				A48D48B72BE131B4004867C6 /* APIService.swift in Sources */,
+				A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A48D48B52BE131AC004867C6 /* Target.swift in Sources */,
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
 				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
+				A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */,
 				A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */,
 				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
