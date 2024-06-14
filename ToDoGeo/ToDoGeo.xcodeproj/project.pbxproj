@@ -14,6 +14,7 @@
 		A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C032C19E28E002B210D /* SignInUseCase.swift */; };
 		A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C052C19E67F002B210D /* SignInRepository.swift */; };
 		A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C082C1A6086002B210D /* AppleSignInError.swift */; };
+		A4355C0C2C1C2513002B210D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C0B2C1C2512002B210D /* Constant.swift */; };
 		A48D48B12BE13168004867C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48B02BE13168004867C6 /* Alamofire */; };
 		A48D48B32BE1319D004867C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B22BE1319D004867C6 /* API.swift */; };
 		A48D48B52BE131AC004867C6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B42BE131AC004867C6 /* Target.swift */; };
@@ -77,6 +78,8 @@
 		A4355C032C19E28E002B210D /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInUseCase.swift; path = UseCase/SignIn/SignInUseCase.swift; sourceTree = SOURCE_ROOT; };
 		A4355C052C19E67F002B210D /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInRepository.swift; path = Repository/SignInRepository.swift; sourceTree = SOURCE_ROOT; };
 		A4355C082C1A6086002B210D /* AppleSignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInError.swift; sourceTree = "<group>"; };
+		A4355C0B2C1C2512002B210D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoGeo.entitlements; sourceTree = "<group>"; };
 		A48D48B22BE1319D004867C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ToDoGeo/Presenter/Flows/API.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B42BE131AC004867C6 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = ToDoGeo/Presenter/Flows/Target.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B62BE131B4004867C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ToDoGeo/Presenter/Flows/APIService.swift; sourceTree = SOURCE_ROOT; };
@@ -194,6 +197,14 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		A4355C0A2C1C2505002B210D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A4355C0B2C1C2512002B210D /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		A48D48C32BE5FB12004867C6 /* ReactorTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +257,7 @@
 		A4AA828B2BCA761A00800468 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A4355C0A2C1C2505002B210D /* Constant */,
 				A4355C072C1A607A002B210D /* Error */,
 				A48D48D72BEDF0B7004867C6 /* Extension */,
 				A4AA828C2BCA762700800468 /* Resource */,
@@ -408,6 +420,7 @@
 		A4B884042BCA1AB2005F79D4 /* ToDoGeo */ = {
 			isa = PBXGroup;
 			children = (
+				A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */,
 				A4AA828D2BCA763200800468 /* System */,
 				A4AA828B2BCA761A00800468 /* Common */,
 				A4AA82882BCA75FE00800468 /* Data */,
@@ -605,6 +618,7 @@
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
 				A4355BF82C19CF2A002B210D /* SignInUseCaseProtocol.swift in Sources */,
 				A4355BFF2C19E244002B210D /* StubSignInUseCase.swift in Sources */,
+				A4355C0C2C1C2513002B210D /* Constant.swift in Sources */,
 				A4355C012C19E26F002B210D /* SignInRepositoryProtocol.swift in Sources */,
 				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
 				A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */,
@@ -788,9 +802,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ToDoGeo/ToDoGeo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RA236ULK2;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoGeo/Common/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -819,9 +834,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ToDoGeo/ToDoGeo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RA236ULK2;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoGeo/Common/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
