@@ -24,7 +24,6 @@
 		A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */; };
 		A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */; };
 		A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48C12BE5D895004867C6 /* FirebaseAuth */; };
-		A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */; };
 		A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C92BE760D5004867C6 /* Utility.swift */; };
 		A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */; };
 		A48D48D12BECDEC3004867C6 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48D02BECDEC3004867C6 /* PinLayout */; };
@@ -85,7 +84,6 @@
 		A48D48B62BE131B4004867C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ToDoGeo/Presenter/Flows/APIService.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkEventLogger.swift; path = ToDoGeo/Presenter/Flows/NetworkEventLogger.swift; sourceTree = SOURCE_ROOT; };
 		A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactorTests.swift; sourceTree = "<group>"; };
 		A48D48C92BE760D5004867C6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExConstant.swift; sourceTree = "<group>"; };
 		A48D48D52BEDEC7F004867C6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
@@ -208,7 +206,6 @@
 		A48D48C32BE5FB12004867C6 /* ReactorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */,
 			);
 			path = ReactorTests;
 			sourceTree = "<group>";
@@ -249,7 +246,6 @@
 				A4AA82912BCA768B00800468 /* Base */,
 				A4AA82902BCA766700800468 /* Main */,
 				A4AA828F2BCA766000800468 /* SignIn */,
-				A4AA828E2BCA765400800468 /* SignUp */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -285,13 +281,6 @@
 				A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */,
 			);
 			path = System;
-			sourceTree = "<group>";
-		};
-		A4AA828E2BCA765400800468 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignUp;
 			sourceTree = "<group>";
 		};
 		A4AA828F2BCA766000800468 /* SignIn */ = {
@@ -638,7 +627,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
