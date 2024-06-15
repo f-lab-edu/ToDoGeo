@@ -513,7 +513,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					A4B884012BCA1AB2005F79D4 = {
 						CreatedOnToolsVersion = 15.3;
@@ -597,7 +597,6 @@
 				A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */,
 				A48D48B72BE131B4004867C6 /* APIService.swift in Sources */,
 				A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */,
-				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A48D48B52BE131AC004867C6 /* Target.swift in Sources */,
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
 				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,

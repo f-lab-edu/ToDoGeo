@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class Utility {
+struct Utility {
     static func checkRegEx(input: String, regEx: String) -> Bool {
         return NSPredicate(format:"SELF MATCHES %@", regEx).evaluate(with: input)
     }
