@@ -50,6 +50,7 @@
 		A4B884152BCA1AB2005F79D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A4B884142BCA1AB2005F79D4 /* Base */; };
 		A4B8842A2BCA1AB3005F79D4 /* ToDoGeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884292BCA1AB3005F79D4 /* ToDoGeoUITests.swift */; };
 		A4B8842C2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */; };
+		A4D3D6812C1D875000FC8EA7 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3D6802C1D875000FC8EA7 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +110,7 @@
 		A4B884252BCA1AB3005F79D4 /* ToDoGeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoGeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B884292BCA1AB3005F79D4 /* ToDoGeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoUITests.swift; sourceTree = "<group>"; };
 		A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A4D3D6802C1D875000FC8EA7 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDo.swift; path = Entity/Todo/ToDo.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -327,6 +329,7 @@
 		A4AA829C2BCA7E4B00800468 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				A4D3D67F2C1D873E00FC8EA7 /* Todo */,
 				A4355BF92C19DC9C002B210D /* SignIn */,
 			);
 			path = Entity;
@@ -436,6 +439,14 @@
 				A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */,
 			);
 			path = ToDoGeoUITests;
+			sourceTree = "<group>";
+		};
+		A4D3D67F2C1D873E00FC8EA7 /* Todo */ = {
+			isa = PBXGroup;
+			children = (
+				A4D3D6802C1D875000FC8EA7 /* ToDo.swift */,
+			);
+			path = Todo;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -611,6 +622,7 @@
 				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
 				A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */,
 				A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */,
+				A4D3D6812C1D875000FC8EA7 /* ToDo.swift in Sources */,
 				A48D48B32BE1319D004867C6 /* API.swift in Sources */,
 				A4AA82B82BD52FE700800468 /* ToDoReactor.swift in Sources */,
 				A4355BFB2C19DCB5002B210D /* SignInUser.swift in Sources */,
