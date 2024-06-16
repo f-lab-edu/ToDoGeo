@@ -39,9 +39,9 @@
 		A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AD2BD506D000800468 /* AppStep.swift */; };
 		A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AF2BD50BB500800468 /* SignInFlow.swift */; };
 		A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B12BD50BBE00800468 /* ToDoFlow.swift */; };
-		A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B32BD52ADC00800468 /* ToDoViewController.swift */; };
+		A4AA82B42BD52ADC00800468 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B32BD52ADC00800468 /* AddToDoViewController.swift */; };
 		A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B52BD52B1D00800468 /* SignInViewController.swift */; };
-		A4AA82B82BD52FE700800468 /* ToDoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B72BD52FE700800468 /* ToDoReactor.swift */; };
+		A4AA82B82BD52FE700800468 /* AddToDoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B72BD52FE700800468 /* AddToDoReactor.swift */; };
 		A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B92BD5308700800468 /* SignInReactor.swift */; };
 		A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */; };
 		A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */; };
@@ -95,9 +95,9 @@
 		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
 		A4AA82AF2BD50BB500800468 /* SignInFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFlow.swift; sourceTree = "<group>"; };
 		A4AA82B12BD50BBE00800468 /* ToDoFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFlow.swift; sourceTree = "<group>"; };
-		A4AA82B32BD52ADC00800468 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		A4AA82B32BD52ADC00800468 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
 		A4AA82B52BD52B1D00800468 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		A4AA82B72BD52FE700800468 /* ToDoReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoReactor.swift; sourceTree = "<group>"; };
+		A4AA82B72BD52FE700800468 /* AddToDoReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoReactor.swift; sourceTree = "<group>"; };
 		A4AA82B92BD5308700800468 /* SignInReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactor.swift; sourceTree = "<group>"; };
 		A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoGeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -364,8 +364,8 @@
 		A4AA82A02BCAC37E00800468 /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
-				A4AA82B32BD52ADC00800468 /* ToDoViewController.swift */,
-				A4AA82B72BD52FE700800468 /* ToDoReactor.swift */,
+				A4AA82B32BD52ADC00800468 /* AddToDoViewController.swift */,
+				A4AA82B72BD52FE700800468 /* AddToDoReactor.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -602,7 +602,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */,
-				A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */,
+				A4AA82B42BD52ADC00800468 /* AddToDoViewController.swift in Sources */,
 				A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */,
@@ -624,7 +624,7 @@
 				A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */,
 				A4D3D6812C1D875000FC8EA7 /* ToDo.swift in Sources */,
 				A48D48B32BE1319D004867C6 /* API.swift in Sources */,
-				A4AA82B82BD52FE700800468 /* ToDoReactor.swift in Sources */,
+				A4AA82B82BD52FE700800468 /* AddToDoReactor.swift in Sources */,
 				A4355BFB2C19DCB5002B210D /* SignInUser.swift in Sources */,
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
