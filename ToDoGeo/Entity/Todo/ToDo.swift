@@ -12,4 +12,14 @@ struct ToDo {
     var title: String
     /// 알림 받을 위치
     var location: CLLocationCoordinate2D
+    /// 위치 이름
+    var locationName: String
+    
+    init(title: String = "",
+         location: CLLocationCoordinate2D = .init(),
+         locationName: String = "") {
+        self.title = title
+        self.location = location
+        self.locationName = locationName
+    }
 }
