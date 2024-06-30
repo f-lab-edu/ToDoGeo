@@ -22,6 +22,10 @@ final class AddToDoReactor: Reactor, Stepper {
     struct State {
         /// todo
         var toDo: ToDo = .init()
+        /// 위치 이름 입력창 에러
+        var locationTextFieldError: ToDoTextFieldError = .none
+        /// ToDo 입력값 입력창 에러
+        var titleTextFieldError: ToDoTextFieldError = .none
     }
     
     enum Action {
@@ -38,6 +42,8 @@ final class AddToDoReactor: Reactor, Stepper {
     enum Mutation {
         /// todo 추가
         case addToDo
+        /// 위치 이름 유효성 체크
+        case checkValidationForLocationName
         /// todo 이름 유효성 체크
         case checkValidationForToDoTitle
         /// todo 위치 이름 맵핑
@@ -54,10 +60,12 @@ final class AddToDoReactor: Reactor, Stepper {
             return .empty()
             
         case .inputLocationName(let input):
-            return Observable.just(Mutation.setLocationName(input))
+            return Observable.concat([.just(Mutation.setLocationName(input)),
+                                      .just(Mutation.checkValidationForLocationName)])
             
         case .inputToDoTitle(let input):
-            return Observable.just(Mutation.setToDoTitle(input))
+            return Observable.concat([.just(Mutation.setToDoTitle(input)),
+                                      .just(Mutation.checkValidationForToDoTitle)])
             
         case .inputToDoLocation:
             return Observable.just(Mutation.setToDoLocation)
@@ -71,8 +79,23 @@ final class AddToDoReactor: Reactor, Stepper {
         case .addToDo:
             break
             
+        case .checkValidationForLocationName:
+            if newState.toDo.locationName.isEmpty {
+                newState.locationTextFieldError = .emptyTextField
+            } else if newState.toDo.locationName.count > 15 {
+                newState.locationTextFieldError = .overLength
+            } else {
+                newState.locationTextFieldError = .none
+            }
+            
         case .checkValidationForToDoTitle:
-            break
+            if newState.toDo.title.isEmpty {
+                newState.titleTextFieldError = .emptyTextField
+            } else if newState.toDo.title.count > 15 {
+                newState.titleTextFieldError = .overLength
+            } else {
+                newState.titleTextFieldError = .none
+            }
             
         case .setLocationName(let input):
             newState.toDo.locationName = input
