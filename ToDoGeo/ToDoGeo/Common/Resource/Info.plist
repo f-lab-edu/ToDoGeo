@@ -19,5 +19,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>ToDo 알림을 받기 위해 위치 권한의 항상 허용이 필요합니다.</string>
 </dict>
 </plist>
