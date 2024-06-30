@@ -15,6 +15,7 @@
 		A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C052C19E67F002B210D /* SignInRepository.swift */; };
 		A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C082C1A6086002B210D /* AppleSignInError.swift */; };
 		A4355C0C2C1C2513002B210D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C0B2C1C2512002B210D /* Constant.swift */; };
+		A4671B502C1F082A00AFE7B2 /* LocationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671B4F2C1F082A00AFE7B2 /* LocationManger.swift */; };
 		A48D48B12BE13168004867C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48B02BE13168004867C6 /* Alamofire */; };
 		A48D48B32BE1319D004867C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B22BE1319D004867C6 /* API.swift */; };
 		A48D48B52BE131AC004867C6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B42BE131AC004867C6 /* Target.swift */; };
@@ -80,6 +81,7 @@
 		A4355C082C1A6086002B210D /* AppleSignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInError.swift; sourceTree = "<group>"; };
 		A4355C0B2C1C2512002B210D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoGeo.entitlements; sourceTree = "<group>"; };
+		A4671B4F2C1F082A00AFE7B2 /* LocationManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManger.swift; sourceTree = "<group>"; };
 		A48D48B22BE1319D004867C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ToDoGeo/Presenter/Flows/API.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B42BE131AC004867C6 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = ToDoGeo/Presenter/Flows/Target.swift; sourceTree = SOURCE_ROOT; };
 		A48D48B62BE131B4004867C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ToDoGeo/Presenter/Flows/APIService.swift; sourceTree = SOURCE_ROOT; };
@@ -203,6 +205,14 @@
 				A4355C0B2C1C2512002B210D /* Constant.swift */,
 			);
 			path = Constant;
+			sourceTree = "<group>";
+		};
+		A4671B4E2C1F080A00AFE7B2 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				A4671B4F2C1F082A00AFE7B2 /* LocationManger.swift */,
+			);
+			path = Location;
 			sourceTree = "<group>";
 		};
 		A48D48C32BE5FB12004867C6 /* ReactorTests */ = {
@@ -412,6 +422,7 @@
 		A4B884042BCA1AB2005F79D4 /* ToDoGeo */ = {
 			isa = PBXGroup;
 			children = (
+				A4671B4E2C1F080A00AFE7B2 /* Location */,
 				A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */,
 				A4AA828D2BCA763200800468 /* System */,
 				A4AA828B2BCA761A00800468 /* Common */,
@@ -619,6 +630,7 @@
 				A4355BFF2C19E244002B210D /* StubSignInUseCase.swift in Sources */,
 				A4355C0C2C1C2513002B210D /* Constant.swift in Sources */,
 				A4355C012C19E26F002B210D /* SignInRepositoryProtocol.swift in Sources */,
+				A4671B502C1F082A00AFE7B2 /* LocationManger.swift in Sources */,
 				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
 				A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */,
 				A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */,
