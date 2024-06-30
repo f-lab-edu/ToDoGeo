@@ -20,22 +20,16 @@ final class LocationManger: NSObject {
 }
 
 extension LocationManger: CLLocationManagerDelegate {
-    
-    /// 위치 정보 권한
-    func requestAlwaysLocation() {
-        switch locationManager.authorizationStatus {
+    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+        switch manager.authorizationStatus {
+        case .authorizedAlways, .authorizedWhenInUse:
+            locationManager.startUpdatingLocation()
+            
         case .notDetermined:
-            locationManager.requestAlwaysAuthorization()
-            
-        case .authorizedWhenInUse:
-            locationManager.requestAlwaysAuthorization()
-            
-        case .authorizedAlways:
-            // TODO: LocationManager 위치 추적 시작
-            return
+            manager.requestAlwaysAuthorization()
             
         default:
-            print("Location is not avaiable.")
+            AlertManager.shared.showInfoAlert(message: "위치 권한 설정을 항상으로 바꿔야 사용 가능 합니다.")
         }
     }
 }
