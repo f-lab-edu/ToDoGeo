@@ -29,8 +29,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let appFlow = AppFlow(withWindow: window)
         self.coordinator.coordinate(flow: appFlow, with: AppStepper())
-        window.makeKeyAndVisible()
-
+        self.window?.backgroundColor = .white
+        self.window?.makeKeyAndVisible()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
