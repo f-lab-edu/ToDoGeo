@@ -29,7 +29,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let appFlow = AppFlow(withWindow: window)
         self.coordinator.coordinate(flow: appFlow, with: AppStepper())
-        self.window?.backgroundColor = .white
+        self.window?.backgroundColor = .systemBackground
         self.window?.makeKeyAndVisible()
     }
 

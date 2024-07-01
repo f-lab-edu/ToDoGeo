@@ -26,7 +26,7 @@ final class AddToDoViewController: UIViewController, View {
         let button = UIButton()
         button.setTitle("추가하기", for: .normal)
         button.titleLabel?.textAlignment = .center
-        button.setTitleColor(.white, for: .normal)
+        button.setTitleColor(.label, for: .normal)
         button.backgroundColor = .mainBackground
         button.layer.cornerRadius = 8.0
         
@@ -43,7 +43,7 @@ final class AddToDoViewController: UIViewController, View {
     
     private let locationTextFieldErrorLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .red
+        label.textColor = .systemRed
         label.font = .systemFont(ofSize: 8.0, weight: .regular)
         label.textAlignment = .left
         label.isHidden = true
@@ -61,7 +61,7 @@ final class AddToDoViewController: UIViewController, View {
     
     private let titleTextFieldErrorLabel: UILabel = {
         let label = UILabel()
-        label.textColor = .red
+        label.textColor = .systemRed
         label.font = .systemFont(ofSize: 8.0, weight: .regular)
         label.textAlignment = .left
         label.isHidden = true
