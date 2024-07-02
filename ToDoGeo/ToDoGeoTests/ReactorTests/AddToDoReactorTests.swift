@@ -67,5 +67,26 @@ final class AddToDoReactorTests: XCTestCase {
         XCTAssertEqual(sut.currentState.titleTextFieldError, .none)
     }
     
+    // todo 제목이 유효하지 않을 경우(15자 이상) IsEnableAddButton는 false
+    func testIsEnableAddButton_WhenToDoTitleIsNotValid_ReturnFalse() {
+        sut.action.onNext(.inputToDoTitle("2134567890123456"))
+        
+        XCTAssertEqual(sut.currentState.isEnableAddButton, false)
+    }
+    
+    // todo 위치 이름이 유효하지 않을 경우(15자 이상) IsEnableAddButton는 false
+    func testIsEnableAddButton_WhenToDoLocationNameIsNotValid_ReturnFalse() {
+        sut.action.onNext(.inputLocationName("2134567890123456"))
+        
+        XCTAssertEqual(sut.currentState.isEnableAddButton, false)
+    }
+    
+    // todo 위치 이름과 제목이 유효할 경우 IsEnableAddButton는 true
+    func testIsEnableAddButton_WhenToDoTitleNToDoLocationNameIsValid_ReturnTrue() {
+        sut.action.onNext(.inputToDoTitle("적당한 이름"))
+        sut.action.onNext(.inputLocationName("적당한 장소"))
+        
+        XCTAssertEqual(sut.currentState.isEnableAddButton, true)
+    }
 
 }

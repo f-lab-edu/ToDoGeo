@@ -27,7 +27,8 @@ final class AddToDoViewController: UIViewController, View {
         button.setTitle("추가하기", for: .normal)
         button.titleLabel?.textAlignment = .center
         button.setTitleColor(.label, for: .normal)
-        button.backgroundColor = .mainBackground
+        button.backgroundColor = .systemGray3
+        button.isEnabled = false
         button.layer.cornerRadius = 8.0
         
         return button
@@ -92,6 +93,8 @@ final class AddToDoViewController: UIViewController, View {
     private func addSubviews() {
         [closeButton, addButton, locationTextField, titleTextField, locationTextFieldErrorLabel, titleTextFieldErrorLabel, mapView]
             .forEach({ view.addSubview($0) })
+        
+        view.bringSubviewToFront(addButton)
     }
     
     private func setupLayout() {
@@ -100,7 +103,7 @@ final class AddToDoViewController: UIViewController, View {
             .height(56.0)
             .marginRight(16.0)
             .sizeToFit()
-                
+        
         titleTextField.pin.top(view.pin.safeArea)
             .height(40)
             .marginTop(40)
@@ -121,16 +124,16 @@ final class AddToDoViewController: UIViewController, View {
             .marginTop(2.0)
             .horizontally(20.0)
         
-        addButton.pin
-            .height(50)
-            .bottom(16)
-            .horizontally(16)
-        
         mapView.pin.below(of: locationTextField)
             .marginTop(30.0)
             .horizontally()
             .bottom()
-
+        
+        addButton.pin
+            .height(50)
+            .bottom(view.pin.safeArea + 16.0)
+            .horizontally(16)
+        
     }
     
     private func configurationMap() {
@@ -147,7 +150,7 @@ final class AddToDoViewController: UIViewController, View {
         let region = MKCoordinateRegion(center: mapView.userLocation.coordinate, span: span)
         
         mapView.setRegion(region, animated: true)
-
+        
         configurationCenterPin()
     }
     
@@ -186,7 +189,7 @@ extension AddToDoViewController {
             .map({ AddToDoReactor.Action.inputToDoTitle($0) })
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
-            
+        
         locationTextField.rx.text.orEmpty
             .distinctUntilChanged()
             .skip(1)
@@ -228,6 +231,20 @@ extension AddToDoViewController {
                 }
             }
             .disposed(by: disposeBag)
+        
+        reactor.state
+            .map({ $0.isEnableAddButton })
+            .distinctUntilChanged()
+            .bind { [weak self] isValid in
+                if isValid {
+                    self?.addButton.isEnabled = true
+                    self?.addButton.backgroundColor = .mainBackground
+                } else {
+                    self?.addButton.backgroundColor = .systemGray3
+                    self?.addButton.isEnabled = false
+                }
+            }
+            .disposed(by: disposeBag)
     }
 }
 
@@ -239,7 +256,6 @@ extension AddToDoViewController: MKMapViewDelegate {
         
         if let circleOverlay = mapView.overlays.first as? MKCircle {
             mapView.removeOverlay(circleOverlay)
-            let regionRadius = 100.0
             mapView.addOverlay(MKCircle(center: centerCoordinate, radius: 100))
         }
     }

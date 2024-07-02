@@ -26,6 +26,9 @@ final class AddToDoReactor: Reactor, Stepper {
         var locationTextFieldError: ToDoTextFieldError = .none
         /// ToDo 입력값 입력창 에러
         var titleTextFieldError: ToDoTextFieldError = .none
+        /// 추가 버튼 활성화 flag
+        var isEnableAddButton: Bool = false
+        
     }
     
     enum Action {
@@ -42,6 +45,8 @@ final class AddToDoReactor: Reactor, Stepper {
     enum Mutation {
         /// todo 추가
         case addToDo
+        /// 추가 버튼 유효성 체크
+        case checkValicationForAddButton
         /// 위치 이름 유효성 체크
         case checkValidationForLocationName
         /// todo 이름 유효성 체크
@@ -61,11 +66,13 @@ final class AddToDoReactor: Reactor, Stepper {
             
         case .inputLocationName(let input):
             return Observable.concat([.just(Mutation.setLocationName(input)),
-                                      .just(Mutation.checkValidationForLocationName)])
+                                      .just(Mutation.checkValidationForLocationName),
+                                      .just(.checkValicationForAddButton)])
             
         case .inputToDoTitle(let input):
             return Observable.concat([.just(Mutation.setToDoTitle(input)),
-                                      .just(Mutation.checkValidationForToDoTitle)])
+                                      .just(Mutation.checkValidationForToDoTitle),
+                                      .just(.checkValicationForAddButton)])
             
         case .inputToDoLocation:
             return Observable.just(Mutation.setToDoLocation)
@@ -78,6 +85,12 @@ final class AddToDoReactor: Reactor, Stepper {
         switch mutation {
         case .addToDo:
             break
+            
+        case .checkValicationForAddButton:
+            newState.isEnableAddButton = newState.titleTextFieldError == .none &&
+            newState.locationTextFieldError == .none &&
+            !newState.toDo.title.isEmpty &&
+            !newState.toDo.locationName.isEmpty
             
         case .checkValidationForLocationName:
             if newState.toDo.locationName.isEmpty {
