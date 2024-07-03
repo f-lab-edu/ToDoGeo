@@ -10,12 +10,17 @@ import RxFlow
 import RxCocoa
 
 final class AddToDoReactor: Reactor, Stepper {
+    private let addToDoUseCase: AddToDoUseCaseProtocol
     var steps: PublishRelay<Step>
+    
+    var disposeBag = DisposeBag()
     
     var initialState: State
     
-    init(initialState: State) {
+    init(addToDoUseCase: AddToDoUseCaseProtocol,
+         initialState: State) {
         self.initialState = initialState
+        self.addToDoUseCase = addToDoUseCase
         self.steps = PublishRelay<Step>()
     }
     
@@ -122,5 +127,16 @@ final class AddToDoReactor: Reactor, Stepper {
         }
         
         return newState
+    }
+    
+    private func addToDo() {
+        addToDoUseCase.addToDo(currentState.toDo)
+            .observe(on: MainScheduler.instance)
+            .subscribe { [weak self] _ in
+                self?.steps.accept(AppStep.toDoRequired)
+            } onError: { error in
+                AlertManager.shared.showInfoAlert(message: error.localizedDescription)
+            }
+            .disposed(by: disposeBag)
     }
 }
