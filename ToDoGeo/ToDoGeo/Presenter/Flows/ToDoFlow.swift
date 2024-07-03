@@ -40,7 +40,8 @@ private
 extension ToDoFlow {
     func navigateToToDo() -> FlowContributors {
         let viewController = AddToDoViewController()
-        let reactor = AddToDoReactor(initialState: .init())
+        let reactor = AddToDoReactor(addToDoUseCase: AddToDoUseCase(toDoRepository: ToDoRepository()),
+                                    initialState: .init())
         viewController.bind(reactor: reactor)
         self.rootViewController.setViewControllers([viewController], animated: true)
         
