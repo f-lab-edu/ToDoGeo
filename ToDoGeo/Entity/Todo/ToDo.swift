@@ -23,3 +23,13 @@ struct ToDo {
         self.locationName = locationName
     }
 }
+
+extension ToDo {
+    func toDictionary() -> [String: Any] {
+        return [
+            "title": title,
+            "location": ["latitude": location.latitude, "longitude": location.longitude],
+            "locationName": locationName
+        ]
+    }
+}

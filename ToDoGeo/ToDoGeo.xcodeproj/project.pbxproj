@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		05DF3D1C2C353B380046E8FB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 05DF3D1B2C353B380046E8FB /* FirebaseDatabase */; };
+		05DF3D1E2C353EEA0046E8FB /* FireBaseAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF3D1D2C353EEA0046E8FB /* FireBaseAuthError.swift */; };
 		A40B66292C3443C800A093AF /* AddToDoUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */; };
 		A40B662B2C34440400A093AF /* StubAddToDoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B662A2C34440400A093AF /* StubAddToDoUseCase.swift */; };
 		A40B662D2C34441B00A093AF /* ToDoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B662C2C34441B00A093AF /* ToDoRepositoryProtocol.swift */; };
@@ -80,6 +82,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		05DF3D1D2C353EEA0046E8FB /* FireBaseAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseAuthError.swift; sourceTree = "<group>"; };
 		A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddToDoUseCaseProtocol.swift; path = UseCase/ToDo/Protocol/AddToDoUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
 		A40B662A2C34440400A093AF /* StubAddToDoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StubAddToDoUseCase.swift; path = UseCase/ToDo/Stub/StubAddToDoUseCase.swift; sourceTree = SOURCE_ROOT; };
 		A40B662C2C34441B00A093AF /* ToDoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoRepositoryProtocol.swift; path = Repository/Protocol/ToDoRepositoryProtocol.swift; sourceTree = SOURCE_ROOT; };
@@ -136,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				05DF3D1C2C353B380046E8FB /* FirebaseDatabase in Frameworks */,
 				A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */,
 				A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */,
 				A48D48B12BE13168004867C6 /* Alamofire in Frameworks */,
@@ -165,6 +169,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05DF3D1A2C353B380046E8FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A40B66252C3443A400A093AF /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +250,7 @@
 			children = (
 				A4355C082C1A6086002B210D /* AppleSignInError.swift */,
 				A4A58CF52C31319000866A0A /* ToDoTextFieldError.swift */,
+				05DF3D1D2C353EEA0046E8FB /* FireBaseAuthError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -454,6 +466,7 @@
 				A4B8841E2BCA1AB3005F79D4 /* ToDoGeoTests */,
 				A4B884282BCA1AB3005F79D4 /* ToDoGeoUITests */,
 				A4B884032BCA1AB2005F79D4 /* Products */,
+				05DF3D1A2C353B380046E8FB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -534,6 +547,7 @@
 				A48D48D02BECDEC3004867C6 /* PinLayout */,
 				A48D48D32BECDEF4004867C6 /* FlexLayout */,
 				A48D48B02BE13168004867C6 /* Alamofire */,
+				05DF3D1B2C353B380046E8FB /* FirebaseDatabase */,
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -674,6 +688,7 @@
 				A40B662F2C3448F300A093AF /* AddToDoUseCase.swift in Sources */,
 				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
 				A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */,
+				05DF3D1E2C353EEA0046E8FB /* FireBaseAuthError.swift in Sources */,
 				A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */,
 				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
@@ -1130,6 +1145,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		05DF3D1B2C353B380046E8FB /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
 		A48D48B02BE13168004867C6 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
