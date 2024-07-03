@@ -7,6 +7,6 @@
 
 import Foundation
 
-final class StubAddToDoUseCase: AddToDoUseCaseProtocol {
+final class StubAddToDoUseCase {
     
 }
