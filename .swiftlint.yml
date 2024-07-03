@@ -11,3 +11,4 @@ disabled_rules:
   - colon
   - mark
   - todo
+  - cyclomatic_complexity
