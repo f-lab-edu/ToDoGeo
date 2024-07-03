@@ -5,6 +5,8 @@
 //  Created by SUN on 4/21/24.
 //
 
+import CoreLocation
+
 import ReactorKit
 import RxFlow
 import RxCocoa
@@ -44,7 +46,8 @@ final class AddToDoReactor: Reactor, Stepper {
         /// todo 이름 입력
         case inputToDoTitle(String)
         /// todo 위치 추가
-        case inputToDoLocation
+        case inputToDoLocation(CLLocationCoordinate2D)
+        /// todo 위치 맵핑
     }
     
     enum Mutation {
@@ -61,12 +64,13 @@ final class AddToDoReactor: Reactor, Stepper {
         /// todo 이름 맵핑
         case setToDoTitle(String)
         /// todo 위치 맵핑
-        case setToDoLocation
+        case setToDoLocation(CLLocationCoordinate2D)
     }
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
         case .didTapAddButton:
+            addToDo()
             return .empty()
             
         case .inputLocationName(let input):
@@ -79,8 +83,8 @@ final class AddToDoReactor: Reactor, Stepper {
                                       .just(Mutation.checkValidationForToDoTitle),
                                       .just(.checkValicationForAddButton)])
             
-        case .inputToDoLocation:
-            return Observable.just(Mutation.setToDoLocation)
+        case .inputToDoLocation(let location):
+            return Observable.just(Mutation.setToDoLocation(location))
         }
     }
     
@@ -121,9 +125,8 @@ final class AddToDoReactor: Reactor, Stepper {
         case .setToDoTitle(let input):
             newState.toDo.title = input
             
-        case .setToDoLocation:
-            // TODO: 위치 입력
-            break
+        case .setToDoLocation(let location):
+            newState.toDo.location = location
         }
         
         return newState
@@ -132,8 +135,8 @@ final class AddToDoReactor: Reactor, Stepper {
     private func addToDo() {
         addToDoUseCase.addToDo(currentState.toDo)
             .observe(on: MainScheduler.instance)
-            .subscribe { [weak self] _ in
-                self?.steps.accept(AppStep.toDoRequired)
+            .subscribe {
+                // TODO: 화면 전환
             } onError: { error in
                 AlertManager.shared.showInfoAlert(message: error.localizedDescription)
             }

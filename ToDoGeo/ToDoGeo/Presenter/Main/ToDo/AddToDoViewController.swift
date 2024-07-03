@@ -15,6 +15,8 @@ import MapKit
 final class AddToDoViewController: UIViewController, View {
     var disposeBag = DisposeBag()
     
+    private let locationSubject = PublishSubject<CLLocationCoordinate2D>()
+    
     private let closeButton: UIButton = {
         let button = UIButton(frame: .init(origin: .zero, size: .init(width: 36.0, height: 36.0)))
         button.setImage(UIImage(named: "close"), for: .normal)
@@ -202,7 +204,10 @@ extension AddToDoViewController {
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
         
-        // TODO: 위치 입력 기능 추가
+        locationSubject
+            .map({ AddToDoReactor.Action.inputToDoLocation($0) })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
     }
     
     private func bindState(reactor: AddToDoReactor) {
@@ -253,6 +258,8 @@ extension AddToDoViewController: MKMapViewDelegate {
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         let centerCoordinate = mapView.centerCoordinate
         centerPin.coordinate = centerCoordinate
+        
+        locationSubject.onNext(centerCoordinate)
         
         if let circleOverlay = mapView.overlays.first as? MKCircle {
             mapView.removeOverlay(circleOverlay)

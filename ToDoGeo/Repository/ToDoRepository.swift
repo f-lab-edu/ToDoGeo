@@ -20,7 +20,7 @@ final class ToDoRepository: ToDoRepositoryProtocol {
                 return Disposables.create()
             }
             
-            let ref = Database.database().reference().child("users").child(userId).child("todos").childByAutoId()
+            let ref = Database.database(url: "https://todogeo-69749-default-rtdb.asia-southeast1.firebasedatabase.app/").reference().child("users").child(userId).child("todos").childByAutoId()
             ref.setValue(todo.toDictionary()){
                 (error:Error?, ref:DatabaseReference) in
                 if let error = error {
