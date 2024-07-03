@@ -41,7 +41,6 @@
 		A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */; };
 		A4A58CF62C31319000866A0A /* ToDoTextFieldError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A58CF52C31319000866A0A /* ToDoTextFieldError.swift */; };
 		A4A58CF82C31499C00866A0A /* AddToDoReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A58CF72C31499C00866A0A /* AddToDoReactorTests.swift */; };
-		A4A58CFA2C31521C00866A0A /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A58CF92C31521C00866A0A /* MapView.swift */; };
 		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
 		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
 		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
@@ -110,7 +109,6 @@
 		A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		A4A58CF52C31319000866A0A /* ToDoTextFieldError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTextFieldError.swift; sourceTree = "<group>"; };
 		A4A58CF72C31499C00866A0A /* AddToDoReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoReactorTests.swift; sourceTree = "<group>"; };
-		A4A58CF92C31521C00866A0A /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapView.swift; path = ToDoGeoTests/ReactorTests/MapView.swift; sourceTree = SOURCE_ROOT; };
 		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
 		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
@@ -442,7 +440,6 @@
 		A4AA82A12BCAC38C00800468 /* Map */ = {
 			isa = PBXGroup;
 			children = (
-				A4A58CF92C31521C00866A0A /* MapView.swift */,
 			);
 			path = Map;
 			sourceTree = "<group>";
@@ -704,7 +701,6 @@
 				A4D3D6812C1D875000FC8EA7 /* ToDo.swift in Sources */,
 				A48D48B32BE1319D004867C6 /* API.swift in Sources */,
 				A4AA82B82BD52FE700800468 /* AddToDoReactor.swift in Sources */,
-				A4A58CFA2C31521C00866A0A /* MapView.swift in Sources */,
 				A4355BFB2C19DCB5002B210D /* SignInUser.swift in Sources */,
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
