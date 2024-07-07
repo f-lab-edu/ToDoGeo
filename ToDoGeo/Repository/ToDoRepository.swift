@@ -21,10 +21,14 @@ final class ToDoRepository: ToDoRepositoryProtocol {
             }
             
             let ref = Database.database(url: "https://todogeo-69749-default-rtdb.asia-southeast1.firebasedatabase.app/").reference().child("users").child(userId).child("todos").childByAutoId()
-            ref.setValue(todo.toDictionary()) { (error:Error?, ref:DatabaseReference) in
+            let autoId = ref.key
+            ref.setValue(todo.toDictionary()) { (error: Error?, ref: DatabaseReference) in
                 if let error = error {
                     observer.onError(error)
                 } else {
+                    if let id = autoId {
+                        LocationManger.shared.registerLocationForGeofence(id: id, location: todo.location)
+                    }
                     observer.onNext(())
                 }
             }
