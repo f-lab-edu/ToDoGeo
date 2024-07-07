@@ -6,6 +6,7 @@
 //
 
 import CoreLocation
+import UserNotifications
 
 final class LocationManger: NSObject {
     static let shared = LocationManger()
@@ -44,6 +45,28 @@ extension LocationManger {
             locationManager.stopMonitoring(for: region)
         }
     }
+    
+    /// 로컬 푸쉬 기능
+    /// - Parameters:
+    ///   - id: 위치 id
+    ///   - body: push 내용
+    func pushLocationNotification(id: String,
+                                  body: String) {
+        let notificationCenter = UNUserNotificationCenter.current()
+                
+        notificationCenter.getNotificationSettings { (settings) in
+            if settings.alertSetting == .enabled {
+                let content = UNMutableNotificationContent()
+                content.title = "ToDo 알림!"
+                content.body = body
+                
+                let uuidString = UUID().uuidString
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
+                let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
+                notificationCenter.add(request)
+            }
+        }
+    }
 }
 
 // MARK: - CLLocationManagerDelegate
@@ -58,6 +81,16 @@ extension LocationManger: CLLocationManagerDelegate {
             
         default:
             AlertManager.shared.showInfoAlert(message: "위치 권한 설정을 항상으로 바꿔야 사용 가능 합니다.")
+        }
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+        switch state {
+        case .inside:
+            pushLocationNotification(id: region.identifier, body: "해야 할 일이 있어요!")
+            
+        case .outside, .unknown:
+            break
         }
     }
 }
