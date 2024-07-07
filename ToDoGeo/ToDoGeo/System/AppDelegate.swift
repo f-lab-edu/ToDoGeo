@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let center = UNUserNotificationCenter.current()
         center.delegate = self
         
-        center.requestAuthorization(options:[.badge, .alert, .sound]){ (granted, error) in }
+        center.requestAuthorization(options:[.badge, .alert, .sound]) { (_, _) in }
         application.registerForRemoteNotifications()
         
         return true
