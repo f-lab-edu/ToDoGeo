@@ -7,12 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
+		A4355BF82C19CF2A002B210D /* SignInUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355BF72C19CF2A002B210D /* SignInUseCaseProtocol.swift */; };
+		A4355BFB2C19DCB5002B210D /* SignInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355BFA2C19DCB5002B210D /* SignInUser.swift */; };
+		A4355BFF2C19E244002B210D /* StubSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355BFE2C19E244002B210D /* StubSignInUseCase.swift */; };
+		A4355C012C19E26F002B210D /* SignInRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C002C19E26F002B210D /* SignInRepositoryProtocol.swift */; };
+		A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C032C19E28E002B210D /* SignInUseCase.swift */; };
+		A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C052C19E67F002B210D /* SignInRepository.swift */; };
+		A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C082C1A6086002B210D /* AppleSignInError.swift */; };
+		A4355C0C2C1C2513002B210D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C0B2C1C2512002B210D /* Constant.swift */; };
+		A48D48B12BE13168004867C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48B02BE13168004867C6 /* Alamofire */; };
+		A48D48B32BE1319D004867C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B22BE1319D004867C6 /* API.swift */; };
+		A48D48B52BE131AC004867C6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B42BE131AC004867C6 /* Target.swift */; };
+		A48D48B72BE131B4004867C6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B62BE131B4004867C6 /* APIService.swift */; };
+		A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */; };
 		A48D48BB2BE5D852004867C6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */; };
 		A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */; };
 		A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */; };
 		A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48C12BE5D895004867C6 /* FirebaseAuth */; };
-		A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */; };
 		A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48C92BE760D5004867C6 /* Utility.swift */; };
 		A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */; };
 		A48D48D12BECDEC3004867C6 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48D02BECDEC3004867C6 /* PinLayout */; };
@@ -20,13 +31,6 @@
 		A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48D52BEDEC7F004867C6 /* AlertManager.swift */; };
 		A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48D82BEDF90B004867C6 /* UIApplicationExtension.swift */; };
 		A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */; };
-
-		A48D48B12BE13168004867C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48B02BE13168004867C6 /* Alamofire */; };
-		A48D48B32BE1319D004867C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B22BE1319D004867C6 /* API.swift */; };
-		A48D48B52BE131AC004867C6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B42BE131AC004867C6 /* Target.swift */; };
-		A48D48B72BE131B4004867C6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B62BE131B4004867C6 /* APIService.swift */; };
-		A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */; };
-
 		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
 		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
 		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
@@ -66,20 +70,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-
+		A4355BF72C19CF2A002B210D /* SignInUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInUseCaseProtocol.swift; path = UseCase/SignIn/Protocol/SignInUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
+		A4355BFA2C19DCB5002B210D /* SignInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInUser.swift; path = Entity/SignIn/SignInUser.swift; sourceTree = SOURCE_ROOT; };
+		A4355BFE2C19E244002B210D /* StubSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StubSignInUseCase.swift; path = UseCase/SignIn/Stub/StubSignInUseCase.swift; sourceTree = SOURCE_ROOT; };
+		A4355C002C19E26F002B210D /* SignInRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInRepositoryProtocol.swift; path = Repository/Protocol/SignInRepositoryProtocol.swift; sourceTree = SOURCE_ROOT; };
+		A4355C032C19E28E002B210D /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInUseCase.swift; path = UseCase/SignIn/SignInUseCase.swift; sourceTree = SOURCE_ROOT; };
+		A4355C052C19E67F002B210D /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInRepository.swift; path = Repository/SignInRepository.swift; sourceTree = SOURCE_ROOT; };
+		A4355C082C1A6086002B210D /* AppleSignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInError.swift; sourceTree = "<group>"; };
+		A4355C0B2C1C2512002B210D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoGeo.entitlements; sourceTree = "<group>"; };
+		A48D48B22BE1319D004867C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ToDoGeo/Presenter/Flows/API.swift; sourceTree = SOURCE_ROOT; };
+		A48D48B42BE131AC004867C6 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = ToDoGeo/Presenter/Flows/Target.swift; sourceTree = SOURCE_ROOT; };
+		A48D48B62BE131B4004867C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ToDoGeo/Presenter/Flows/APIService.swift; sourceTree = SOURCE_ROOT; };
+		A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkEventLogger.swift; path = ToDoGeo/Presenter/Flows/NetworkEventLogger.swift; sourceTree = SOURCE_ROOT; };
 		A48D48BA2BE5D852004867C6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactorTests.swift; sourceTree = "<group>"; };
 		A48D48C92BE760D5004867C6 /* Utility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utility.swift; sourceTree = "<group>"; };
 		A48D48CD2BECDCC3004867C6 /* RegExConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegExConstant.swift; sourceTree = "<group>"; };
 		A48D48D52BEDEC7F004867C6 /* AlertManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertManager.swift; sourceTree = "<group>"; };
 		A48D48D82BEDF90B004867C6 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
 		A48D48DA2BEDF953004867C6 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
-
-		A48D48B22BE1319D004867C6 /* API.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = API.swift; path = ToDoGeo/Presenter/Flows/API.swift; sourceTree = SOURCE_ROOT; };
-		A48D48B42BE131AC004867C6 /* Target.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Target.swift; path = ToDoGeo/Presenter/Flows/Target.swift; sourceTree = SOURCE_ROOT; };
-		A48D48B62BE131B4004867C6 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = APIService.swift; path = ToDoGeo/Presenter/Flows/APIService.swift; sourceTree = SOURCE_ROOT; };
-		A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = NetworkEventLogger.swift; path = ToDoGeo/Presenter/Flows/NetworkEventLogger.swift; sourceTree = SOURCE_ROOT; };
-
 		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
 		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
 		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
@@ -108,11 +117,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */,
-
 				A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */,
-
 				A48D48B12BE13168004867C6 /* Alamofire in Frameworks */,
-
 				A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */,
 				A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */,
 				A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */,
@@ -139,10 +145,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A4355BF62C19CF18002B210D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A4355BF72C19CF2A002B210D /* SignInUseCaseProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A4355BF92C19DC9C002B210D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A4355BFA2C19DCB5002B210D /* SignInUser.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A4355BFC2C19E1EC002B210D /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				A4355BFD2C19E22E002B210D /* Stub */,
+				A4355BF62C19CF18002B210D /* Protocol */,
+				A4355C032C19E28E002B210D /* SignInUseCase.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		A4355BFD2C19E22E002B210D /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				A4355BFE2C19E244002B210D /* StubSignInUseCase.swift */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
+		A4355C022C19E277002B210D /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				A4355C002C19E26F002B210D /* SignInRepositoryProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		A4355C072C1A607A002B210D /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				A4355C082C1A6086002B210D /* AppleSignInError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		A4355C0A2C1C2505002B210D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				A4355C0B2C1C2512002B210D /* Constant.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		A48D48C32BE5FB12004867C6 /* ReactorTests */ = {
 			isa = PBXGroup;
 			children = (
-				A48D48C42BE5FB34004867C6 /* SignInReactorTests.swift */,
 			);
 			path = ReactorTests;
 			sourceTree = "<group>";
@@ -183,7 +246,6 @@
 				A4AA82912BCA768B00800468 /* Base */,
 				A4AA82902BCA766700800468 /* Main */,
 				A4AA828F2BCA766000800468 /* SignIn */,
-				A4AA828E2BCA765400800468 /* SignUp */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -191,6 +253,8 @@
 		A4AA828B2BCA761A00800468 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				A4355C0A2C1C2505002B210D /* Constant */,
+				A4355C072C1A607A002B210D /* Error */,
 				A48D48D72BEDF0B7004867C6 /* Extension */,
 				A4AA828C2BCA762700800468 /* Resource */,
 				A48D48C92BE760D5004867C6 /* Utility.swift */,
@@ -217,13 +281,6 @@
 				A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */,
 			);
 			path = System;
-			sourceTree = "<group>";
-		};
-		A4AA828E2BCA765400800468 /* SignUp */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = SignUp;
 			sourceTree = "<group>";
 		};
 		A4AA828F2BCA766000800468 /* SignIn */ = {
@@ -254,6 +311,7 @@
 		A4AA829A2BCA7E3800800468 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				A4355BFC2C19E1EC002B210D /* SignIn */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -261,6 +319,7 @@
 		A4AA829B2BCA7E3F00800468 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A4355C022C19E277002B210D /* Protocol */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -268,6 +327,7 @@
 		A4AA829C2BCA7E4B00800468 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				A4355BF92C19DC9C002B210D /* SignIn */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -275,6 +335,7 @@
 		A4AA829D2BCA7E7500800468 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
+				A4355C052C19E67F002B210D /* SignInRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -348,6 +409,7 @@
 		A4B884042BCA1AB2005F79D4 /* ToDoGeo */ = {
 			isa = PBXGroup;
 			children = (
+				A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */,
 				A4AA828D2BCA763200800468 /* System */,
 				A4AA828B2BCA761A00800468 /* Common */,
 				A4AA82882BCA75FE00800468 /* Data */,
@@ -396,15 +458,12 @@
 				A4AA82952BCA7A2F00800468 /* RxCocoa */,
 				A4AA82982BCA7A4100800468 /* ReactorKit */,
 				A4AA82A72BD4FC2D00800468 /* RxFlow */,
-
 				A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */,
 				A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */,
 				A48D48C12BE5D895004867C6 /* FirebaseAuth */,
 				A48D48D02BECDEC3004867C6 /* PinLayout */,
 				A48D48D32BECDEF4004867C6 /* FlexLayout */,
-
 				A48D48B02BE13168004867C6 /* Alamofire */,
-
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -454,7 +513,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1530;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					A4B884012BCA1AB2005F79D4 = {
 						CreatedOnToolsVersion = 15.3;
@@ -483,13 +542,10 @@
 				A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */,
 				A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */,
-
 				A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */,
 				A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */,
-
 				A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */,
-
 			);
 			productRefGroup = A4B884032BCA1AB2005F79D4 /* Products */;
 			projectDirPath = "";
@@ -536,32 +592,33 @@
 			files = (
 				A48D48CA2BE760D5004867C6 /* Utility.swift in Sources */,
 				A4AA82B42BD52ADC00800468 /* ToDoViewController.swift in Sources */,
-
 				A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */,
-
 				A48D48B72BE131B4004867C6 /* APIService.swift in Sources */,
-				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
+				A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */,
 				A48D48B52BE131AC004867C6 /* Target.swift in Sources */,
-
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
 				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
+				A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */,
 				A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */,
 				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
+				A4355BF82C19CF2A002B210D /* SignInUseCaseProtocol.swift in Sources */,
+				A4355BFF2C19E244002B210D /* StubSignInUseCase.swift in Sources */,
+				A4355C0C2C1C2513002B210D /* Constant.swift in Sources */,
+				A4355C012C19E26F002B210D /* SignInRepositoryProtocol.swift in Sources */,
 				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
+				A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */,
 				A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */,
 				A48D48B32BE1319D004867C6 /* API.swift in Sources */,
 				A4AA82B82BD52FE700800468 /* ToDoReactor.swift in Sources */,
+				A4355BFB2C19DCB5002B210D /* SignInUser.swift in Sources */,
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
 				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,
-
 				A48D48CE2BECDCC3004867C6 /* RegExConstant.swift in Sources */,
-
 				A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -569,7 +626,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A48D48C52BE5FB34004867C6 /* SignInReactorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -733,9 +789,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ToDoGeo/ToDoGeo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RA236ULK2;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoGeo/Common/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -764,9 +821,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ToDoGeo/ToDoGeo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7RA236ULK2;
+				DEVELOPMENT_TEAM = WC4SMWCBL2;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ToDoGeo/Common/Resource/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -798,9 +856,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-
 				DEVELOPMENT_TEAM = 7RA236ULK2;
-
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -826,9 +882,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-
 				DEVELOPMENT_TEAM = 7RA236ULK2;
-
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				MARKETING_VERSION = 1.0;
@@ -852,9 +906,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-
 				DEVELOPMENT_TEAM = 7RA236ULK2;
-
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoUITests;
@@ -877,9 +929,7 @@
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-
 				DEVELOPMENT_TEAM = 7RA236ULK2;
-
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Neoguri.ToDoGeoUITests;
@@ -937,7 +987,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-
+		A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 		A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -960,14 +1017,6 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 2.0.7;
-	    };
-		};
-		A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.9.1;
 			};
 		};
 		A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
@@ -997,7 +1046,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-
+		A48D48B02BE13168004867C6 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
 		A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
@@ -1022,13 +1075,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */;
 			productName = FlexLayout;
-	
-		};
-		A48D48B02BE13168004867C6 /* Alamofire */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-
 		};
 		A4AA82952BCA7A2F00800468 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
