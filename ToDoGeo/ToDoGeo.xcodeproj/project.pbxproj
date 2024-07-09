@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		05DF3D1C2C353B380046E8FB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 05DF3D1B2C353B380046E8FB /* FirebaseDatabase */; };
 		05DF3D1E2C353EEA0046E8FB /* FireBaseAuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05DF3D1D2C353EEA0046E8FB /* FireBaseAuthError.swift */; };
+		05FB0CBB2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB0CBA2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift */; };
+		05FB0CBD2C3D550000F1D94A /* GetToDoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB0CBC2C3D550000F1D94A /* GetToDoUseCase.swift */; };
+		05FB0CC22C3D5AA000F1D94A /* ToDos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB0CC12C3D5AA000F1D94A /* ToDos.swift */; };
 		A40B66292C3443C800A093AF /* AddToDoUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */; };
 		A40B662B2C34440400A093AF /* StubAddToDoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B662A2C34440400A093AF /* StubAddToDoUseCase.swift */; };
 		A40B662D2C34441B00A093AF /* ToDoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B662C2C34441B00A093AF /* ToDoRepositoryProtocol.swift */; };
@@ -82,6 +85,9 @@
 
 /* Begin PBXFileReference section */
 		05DF3D1D2C353EEA0046E8FB /* FireBaseAuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FireBaseAuthError.swift; sourceTree = "<group>"; };
+		05FB0CBA2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetToDoUseCaseProtocol.swift; path = UseCase/ToDo/Protocol/GetToDoUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
+		05FB0CBC2C3D550000F1D94A /* GetToDoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetToDoUseCase.swift; path = UseCase/ToDo/GetToDoUseCase.swift; sourceTree = SOURCE_ROOT; };
+		05FB0CC12C3D5AA000F1D94A /* ToDos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDos.swift; path = Entity/Todo/ToDos.swift; sourceTree = SOURCE_ROOT; };
 		A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddToDoUseCaseProtocol.swift; path = UseCase/ToDo/Protocol/AddToDoUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
 		A40B662A2C34440400A093AF /* StubAddToDoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StubAddToDoUseCase.swift; path = UseCase/ToDo/Stub/StubAddToDoUseCase.swift; sourceTree = SOURCE_ROOT; };
 		A40B662C2C34441B00A093AF /* ToDoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoRepositoryProtocol.swift; path = Repository/Protocol/ToDoRepositoryProtocol.swift; sourceTree = SOURCE_ROOT; };
@@ -174,12 +180,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		05FB0CBE2C3D592700F1D94A /* FireBaseDataBase */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FireBaseDataBase;
+			sourceTree = "<group>";
+		};
 		A40B66252C3443A400A093AF /* ToDo */ = {
 			isa = PBXGroup;
 			children = (
 				A40B66272C3443B600A093AF /* Stub */,
 				A40B66262C3443AE00A093AF /* Protocol */,
 				A40B662E2C3448F300A093AF /* AddToDoUseCase.swift */,
+				05FB0CBC2C3D550000F1D94A /* GetToDoUseCase.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -188,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */,
+				05FB0CBA2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -424,6 +439,7 @@
 		A4AA829F2BCA7E8C00800468 /* Dto */ = {
 			isa = PBXGroup;
 			children = (
+				05FB0CBE2C3D592700F1D94A /* FireBaseDataBase */,
 			);
 			path = Dto;
 			sourceTree = "<group>";
@@ -514,6 +530,7 @@
 			isa = PBXGroup;
 			children = (
 				A4D3D6802C1D875000FC8EA7 /* ToDo.swift */,
+				05FB0CC12C3D5AA000F1D94A /* ToDos.swift */,
 			);
 			path = Todo;
 			sourceTree = "<group>";
@@ -677,6 +694,7 @@
 				A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
 				A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */,
+				05FB0CBD2C3D550000F1D94A /* GetToDoUseCase.swift in Sources */,
 				A48D48B72BE131B4004867C6 /* APIService.swift in Sources */,
 				A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */,
 				A48D48B52BE131AC004867C6 /* Target.swift in Sources */,
@@ -687,6 +705,7 @@
 				A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */,
 				05DF3D1E2C353EEA0046E8FB /* FireBaseAuthError.swift in Sources */,
 				A48D48D92BEDF90B004867C6 /* UIApplicationExtension.swift in Sources */,
+				05FB0CC22C3D5AA000F1D94A /* ToDos.swift in Sources */,
 				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
 				A4355BF82C19CF2A002B210D /* SignInUseCaseProtocol.swift in Sources */,
@@ -701,6 +720,7 @@
 				A4D3D6812C1D875000FC8EA7 /* ToDo.swift in Sources */,
 				A48D48B32BE1319D004867C6 /* API.swift in Sources */,
 				A4AA82B82BD52FE700800468 /* AddToDoReactor.swift in Sources */,
+				05FB0CBB2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift in Sources */,
 				A4355BFB2C19DCB5002B210D /* SignInUser.swift in Sources */,
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
