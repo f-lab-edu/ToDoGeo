@@ -26,7 +26,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
             }
             
             let autoId = self?.ref.key
-            self?.ref.child("users").child(userId).child("todos").childByAutoId().setValue(todo.toDictionary()) { (error: Error?, ref: DatabaseReference) in
+            self?.ref.child("users").child(userId).child("todos").child("\(todo.id)").setValue(todo.toDictionary()) { (error: Error?, ref: DatabaseReference) in
                 if let error = error {
                     observer.onError(error)
                 } else {
@@ -43,33 +43,21 @@ extension ToDoRepository: ToDoRepositoryProtocol {
     
     /// todo 목록 불러오기
     /// - Returns: todo 목록
-    func getToDos() -> Observable<ToDos> {
+    func getToDos() -> Observable<[ToDo]> {
         Observable.create { [weak self] observer -> Disposable in
             guard let userId = Auth.auth().currentUser?.uid  else {
                 observer.onError(FireBaseAuthError.invalidUserId)
                 return Disposables.create()
             }
             
-            self?.ref.child("users").child(userId).child("todos").observeSingleEvent(of: .value) { snapshot in
-                    
-                var todos: ToDos = .init()
-                for child in snapshot.children {
-                    if let childSnapshot = child as? DataSnapshot,
-                       let dict = childSnapshot.value as? [String: Any] {
-                        //                       let todo = ToDo.fromDictionary(dict) {
-                        if let title = dict["title"] as? String,
-                           let locationDict = dict["location"] as? [String: Any],
-                           let latitude = locationDict["latitude"] as? CLLocationDegrees,
-                           let longitude = locationDict["longitude"] as? CLLocationDegrees,
-                           let locationName = dict["locationName"] as? String {
-                            
-                            let location = CLLocationCoordinate2D(latitude: latitude, longitude: longitude)
-                            todos.todos[childSnapshot.key] = ToDo(title: title, location: location, locationName: locationName)
-                        }
-                    }
+            self?.ref.child("users").child(userId).child("todos").observe(.value) { snapshot  in
+                do {
+                    let data = try JSONSerialization.data(withJSONObject: [snapshot.key: snapshot.value])
+                    let todos = try JSONDecoder().decode(ToDosResponseDto.self, from: data)
+                    observer.onNext(todos.toDomain())
+                } catch let error {
+                    observer.onError(error)
                 }
-                
-                observer.onNext(todos)
             }
             return Disposables.create()
         }

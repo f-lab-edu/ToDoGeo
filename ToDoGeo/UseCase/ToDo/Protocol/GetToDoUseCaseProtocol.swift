@@ -10,5 +10,5 @@ import RxSwift
 protocol GetToDoUseCaseProtocol {
     /// todo 목록 불러오기
     /// - Returns: todo 목록
-    func getToDos() -> Observable<ToDos>
+    func getToDos() -> Observable<[ToDo]>
 }
