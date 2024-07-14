@@ -25,7 +25,7 @@ final class ToDoFlow: Flow {
         
         switch step {
         case .toDoRequired:
-            return self.navigateToToDo()
+            return navigateToToDoMaps()
             
         default:
             return .none
@@ -42,6 +42,16 @@ extension ToDoFlow {
         let viewController = AddToDoViewController()
         let reactor = AddToDoReactor(addToDoUseCase: AddToDoUseCase(toDoRepository: ToDoRepository()),
                                     initialState: .init())
+        viewController.bind(reactor: reactor)
+        self.rootViewController.setViewControllers([viewController], animated: true)
+        
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
+    }
+    
+    func navigateToToDoMaps() -> FlowContributors {
+        let viewController = ToDoMapsViewController()
+        let reactor = ToDoMapsReactor(getToDoUseCase: GetToDoUseCase(toDoRepository: ToDoRepository()),
+                                      initialState: .init())
         viewController.bind(reactor: reactor)
         self.rootViewController.setViewControllers([viewController], animated: true)
         
