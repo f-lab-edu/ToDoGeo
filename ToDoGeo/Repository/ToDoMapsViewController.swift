@@ -18,6 +18,17 @@ final class ToDoMapsViewController: UIViewController, View {
     
     private let mapView = MKMapView()
     
+    private let floatButton: UIButton = {
+        let image = UIImage(systemName: "plus")?.withRenderingMode(.alwaysTemplate)
+        
+        let button = UIButton()
+        button.setImage(image, for: .normal)
+        button.tintColor = .white
+        button.layer.cornerRadius = 24
+        button.backgroundColor = .mainBackground
+        return button
+    }()
+    
     private let locationManager = LocationManger.shared
     
     override func viewDidLoad() {
@@ -36,12 +47,19 @@ final class ToDoMapsViewController: UIViewController, View {
     }
     
     private func addSubviews() {
-        [mapView]
+        [mapView, floatButton]
             .forEach({ view.addSubview($0) })
+        
+        view.bringSubviewToFront(floatButton)
     }
     
     private func setupLayout() {
         mapView.pin.all()
+        
+        floatButton.pin.bottom(view.pin.safeArea + 16.0)
+            .right(16.0)
+            .width(48.0)
+            .height(48.0)
     }
     
     private func configurationMap() {
@@ -79,6 +97,11 @@ extension ToDoMapsViewController {
     
     private func bindAction(reactor: ToDoMapsReactor) {
         viewDidLoadSubject.map({ ToDoMapsReactor.Action.viewDidLoad })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
+        floatButton.rx.tap
+            .map({ ToDoMapsReactor.Action.didTapFloatButton })
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
     }

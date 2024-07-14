@@ -41,6 +41,8 @@ final class AddToDoReactor: Reactor, Stepper {
     enum Action {
         /// 추가 버튼 클릭
         case didTapAddButton
+        /// 나가기 버튼 클릭
+        case didTapDismissButton
         /// todo 위치 이름 입력
         case inputLocationName(String)
         /// todo 이름 입력
@@ -71,6 +73,10 @@ final class AddToDoReactor: Reactor, Stepper {
         switch action {
         case .didTapAddButton:
             addToDo()
+            return .empty()
+            
+        case .didTapDismissButton:
+            steps.accept(AppStep.dismissAddToDoRequired)
             return .empty()
             
         case .inputLocationName(let input):
@@ -135,8 +141,8 @@ final class AddToDoReactor: Reactor, Stepper {
     private func addToDo() {
         addToDoUseCase.addToDo(currentState.toDo)
             .observe(on: MainScheduler.instance)
-            .subscribe {
-                // TODO: 화면 전환
+            .subscribe { [weak self] in
+                self?.steps.accept(AppStep.dismissAddToDoRequired)
             } onError: { error in
                 AlertManager.shared.showInfoAlert(message: error.localizedDescription)
             }

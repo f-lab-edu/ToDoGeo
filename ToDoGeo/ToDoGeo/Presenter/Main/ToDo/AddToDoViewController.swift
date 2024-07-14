@@ -79,6 +79,7 @@ final class AddToDoViewController: UIViewController, View {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .systemBackground
         addSubviews()
         configurationMap()
     }
@@ -100,16 +101,16 @@ final class AddToDoViewController: UIViewController, View {
     }
     
     private func setupLayout() {
-        closeButton.pin.top(view.pin.safeArea)
+        closeButton.pin.top(view.pin.safeArea + 16.0)
             .right(view.pin.safeArea)
             .height(56.0)
             .marginRight(16.0)
             .sizeToFit()
         
         titleTextField.pin.top(view.pin.safeArea)
-            .height(40)
-            .marginTop(40)
-            .horizontally(16)
+            .height(40.0)
+            .marginTop(50.0)
+            .horizontally(16.0)
         
         titleTextFieldErrorLabel.pin.below(of: titleTextField)
             .height(10.0)
@@ -185,6 +186,11 @@ extension AddToDoViewController {
     }
     
     private func bindAction(reactor: AddToDoReactor) {
+        closeButton.rx.tap
+            .map({ AddToDoReactor.Action.didTapDismissButton })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         titleTextField.rx.text.orEmpty
             .distinctUntilChanged()
             .skip(1)

@@ -28,6 +28,7 @@ final class ToDoMapsReactor: Reactor, Stepper {
     }
     
     enum Action {
+        case didTapFloatButton
         case viewDidLoad
     }
     
@@ -37,6 +38,10 @@ final class ToDoMapsReactor: Reactor, Stepper {
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
+        case .didTapFloatButton:
+            steps.accept(AppStep.addToDoRequired)
+            return .empty()
+            
         case .viewDidLoad:
             return getToDos().map({ Mutation.setTodos($0) })
         }
