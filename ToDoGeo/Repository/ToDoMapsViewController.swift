@@ -110,21 +110,23 @@ extension ToDoMapsViewController {
         reactor.state
             .map({ $0.todos })
             .bind { [weak self] todos in
-                todos.forEach({
-                    let annotation = MKPointAnnotation()
-                        annotation.coordinate = CLLocationCoordinate2D(latitude: $0.location.latitude,
-                                                                       longitude: $0.location.longitude)
-                        annotation.title = $0.title
-                        annotation.subtitle = $0.locationName
-                    self?.mapView.addAnnotation(annotation)
-                })
+                self?.addToDoAnnotaions(todos)
             }
             .disposed(by: disposeBag)
     }
-    
 }
 
 // MARK: - MKMapViewDelegate
 extension ToDoMapsViewController: MKMapViewDelegate {
-
+    private func addToDoAnnotaions(_ todos: [ToDo]) {
+        mapView.removeAnnotations(mapView.annotations)
+        todos.forEach({
+            let annotation = MKPointAnnotation()
+            annotation.coordinate = CLLocationCoordinate2D(latitude: $0.location.latitude,
+                                                           longitude: $0.location.longitude)
+            annotation.title = $0.title
+            annotation.subtitle = $0.locationName
+            mapView.addAnnotation(annotation)
+        })
+    }
 }
