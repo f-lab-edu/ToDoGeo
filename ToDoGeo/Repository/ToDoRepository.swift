@@ -11,7 +11,7 @@ import RxSwift
 import CoreLocation
 
 final class ToDoRepository {
-    private let ref = Database.database(url: "https://todogeo-69749-default-rtdb.asia-southeast1.firebasedatabase.app/").reference()
+    private let ref = Database.database().reference()
 }
 
 extension ToDoRepository: ToDoRepositoryProtocol {

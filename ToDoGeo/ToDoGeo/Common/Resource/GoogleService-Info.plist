@@ -26,5 +26,7 @@
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
 	<string>1:292641501457:ios:a4a25b2e55da400be8dcb0</string>
+	<key>DATABASE_URL</key>
+	<string>https://todogeo-69749-default-rtdb.asia-southeast1.firebasedatabase.app</string>
 </dict>
 </plist>
