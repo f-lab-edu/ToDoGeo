@@ -41,8 +41,7 @@ final class AppFlow: Flow {
 }
 
 //MARK: 화면 이동 로직
-private
-extension AppFlow {
+private extension AppFlow {
     func navigateToSignin() -> FlowContributors {
         let singInFlow = SignInFlow()
         Flows.use(singInFlow, when: .created) { [weak self] (root) in

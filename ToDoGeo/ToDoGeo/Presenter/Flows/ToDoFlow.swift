@@ -42,8 +42,7 @@ final class ToDoFlow: Flow {
 }
 
 //MARK: 화면 이동 로직
-private
-extension ToDoFlow {
+private extension ToDoFlow {
     func dismissAddToDo() -> FlowContributors {
         rootViewController.dismiss(animated: true)
         return .none

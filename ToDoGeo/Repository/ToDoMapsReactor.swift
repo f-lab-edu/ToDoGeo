@@ -59,8 +59,7 @@ final class ToDoMapsReactor: Reactor, Stepper {
     }
 }
 
-private
-extension ToDoMapsReactor {
+private extension ToDoMapsReactor {
     func getToDos() -> Observable<[ToDo]> {
         getToDoUseCase.getToDos()
             .observe(on: MainScheduler.instance)
