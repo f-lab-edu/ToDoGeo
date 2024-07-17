@@ -45,7 +45,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
     /// - Returns: todo 목록
     func getList() -> Observable<[ToDo]> {
         Observable.create { [weak self] observer -> Disposable in
-            guard let userId = Auth.auth().currentUser?.uid  else {
+            guard let userId = Auth.auth().currentUser?.uid else {
                 observer.onError(FireBaseAuthError.invalidUserId)
                 return Disposables.create()
             }
