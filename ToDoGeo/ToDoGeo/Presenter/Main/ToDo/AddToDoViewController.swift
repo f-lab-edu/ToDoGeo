@@ -77,22 +77,6 @@ final class AddToDoViewController: UIViewController, View {
     private let centerPin = MKPointAnnotation()
     private let locationManager = LocationManger.shared
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        view.backgroundColor = .systemBackground
-        addSubviews()
-        configurationMap()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        setupLayout()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setMapCenterToUserLocation()
-        setCircularResionInMap()
-    }
-    
     private func addSubviews() {
         [closeButton, addButton, locationTextField, titleTextField, locationTextFieldErrorLabel, titleTextFieldErrorLabel, mapView]
             .forEach({ view.addSubview($0) })
@@ -175,6 +159,25 @@ final class AddToDoViewController: UIViewController, View {
     private func setCircularResionInMap() {
         let userLocation = locationManager.locationManager.location?.coordinate ?? .init(latitude: 37.27, longitude: 127.43)
         mapView.addOverlay(MKCircle(center: userLocation, radius: 100))
+    }
+}
+
+// MARK: - override
+extension AddToDoViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        addSubviews()
+        configurationMap()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setupLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setMapCenterToUserLocation()
+        setCircularResionInMap()
     }
 }
 

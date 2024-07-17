@@ -31,21 +31,6 @@ final class ToDoMapsViewController: UIViewController, View {
     
     private let locationManager = LocationManger.shared
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addSubviews()
-        viewDidLoadSubject.onNext(())
-    }
-    
-    override func viewDidLayoutSubviews() {
-        setupLayout()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        configurationMap()
-        setMapCenterToUserLocation()
-    }
-    
     private func addSubviews() {
         [mapView, floatButton]
             .forEach({ view.addSubview($0) })
@@ -86,6 +71,24 @@ final class ToDoMapsViewController: UIViewController, View {
         let span = MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01)
         let region = MKCoordinateRegion(center: userLocation, span: span)
         mapView.setRegion(region, animated: true)
+    }
+}
+
+// MARK: - override
+extension ToDoMapsViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        addSubviews()
+        viewDidLoadSubject.onNext(())
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setupLayout()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        configurationMap()
+        setMapCenterToUserLocation()
     }
 }
 
