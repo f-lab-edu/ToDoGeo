@@ -29,7 +29,7 @@ extension LocationManger {
     ///   - id: 위치 id
     ///   - location: 위치 좌표
     func registerLocationForGeofence(id: String, location: CLLocationCoordinate2D) {
-        var region = CLCircularRegion(center: location,
+        let region = CLCircularRegion(center: location,
                                       radius: 100,
                                       identifier: id)
         region.notifyOnEntry = true
@@ -60,7 +60,6 @@ extension LocationManger {
                 content.title = "ToDo 알림!"
                 content.body = body
                 
-                let uuidString = UUID().uuidString
                 let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
                 let request = UNNotificationRequest(identifier: id, content: content, trigger: trigger)
                 notificationCenter.add(request)
