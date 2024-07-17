@@ -61,11 +61,9 @@ final class ToDoMapsReactor: Reactor, Stepper {
 
 private extension ToDoMapsReactor {
     func getToDos() -> Observable<[ToDo]> {
-        getToDoUseCase.getToDos()
+        getToDoUseCase.getList()
             .observe(on: MainScheduler.instance)
-            .map({
-                return $0
-            })
+            .map({ $0 })
             .do(onError: { error in
                 AlertManager.shared.showInfoAlert(message: error.localizedDescription)
             })
