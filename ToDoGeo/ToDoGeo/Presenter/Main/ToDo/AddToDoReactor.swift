@@ -139,7 +139,7 @@ final class AddToDoReactor: Reactor, Stepper {
     }
     
     private func addToDo() {
-        addToDoUseCase.addToDo(currentState.toDo)
+        addToDoUseCase.add(currentState.toDo)
             .observe(on: MainScheduler.instance)
             .subscribe { [weak self] in
                 self?.steps.accept(AppStep.dismissAddToDoRequired)

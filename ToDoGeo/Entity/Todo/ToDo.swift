@@ -28,11 +28,11 @@ struct ToDo {
 }
 
 extension ToDo {
-    func toDictionary() -> [String: Any] {
+    func toDic() -> [String: Any] {
         return [
             "id": id.uuidString,
             "title": title,
-            "location": ["latitude": location.latitude, "longitude": location.longitude],
+            "location": ["lat": location.latitude, "lng": location.longitude],
             "locationName": locationName
         ]
     }

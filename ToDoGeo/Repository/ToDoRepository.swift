@@ -18,7 +18,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
     /// ToDo 등록
     /// - Parameter todo: 등록할 ToDo
     /// - Returns: 등록 결과
-    func addToDo(_ todo: ToDo) -> Observable<Void> {
+    func add(_ todo: ToDo) -> Observable<Void> {
         Observable.create { [weak self] observer -> Disposable in
             guard let userId = Auth.auth().currentUser?.uid  else {
                 observer.onError(FireBaseAuthError.invalidUserId)
@@ -26,7 +26,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
             }
             
             let autoId = self?.ref.key
-            self?.ref.child("users").child(userId).child("todos").child("\(todo.id)").setValue(todo.toDictionary()) { (error: Error?, ref: DatabaseReference) in
+            self?.ref.child("users").child(userId).child("todos").child("\(todo.id)").setValue(todo.toDic()) { (error: Error?, ref: DatabaseReference) in
                 if let error = error {
                     observer.onError(error)
                 } else {
@@ -43,7 +43,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
     
     /// todo 목록 불러오기
     /// - Returns: todo 목록
-    func getToDos() -> Observable<[ToDo]> {
+    func getList() -> Observable<[ToDo]> {
         Observable.create { [weak self] observer -> Disposable in
             guard let userId = Auth.auth().currentUser?.uid  else {
                 observer.onError(FireBaseAuthError.invalidUserId)

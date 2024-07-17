@@ -19,8 +19,8 @@ struct ToDoResponseDto: Codable {
 }
 
 struct LocationDto: Codable {
-    var latitude: Double?
-    var longitude: Double?
+    var lat: Double?
+    var lng: Double?
 }
 
 extension ToDosResponseDto {
@@ -28,8 +28,8 @@ extension ToDosResponseDto {
         return todos?.values.map({
             ToDo(id: .init(uuidString: $0.id ?? "") ?? UUID(),
                  title: $0.title ?? "",
-                 location: .init(latitude: $0.location?.latitude ?? 0.0,
-                                 longitude: $0.location?.longitude ?? 0.0),
+                 location: .init(latitude: $0.location?.lat ?? 0.0,
+                                 longitude: $0.location?.lng ?? 0.0),
                  locationName: $0.locationName ?? "") }) ?? []
     }
 }
