@@ -13,11 +13,11 @@ import RxCocoa
 
 final class AddToDoReactor: Reactor, Stepper {
     private let addToDoUseCase: AddToDoUseCaseProtocol
-    var steps: PublishRelay<Step>
-    
     var disposeBag = DisposeBag()
     
+    var steps: PublishRelay<Step>
     var initialState: State
+    private let maxTextFieldLength: Int = 15
     
     init(addToDoUseCase: AddToDoUseCaseProtocol,
          initialState: State) {
@@ -110,7 +110,7 @@ final class AddToDoReactor: Reactor, Stepper {
         case .checkValidationForLocationName:
             if newState.toDo.locationName.isEmpty {
                 newState.locationTextFieldError = .emptyTextField
-            } else if newState.toDo.locationName.count > 15 {
+            } else if newState.toDo.locationName.count > maxTextFieldLength {
                 newState.locationTextFieldError = .overLength
             } else {
                 newState.locationTextFieldError = .none
@@ -119,7 +119,7 @@ final class AddToDoReactor: Reactor, Stepper {
         case .checkValidationForToDoTitle:
             if newState.toDo.title.isEmpty {
                 newState.titleTextFieldError = .emptyTextField
-            } else if newState.toDo.title.count > 15 {
+            } else if newState.toDo.title.count > maxTextFieldLength {
                 newState.titleTextFieldError = .overLength
             } else {
                 newState.titleTextFieldError = .none
