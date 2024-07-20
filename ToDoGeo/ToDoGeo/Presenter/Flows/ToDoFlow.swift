@@ -39,8 +39,10 @@ final class ToDoFlow: Flow {
 private
 extension ToDoFlow {
     func navigateToToDo() -> FlowContributors {
-        let viewController = ToDoViewController()
-        let reactor = ToDoReactor(initialState: .init())
+        let viewController = AddToDoViewController()
+        let reactor = AddToDoReactor(addToDoUseCase: AddToDoUseCase(toDoRepository: ToDoRepository()),
+                                    initialState: .init())
+        viewController.bind(reactor: reactor)
         self.rootViewController.setViewControllers([viewController], animated: true)
         
         return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))

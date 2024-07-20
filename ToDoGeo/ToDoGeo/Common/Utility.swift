@@ -17,11 +17,7 @@ struct Utility {
     }
     
     static func load(key: String) -> String {
-        if let value = UserDefaults.standard.string(forKey: key) {
-            return value
-        } else {
-            return ""
-        }
+        return UserDefaults.standard.string(forKey: key) ?? ""
     }
     
     static func delete(key: String) {
