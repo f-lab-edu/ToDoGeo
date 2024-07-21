@@ -71,7 +71,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
                 return Disposables.create()
             }
             
-            self?.ref.child("users").child(userId).child("todos/\(item.id)").removeValue{ (error: Error?, ref: DatabaseReference) in
+            self?.ref.child("users").child(userId).child("todos/\(item.id)").removeValue { (error: Error?, ref: DatabaseReference) in
                 if let error = error {
                     observer.onError(error)
                 } else {
