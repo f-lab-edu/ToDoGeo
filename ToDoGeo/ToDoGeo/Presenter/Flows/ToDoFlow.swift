@@ -59,7 +59,8 @@ private extension ToDoFlow {
     
     func navigateToToDoMaps() -> FlowContributors {
         let viewController = ToDoMapsViewController()
-        let reactor = ToDoMapsReactor(getToDoUseCase: GetToDoUseCase(toDoRepository: ToDoRepository()),
+        let reactor = ToDoMapsReactor(completeToDoUseCase: CompleteToDoUseCase(toDoRepository: ToDoRepository()),
+                                      getToDoUseCase: GetToDoUseCase(toDoRepository: ToDoRepository()),
                                       initialState: .init())
         viewController.bind(reactor: reactor)
         self.rootViewController.setViewControllers([viewController], animated: true)

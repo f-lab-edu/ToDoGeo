@@ -14,6 +14,7 @@ import RxCocoa
 
 final class ToDoMapsViewController: UIViewController, View {
     var disposeBag = DisposeBag()
+    private let completeToDoSubject = PublishSubject<ToDo>()
     private let viewDidLoadSubject = PublishSubject<Void>()
     
     private let mapView = MKMapView()
@@ -72,6 +73,24 @@ final class ToDoMapsViewController: UIViewController, View {
         let region = MKCoordinateRegion(center: userLocation, span: span)
         mapView.setRegion(region, animated: true)
     }
+    
+    private func showCompleteToDoAlert(_ todo: ToDo) {
+        let alertController = UIAlertController(title: "ToDo 완료", 
+                                                message: "\(todo.title)을 완료 하시겠습니까?",
+                                                preferredStyle: .alert)
+        
+        let okAction = UIAlertAction(title: "완료", style: .default) { [weak self] _ in
+            self?.completeToDoSubject.onNext(todo)
+        }
+
+        let cancelAction = UIAlertAction(title: "취소", style: .default)
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true, completion: nil)
+    }
+    
 }
 
 // MARK: - override
@@ -86,7 +105,7 @@ extension ToDoMapsViewController {
         setupLayout()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         configurationMap()
         setMapCenterToUserLocation()
     }
@@ -99,6 +118,10 @@ extension ToDoMapsViewController {
     }
     
     private func bindAction(reactor: ToDoMapsReactor) {
+        completeToDoSubject.map({ ToDoMapsReactor.Action.completeToDo($0) })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         viewDidLoadSubject.map({ ToDoMapsReactor.Action.viewDidLoad })
             .bind(to: reactor.action)
             .disposed(by: disposeBag)
@@ -124,12 +147,15 @@ extension ToDoMapsViewController: MKMapViewDelegate {
     private func addToDoAnnotaions(_ todos: [ToDo]) {
         mapView.removeAnnotations(mapView.annotations)
         todos.forEach({
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: $0.location.latitude,
-                                                           longitude: $0.location.longitude)
-            annotation.title = $0.title
-            annotation.subtitle = $0.locationName
+            let annotation = ToDoAnnotation(todo: $0,
+                                            coordinate: $0.location)
             mapView.addAnnotation(annotation)
         })
+    }
+    
+    func mapView(_ mapView: MKMapView, didSelect annotation: any MKAnnotation) {
+        if let annotation = annotation as? ToDoAnnotation {
+            showCompleteToDoAlert(annotation.todo)
+        }
     }
 }

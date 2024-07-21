@@ -10,15 +10,18 @@ import RxFlow
 import RxCocoa
 
 final class ToDoMapsReactor: Reactor, Stepper {
+    private let completeToDoUseCase: CompleteToDoUseCaseProtocol
     private let getToDoUseCase: GetToDoUseCaseProtocol
     var steps: PublishRelay<Step>
     var disposeBag = DisposeBag()
 
     var initialState: State
     
-    init(getToDoUseCase: GetToDoUseCaseProtocol,
+    init(completeToDoUseCase: CompleteToDoUseCaseProtocol,
+         getToDoUseCase: GetToDoUseCaseProtocol,
          initialState: State) {
         self.initialState = initialState
+        self.completeToDoUseCase = completeToDoUseCase
         self.getToDoUseCase = getToDoUseCase
         self.steps = PublishRelay<Step>()
     }
@@ -28,6 +31,7 @@ final class ToDoMapsReactor: Reactor, Stepper {
     }
     
     enum Action {
+        case completeToDo(ToDo)
         case didTapFloatButton
         case viewDidLoad
     }
@@ -38,6 +42,10 @@ final class ToDoMapsReactor: Reactor, Stepper {
     
     func mutate(action: Action) -> Observable<Mutation> {
         switch action {
+        case .completeToDo(let todo):
+            completeToDo(todo)
+            return .empty()
+            
         case .didTapFloatButton:
             steps.accept(AppStep.addToDoRequired)
             return .empty()
@@ -60,6 +68,15 @@ final class ToDoMapsReactor: Reactor, Stepper {
 }
 
 private extension ToDoMapsReactor {
+    func completeToDo(_ item: ToDo) {
+        completeToDoUseCase.completeToDo(item)
+            .observe(on: MainScheduler.instance)
+            .subscribe(onError: { error in
+                AlertManager.shared.showInfoAlert(message: error.localizedDescription)
+            })
+            .disposed(by: disposeBag)
+    }
+    
     func getToDos() -> Observable<[ToDo]> {
         getToDoUseCase.getList()
             .observe(on: MainScheduler.instance)
