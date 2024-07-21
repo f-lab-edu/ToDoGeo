@@ -24,6 +24,8 @@
 		A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C052C19E67F002B210D /* SignInRepository.swift */; };
 		A4355C092C1A6086002B210D /* AppleSignInError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C082C1A6086002B210D /* AppleSignInError.swift */; };
 		A4355C0C2C1C2513002B210D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C0B2C1C2512002B210D /* Constant.swift */; };
+		A4546BA42C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4546BA32C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift */; };
+		A4546BA62C4CF98100C48D96 /* CompleteToDoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4546BA52C4CF98100C48D96 /* CompleteToDoUseCase.swift */; };
 		A4671B502C1F082A00AFE7B2 /* LocationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671B4F2C1F082A00AFE7B2 /* LocationManger.swift */; };
 		A484607E2C41497D0030E165 /* ToDoResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484607D2C41497D0030E165 /* ToDoResponseDto.swift */; };
 		A48460802C425AD20030E165 /* ToDoMapsReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484607F2C425AD20030E165 /* ToDoMapsReactor.swift */; };
@@ -103,6 +105,8 @@
 		A4355C082C1A6086002B210D /* AppleSignInError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleSignInError.swift; sourceTree = "<group>"; };
 		A4355C0B2C1C2512002B210D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoGeo.entitlements; sourceTree = "<group>"; };
+		A4546BA32C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompleteToDoUseCaseProtocol.swift; path = UseCase/ToDo/Protocol/CompleteToDoUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
+		A4546BA52C4CF98100C48D96 /* CompleteToDoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompleteToDoUseCase.swift; path = UseCase/ToDo/CompleteToDoUseCase.swift; sourceTree = SOURCE_ROOT; };
 		A4671B4F2C1F082A00AFE7B2 /* LocationManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManger.swift; sourceTree = "<group>"; };
 		A484607D2C41497D0030E165 /* ToDoResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoResponseDto.swift; path = Repository/ToDoResponseDto.swift; sourceTree = SOURCE_ROOT; };
 		A484607F2C425AD20030E165 /* ToDoMapsReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoMapsReactor.swift; path = Repository/ToDoMapsReactor.swift; sourceTree = SOURCE_ROOT; };
@@ -199,6 +203,7 @@
 				A40B66262C3443AE00A093AF /* Protocol */,
 				A40B662E2C3448F300A093AF /* AddToDoUseCase.swift */,
 				05FB0CBC2C3D550000F1D94A /* GetToDoUseCase.swift */,
+				A4546BA52C4CF98100C48D96 /* CompleteToDoUseCase.swift */,
 			);
 			path = ToDo;
 			sourceTree = "<group>";
@@ -208,6 +213,7 @@
 			children = (
 				A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */,
 				05FB0CBA2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift */,
+				A4546BA32C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -699,6 +705,7 @@
 				A4AA82B42BD52ADC00800468 /* AddToDoViewController.swift in Sources */,
 				A48D48D62BEDEC7F004867C6 /* AlertManager.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
+				A4546BA62C4CF98100C48D96 /* CompleteToDoUseCase.swift in Sources */,
 				A48D48DB2BEDF953004867C6 /* UIViewControllerExtension.swift in Sources */,
 				05FB0CBD2C3D550000F1D94A /* GetToDoUseCase.swift in Sources */,
 				A48460822C4265C60030E165 /* ToDoMapsViewController.swift in Sources */,
@@ -732,6 +739,7 @@
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
 				A484607E2C41497D0030E165 /* ToDoResponseDto.swift in Sources */,
+				A4546BA42C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift in Sources */,
 				A40B66292C3443C800A093AF /* AddToDoUseCaseProtocol.swift in Sources */,
 				A4A58CF62C31319000866A0A /* ToDoTextFieldError.swift in Sources */,
 				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,

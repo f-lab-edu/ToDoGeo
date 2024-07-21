@@ -16,4 +16,9 @@ protocol ToDoRepositoryProtocol {
     /// todo 목록 불러오기
     /// - Returns: todo 목록
     func getList() -> Observable<[ToDo]>
+    
+    /// todo 삭제
+    /// - Parameter item: 삭제할 todo
+    /// - Returns: 결과
+    func remove(_ item: ToDo) -> Observable<Void>
 }
