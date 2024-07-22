@@ -16,6 +16,11 @@ enum AppStep: Step {
     case signUpRequired
     
     //MARK: todo 화면 이동 로직 case
+    /// todo 추가 화면으로 이동
+    case addToDoRequired
+    /// todo 추가 화면 dismiss
+    case dismissAddToDoRequired
     /// todo 화면으로 이동
     case toDoRequired
+    
 }

@@ -11,5 +11,5 @@ protocol AddToDoUseCaseProtocol {
     /// ToDo 등록
     /// - Parameter todo: 등록할 ToDo
     /// - Returns: 등록 결과
-    func addToDo(_ todo: ToDo) -> Observable<Void>
+    func add(_ item: ToDo) -> Observable<Void>
 }

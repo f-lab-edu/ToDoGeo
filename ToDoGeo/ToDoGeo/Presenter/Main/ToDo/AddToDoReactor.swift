@@ -13,11 +13,11 @@ import RxCocoa
 
 final class AddToDoReactor: Reactor, Stepper {
     private let addToDoUseCase: AddToDoUseCaseProtocol
-    var steps: PublishRelay<Step>
-    
     var disposeBag = DisposeBag()
     
+    var steps: PublishRelay<Step>
     var initialState: State
+    private let maxTextFieldLength: Int = 15
     
     init(addToDoUseCase: AddToDoUseCaseProtocol,
          initialState: State) {
@@ -41,6 +41,8 @@ final class AddToDoReactor: Reactor, Stepper {
     enum Action {
         /// 추가 버튼 클릭
         case didTapAddButton
+        /// 나가기 버튼 클릭
+        case didTapDismissButton
         /// todo 위치 이름 입력
         case inputLocationName(String)
         /// todo 이름 입력
@@ -71,6 +73,10 @@ final class AddToDoReactor: Reactor, Stepper {
         switch action {
         case .didTapAddButton:
             addToDo()
+            return .empty()
+            
+        case .didTapDismissButton:
+            steps.accept(AppStep.dismissAddToDoRequired)
             return .empty()
             
         case .inputLocationName(let input):
@@ -104,7 +110,7 @@ final class AddToDoReactor: Reactor, Stepper {
         case .checkValidationForLocationName:
             if newState.toDo.locationName.isEmpty {
                 newState.locationTextFieldError = .emptyTextField
-            } else if newState.toDo.locationName.count > 15 {
+            } else if newState.toDo.locationName.count > maxTextFieldLength {
                 newState.locationTextFieldError = .overLength
             } else {
                 newState.locationTextFieldError = .none
@@ -113,7 +119,7 @@ final class AddToDoReactor: Reactor, Stepper {
         case .checkValidationForToDoTitle:
             if newState.toDo.title.isEmpty {
                 newState.titleTextFieldError = .emptyTextField
-            } else if newState.toDo.title.count > 15 {
+            } else if newState.toDo.title.count > maxTextFieldLength {
                 newState.titleTextFieldError = .overLength
             } else {
                 newState.titleTextFieldError = .none
@@ -133,10 +139,10 @@ final class AddToDoReactor: Reactor, Stepper {
     }
     
     private func addToDo() {
-        addToDoUseCase.addToDo(currentState.toDo)
+        addToDoUseCase.add(currentState.toDo)
             .observe(on: MainScheduler.instance)
-            .subscribe {
-                // TODO: 화면 전환
+            .subscribe { [weak self] in
+                self?.steps.accept(AppStep.dismissAddToDoRequired)
             } onError: { error in
                 AlertManager.shared.showInfoAlert(message: error.localizedDescription)
             }

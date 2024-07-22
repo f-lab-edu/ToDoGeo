@@ -8,6 +8,7 @@
 import CoreLocation
 
 struct ToDo {
+    var id: UUID
     /// 제목
     var title: String
     /// 알림 받을 위치
@@ -15,9 +16,11 @@ struct ToDo {
     /// 위치 이름
     var locationName: String
     
-    init(title: String = "",
+    init(id: UUID = UUID(),
+         title: String = "",
          location: CLLocationCoordinate2D = .init(),
          locationName: String = "") {
+        self.id = id
         self.title = title
         self.location = location
         self.locationName = locationName
@@ -25,10 +28,11 @@ struct ToDo {
 }
 
 extension ToDo {
-    func toDictionary() -> [String: Any] {
+    func toDic() -> [String: Any] {
         return [
+            "id": id.uuidString,
             "title": title,
-            "location": ["latitude": location.latitude, "longitude": location.longitude],
+            "location": ["lat": location.latitude, "lng": location.longitude],
             "locationName": locationName
         ]
     }

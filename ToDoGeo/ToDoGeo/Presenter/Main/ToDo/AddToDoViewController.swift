@@ -77,21 +77,6 @@ final class AddToDoViewController: UIViewController, View {
     private let centerPin = MKPointAnnotation()
     private let locationManager = LocationManger.shared
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addSubviews()
-        configurationMap()
-    }
-    
-    override func viewDidLayoutSubviews() {
-        setupLayout()
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        setMapCenterToUserLocation()
-        setCircularResionInMap()
-    }
-    
     private func addSubviews() {
         [closeButton, addButton, locationTextField, titleTextField, locationTextFieldErrorLabel, titleTextFieldErrorLabel, mapView]
             .forEach({ view.addSubview($0) })
@@ -100,16 +85,16 @@ final class AddToDoViewController: UIViewController, View {
     }
     
     private func setupLayout() {
-        closeButton.pin.top(view.pin.safeArea)
+        closeButton.pin.top(view.pin.safeArea + 16.0)
             .right(view.pin.safeArea)
             .height(56.0)
             .marginRight(16.0)
             .sizeToFit()
         
         titleTextField.pin.top(view.pin.safeArea)
-            .height(40)
-            .marginTop(40)
-            .horizontally(16)
+            .height(40.0)
+            .marginTop(50.0)
+            .horizontally(16.0)
         
         titleTextFieldErrorLabel.pin.below(of: titleTextField)
             .height(10.0)
@@ -177,6 +162,25 @@ final class AddToDoViewController: UIViewController, View {
     }
 }
 
+// MARK: - override
+extension AddToDoViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.backgroundColor = .systemBackground
+        addSubviews()
+        configurationMap()
+    }
+    
+    override func viewDidLayoutSubviews() {
+        setupLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        setMapCenterToUserLocation()
+        setCircularResionInMap()
+    }
+}
+
 // MARK: - Binding
 extension AddToDoViewController {
     func bind(reactor: AddToDoReactor) {
@@ -185,6 +189,11 @@ extension AddToDoViewController {
     }
     
     private func bindAction(reactor: AddToDoReactor) {
+        closeButton.rx.tap
+            .map({ AddToDoReactor.Action.didTapDismissButton })
+            .bind(to: reactor.action)
+            .disposed(by: disposeBag)
+        
         titleTextField.rx.text.orEmpty
             .distinctUntilChanged()
             .skip(1)

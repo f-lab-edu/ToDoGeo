@@ -25,7 +25,13 @@ final class ToDoFlow: Flow {
         
         switch step {
         case .toDoRequired:
-            return self.navigateToToDo()
+            return navigateToToDoMaps()
+            
+        case .addToDoRequired:
+            return presentToAddToDo()
+            
+        case .dismissAddToDoRequired:
+            return dismissAddToDo()
             
         default:
             return .none
@@ -36,12 +42,25 @@ final class ToDoFlow: Flow {
 }
 
 //MARK: 화면 이동 로직
-private
-extension ToDoFlow {
-    func navigateToToDo() -> FlowContributors {
+private extension ToDoFlow {
+    func dismissAddToDo() -> FlowContributors {
+        rootViewController.dismiss(animated: true)
+        return .none
+    }
+    
+    func presentToAddToDo() -> FlowContributors {
         let viewController = AddToDoViewController()
         let reactor = AddToDoReactor(addToDoUseCase: AddToDoUseCase(toDoRepository: ToDoRepository()),
                                     initialState: .init())
+        viewController.bind(reactor: reactor)
+        rootViewController.present(viewController, animated: true)
+        return .one(flowContributor: .contribute(withNextPresentable: viewController, withNextStepper: reactor))
+    }
+    
+    func navigateToToDoMaps() -> FlowContributors {
+        let viewController = ToDoMapsViewController()
+        let reactor = ToDoMapsReactor(getToDoUseCase: GetToDoUseCase(toDoRepository: ToDoRepository()),
+                                      initialState: .init())
         viewController.bind(reactor: reactor)
         self.rootViewController.setViewControllers([viewController], animated: true)
         

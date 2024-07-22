@@ -16,11 +16,11 @@ final class AppStepper: Stepper {
     let disposeBag = DisposeBag()
     
     var initialStep: Step {
-//        if let userId = Auth.auth().currentUser?.uid,
-//           userId == Utility.load(key: Constant.userID) {
+        if let userId = Auth.auth().currentUser?.uid,
+           userId == Utility.load(key: Constant.userID) {
             return AppStep.toDoRequired
-//        } else {
-//            return AppStep.signInRequired
-//        }
+        } else {
+            return AppStep.signInRequired
+        }
     }
 }
