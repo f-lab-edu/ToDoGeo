@@ -12,6 +12,7 @@ import FirebaseAuth
 import ReactorKit
 import RxFlow
 import RxCocoa
+import Shared
 
 final class SignInReactor: NSObject, Reactor, Stepper {
     var disposeBag = DisposeBag()

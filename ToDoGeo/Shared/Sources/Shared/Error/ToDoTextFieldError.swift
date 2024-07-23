@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum ToDoTextFieldError {
+public enum ToDoTextFieldError {
     /// 에러 없음
     case none
     /// 입력값 공백
@@ -15,7 +15,7 @@ enum ToDoTextFieldError {
     /// 입력값 제한 초과
     case overLength
     
-    var errorMessage: String {
+    public var errorMessage: String {
         switch self {
         case .none:
             return ""

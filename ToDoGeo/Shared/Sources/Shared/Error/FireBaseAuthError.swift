@@ -7,6 +7,6 @@
 
 import Foundation
 
-enum FireBaseAuthError: Error {
+public enum FireBaseAuthError: Error {
     case invalidUserId
 }

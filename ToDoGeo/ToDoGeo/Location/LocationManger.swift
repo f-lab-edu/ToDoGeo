@@ -7,6 +7,7 @@
 
 import CoreLocation
 import UserNotifications
+import Shared
 
 final class LocationManger: NSObject {
     static let shared = LocationManger()

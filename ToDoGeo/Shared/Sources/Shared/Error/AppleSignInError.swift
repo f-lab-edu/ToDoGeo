@@ -7,7 +7,7 @@
 
 import Foundation
 
-enum AppleSignInError: Error {
+public enum AppleSignInError: Error {
     case invalidCredential(message: String)
     case existedAccount
 }

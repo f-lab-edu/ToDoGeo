@@ -7,11 +7,11 @@
 
 import UIKit
 
-final class AlertManager {
-    static let shared = AlertManager()
+final public class AlertManager {
+    public static let shared = AlertManager()
     private init() {}
     
-    func showInfoAlert(message: String, completeTitle: String = "확인", completeHandler:(() -> Void)? = nil) {
+    public func showInfoAlert(message: String, completeTitle: String = "확인", completeHandler:(() -> Void)? = nil) {
         guard let keyWindow = UIApplication.shared.keyWindow else {
             return
         }

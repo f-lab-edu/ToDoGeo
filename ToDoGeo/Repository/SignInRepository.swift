@@ -9,6 +9,7 @@ import AuthenticationServices
 
 import RxSwift
 import FirebaseAuth
+import Shared
 
 final class SignInRepository: SignInRepositoryProtocol {
     func appleSignUp(credential: ASAuthorizationAppleIDCredential, nonce: String?) -> Observable<SignInUser> {
