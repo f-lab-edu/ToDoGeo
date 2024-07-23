@@ -7,11 +7,11 @@
 
 import Foundation
 
-struct SignInUser {
+public struct SignInUser {
     /// 사용자 uuid
-    var id: String
+    public var id: String
     /// 사용자 email
-    var email: String
+    public var email: String
     /// 사용자 이름
-    var name: String
+    public var name: String
 }

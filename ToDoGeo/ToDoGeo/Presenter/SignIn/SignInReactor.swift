@@ -12,6 +12,7 @@ import FirebaseAuth
 import ReactorKit
 import RxFlow
 import RxCocoa
+import Domain
 import Shared
 
 final class SignInReactor: NSObject, Reactor, Stepper {

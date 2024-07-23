@@ -9,7 +9,7 @@ import AuthenticationServices
 
 import RxSwift
 
-protocol SignInRepositoryProtocol {
+public protocol SignInRepositoryProtocol {
     /// 애플 회원가입
     /// - Parameters:
     ///   - credential: 애플 로그인 정보

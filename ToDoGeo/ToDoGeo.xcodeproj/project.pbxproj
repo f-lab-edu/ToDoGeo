@@ -7,43 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05DF3D1C2C353B380046E8FB /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 05DF3D1B2C353B380046E8FB /* FirebaseDatabase */; };
-		05FB0CBB2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB0CBA2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift */; };
-		05FB0CBD2C3D550000F1D94A /* GetToDoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05FB0CBC2C3D550000F1D94A /* GetToDoUseCase.swift */; };
-		A40B66292C3443C800A093AF /* AddToDoUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */; };
-		A40B662B2C34440400A093AF /* StubAddToDoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B662A2C34440400A093AF /* StubAddToDoUseCase.swift */; };
-		A40B662D2C34441B00A093AF /* ToDoRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B662C2C34441B00A093AF /* ToDoRepositoryProtocol.swift */; };
-		A40B662F2C3448F300A093AF /* AddToDoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B662E2C3448F300A093AF /* AddToDoUseCase.swift */; };
 		A40B66312C344BFC00A093AF /* ToDoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B66302C344BFC00A093AF /* ToDoRepository.swift */; };
-		A4355BF82C19CF2A002B210D /* SignInUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355BF72C19CF2A002B210D /* SignInUseCaseProtocol.swift */; };
-		A4355BFB2C19DCB5002B210D /* SignInUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355BFA2C19DCB5002B210D /* SignInUser.swift */; };
-		A4355BFF2C19E244002B210D /* StubSignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355BFE2C19E244002B210D /* StubSignInUseCase.swift */; };
-		A4355C012C19E26F002B210D /* SignInRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C002C19E26F002B210D /* SignInRepositoryProtocol.swift */; };
-		A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C032C19E28E002B210D /* SignInUseCase.swift */; };
 		A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C052C19E67F002B210D /* SignInRepository.swift */; };
-		A4546BA42C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4546BA32C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift */; };
-		A4546BA62C4CF98100C48D96 /* CompleteToDoUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4546BA52C4CF98100C48D96 /* CompleteToDoUseCase.swift */; };
 		A4546BA82C4D248800C48D96 /* ToDoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4546BA72C4D248800C48D96 /* ToDoAnnotation.swift */; };
 		A4546BB02C4FDCD900C48D96 /* Shared in Frameworks */ = {isa = PBXBuildFile; productRef = A4546BAF2C4FDCD900C48D96 /* Shared */; };
+		A4546BB62C4FDF8600C48D96 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = A4546BB52C4FDF8600C48D96 /* Domain */; };
 		A4671B502C1F082A00AFE7B2 /* LocationManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4671B4F2C1F082A00AFE7B2 /* LocationManger.swift */; };
 		A484607E2C41497D0030E165 /* ToDoResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484607D2C41497D0030E165 /* ToDoResponseDto.swift */; };
 		A48460802C425AD20030E165 /* ToDoMapsReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484607F2C425AD20030E165 /* ToDoMapsReactor.swift */; };
 		A48460822C4265C60030E165 /* ToDoMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48460812C4265C60030E165 /* ToDoMapsViewController.swift */; };
 		A48460862C4561A50030E165 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A48460852C4561A50030E165 /* GoogleService-Info.plist */; };
-		A48D48B12BE13168004867C6 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48B02BE13168004867C6 /* Alamofire */; };
 		A48D48B32BE1319D004867C6 /* API.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B22BE1319D004867C6 /* API.swift */; };
 		A48D48B52BE131AC004867C6 /* Target.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B42BE131AC004867C6 /* Target.swift */; };
 		A48D48B72BE131B4004867C6 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B62BE131B4004867C6 /* APIService.swift */; };
 		A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48D48B82BE131CB004867C6 /* NetworkEventLogger.swift */; };
-		A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */; };
-		A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */; };
-		A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48C12BE5D895004867C6 /* FirebaseAuth */; };
-		A48D48D12BECDEC3004867C6 /* PinLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48D02BECDEC3004867C6 /* PinLayout */; };
-		A48D48D42BECDEF4004867C6 /* FlexLayout in Frameworks */ = {isa = PBXBuildFile; productRef = A48D48D32BECDEF4004867C6 /* FlexLayout */; };
 		A4A58CF82C31499C00866A0A /* AddToDoReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A58CF72C31499C00866A0A /* AddToDoReactorTests.swift */; };
-		A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82952BCA7A2F00800468 /* RxCocoa */; };
-		A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82982BCA7A4100800468 /* ReactorKit */; };
-		A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */ = {isa = PBXBuildFile; productRef = A4AA82A72BD4FC2D00800468 /* RxFlow */; };
 		A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82A92BD500AE00800468 /* AppFlow.swift */; };
 		A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AB2BD5067800800468 /* AppStepper.swift */; };
 		A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AD2BD506D000800468 /* AppStep.swift */; };
@@ -60,7 +38,6 @@
 		A4B884152BCA1AB2005F79D4 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = A4B884142BCA1AB2005F79D4 /* Base */; };
 		A4B8842A2BCA1AB3005F79D4 /* ToDoGeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884292BCA1AB3005F79D4 /* ToDoGeoUITests.swift */; };
 		A4B8842C2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */; };
-		A4D3D6812C1D875000FC8EA7 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D3D6802C1D875000FC8EA7 /* ToDo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,24 +58,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		05FB0CBA2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetToDoUseCaseProtocol.swift; path = UseCase/ToDo/Protocol/GetToDoUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
-		05FB0CBC2C3D550000F1D94A /* GetToDoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = GetToDoUseCase.swift; path = UseCase/ToDo/GetToDoUseCase.swift; sourceTree = SOURCE_ROOT; };
-		A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddToDoUseCaseProtocol.swift; path = UseCase/ToDo/Protocol/AddToDoUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
-		A40B662A2C34440400A093AF /* StubAddToDoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StubAddToDoUseCase.swift; path = UseCase/ToDo/Stub/StubAddToDoUseCase.swift; sourceTree = SOURCE_ROOT; };
-		A40B662C2C34441B00A093AF /* ToDoRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoRepositoryProtocol.swift; path = Repository/Protocol/ToDoRepositoryProtocol.swift; sourceTree = SOURCE_ROOT; };
-		A40B662E2C3448F300A093AF /* AddToDoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AddToDoUseCase.swift; path = UseCase/ToDo/AddToDoUseCase.swift; sourceTree = SOURCE_ROOT; };
 		A40B66302C344BFC00A093AF /* ToDoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoRepository.swift; path = Repository/ToDoRepository.swift; sourceTree = SOURCE_ROOT; };
-		A4355BF72C19CF2A002B210D /* SignInUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInUseCaseProtocol.swift; path = UseCase/SignIn/Protocol/SignInUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
-		A4355BFA2C19DCB5002B210D /* SignInUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInUser.swift; path = Entity/SignIn/SignInUser.swift; sourceTree = SOURCE_ROOT; };
-		A4355BFE2C19E244002B210D /* StubSignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = StubSignInUseCase.swift; path = UseCase/SignIn/Stub/StubSignInUseCase.swift; sourceTree = SOURCE_ROOT; };
-		A4355C002C19E26F002B210D /* SignInRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInRepositoryProtocol.swift; path = Repository/Protocol/SignInRepositoryProtocol.swift; sourceTree = SOURCE_ROOT; };
-		A4355C032C19E28E002B210D /* SignInUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInUseCase.swift; path = UseCase/SignIn/SignInUseCase.swift; sourceTree = SOURCE_ROOT; };
 		A4355C052C19E67F002B210D /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInRepository.swift; path = Repository/SignInRepository.swift; sourceTree = SOURCE_ROOT; };
 		A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoGeo.entitlements; sourceTree = "<group>"; };
-		A4546BA32C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompleteToDoUseCaseProtocol.swift; path = UseCase/ToDo/Protocol/CompleteToDoUseCaseProtocol.swift; sourceTree = SOURCE_ROOT; };
-		A4546BA52C4CF98100C48D96 /* CompleteToDoUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CompleteToDoUseCase.swift; path = UseCase/ToDo/CompleteToDoUseCase.swift; sourceTree = SOURCE_ROOT; };
 		A4546BA72C4D248800C48D96 /* ToDoAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoAnnotation.swift; path = UseCase/ToDo/ToDoAnnotation.swift; sourceTree = SOURCE_ROOT; };
 		A4546BAB2C4FDB9F00C48D96 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared; sourceTree = "<group>"; };
+		A4546BB42C4FDF0B00C48D96 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		A4671B4F2C1F082A00AFE7B2 /* LocationManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManger.swift; sourceTree = "<group>"; };
 		A484607D2C41497D0030E165 /* ToDoResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoResponseDto.swift; path = Repository/ToDoResponseDto.swift; sourceTree = SOURCE_ROOT; };
 		A484607F2C425AD20030E165 /* ToDoMapsReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoMapsReactor.swift; path = Repository/ToDoMapsReactor.swift; sourceTree = SOURCE_ROOT; };
@@ -129,7 +94,6 @@
 		A4B884252BCA1AB3005F79D4 /* ToDoGeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToDoGeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B884292BCA1AB3005F79D4 /* ToDoGeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoUITests.swift; sourceTree = "<group>"; };
 		A4B8842B2BCA1AB3005F79D4 /* ToDoGeoUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoGeoUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		A4D3D6802C1D875000FC8EA7 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDo.swift; path = Entity/Todo/ToDo.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -137,17 +101,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				05DF3D1C2C353B380046E8FB /* FirebaseDatabase in Frameworks */,
-				A4AA82A82BD4FC2D00800468 /* RxFlow in Frameworks */,
-				A48D48C22BE5D895004867C6 /* FirebaseAuth in Frameworks */,
-				A48D48B12BE13168004867C6 /* Alamofire in Frameworks */,
-				A4AA82992BCA7A4100800468 /* ReactorKit in Frameworks */,
-				A48D48BE2BE5D895004867C6 /* FirebaseAnalytics in Frameworks */,
-				A4AA82962BCA7A2F00800468 /* RxCocoa in Frameworks */,
-				A48D48D12BECDEC3004867C6 /* PinLayout in Frameworks */,
-				A48D48C02BE5D895004867C6 /* FirebaseAnalyticsSwift in Frameworks */,
+				A4546BB62C4FDF8600C48D96 /* Domain in Frameworks */,
 				A4546BB02C4FDCD900C48D96 /* Shared in Frameworks */,
-				A48D48D42BECDEF4004867C6 /* FlexLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -183,79 +138,6 @@
 			path = FireBaseDataBase;
 			sourceTree = "<group>";
 		};
-		A40B66252C3443A400A093AF /* ToDo */ = {
-			isa = PBXGroup;
-			children = (
-				A40B66272C3443B600A093AF /* Stub */,
-				A40B66262C3443AE00A093AF /* Protocol */,
-				A40B662E2C3448F300A093AF /* AddToDoUseCase.swift */,
-				05FB0CBC2C3D550000F1D94A /* GetToDoUseCase.swift */,
-				A4546BA52C4CF98100C48D96 /* CompleteToDoUseCase.swift */,
-			);
-			path = ToDo;
-			sourceTree = "<group>";
-		};
-		A40B66262C3443AE00A093AF /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				A40B66282C3443C800A093AF /* AddToDoUseCaseProtocol.swift */,
-				05FB0CBA2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift */,
-				A4546BA32C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		A40B66272C3443B600A093AF /* Stub */ = {
-			isa = PBXGroup;
-			children = (
-				A40B662A2C34440400A093AF /* StubAddToDoUseCase.swift */,
-			);
-			path = Stub;
-			sourceTree = "<group>";
-		};
-		A4355BF62C19CF18002B210D /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				A4355BF72C19CF2A002B210D /* SignInUseCaseProtocol.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
-		A4355BF92C19DC9C002B210D /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				A4355BFA2C19DCB5002B210D /* SignInUser.swift */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
-		A4355BFC2C19E1EC002B210D /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				A4355BFD2C19E22E002B210D /* Stub */,
-				A4355BF62C19CF18002B210D /* Protocol */,
-				A4355C032C19E28E002B210D /* SignInUseCase.swift */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
-		A4355BFD2C19E22E002B210D /* Stub */ = {
-			isa = PBXGroup;
-			children = (
-				A4355BFE2C19E244002B210D /* StubSignInUseCase.swift */,
-			);
-			path = Stub;
-			sourceTree = "<group>";
-		};
-		A4355C022C19E277002B210D /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				A4355C002C19E26F002B210D /* SignInRepositoryProtocol.swift */,
-				A40B662C2C34441B00A093AF /* ToDoRepositoryProtocol.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		A4671B4E2C1F080A00AFE7B2 /* Location */ = {
 			isa = PBXGroup;
 			children = (
@@ -280,16 +162,6 @@
 				A4AA829D2BCA7E7500800468 /* Repository */,
 			);
 			path = Data;
-			sourceTree = "<group>";
-		};
-		A4AA82892BCA760600800468 /* Domain */ = {
-			isa = PBXGroup;
-			children = (
-				A4AA829C2BCA7E4B00800468 /* Entity */,
-				A4AA829B2BCA7E3F00800468 /* Repository */,
-				A4AA829A2BCA7E3800800468 /* UseCase */,
-			);
-			path = Domain;
 			sourceTree = "<group>";
 		};
 		A4AA828A2BCA760D00800468 /* Presenter */ = {
@@ -355,32 +227,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		A4AA829A2BCA7E3800800468 /* UseCase */ = {
-			isa = PBXGroup;
-			children = (
-				A40B66252C3443A400A093AF /* ToDo */,
-				A4355BFC2C19E1EC002B210D /* SignIn */,
-			);
-			path = UseCase;
-			sourceTree = "<group>";
-		};
-		A4AA829B2BCA7E3F00800468 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				A4355C022C19E277002B210D /* Protocol */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		A4AA829C2BCA7E4B00800468 /* Entity */ = {
-			isa = PBXGroup;
-			children = (
-				A4D3D67F2C1D873E00FC8EA7 /* Todo */,
-				A4355BF92C19DC9C002B210D /* SignIn */,
-			);
-			path = Entity;
-			sourceTree = "<group>";
-		};
 		A4AA829D2BCA7E7500800468 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -443,6 +289,7 @@
 		A4B883F92BCA1AB2005F79D4 = {
 			isa = PBXGroup;
 			children = (
+				A4546BB42C4FDF0B00C48D96 /* Domain */,
 				A4546BAB2C4FDB9F00C48D96 /* Shared */,
 				A4B884042BCA1AB2005F79D4 /* ToDoGeo */,
 				A4B8841E2BCA1AB3005F79D4 /* ToDoGeoTests */,
@@ -470,7 +317,6 @@
 				A4AA828D2BCA763200800468 /* System */,
 				A4AA828B2BCA761A00800468 /* Common */,
 				A4AA82882BCA75FE00800468 /* Data */,
-				A4AA82892BCA760600800468 /* Domain */,
 				A4AA828A2BCA760D00800468 /* Presenter */,
 				A4B884132BCA1AB2005F79D4 /* LaunchScreen.storyboard */,
 				A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */,
@@ -495,14 +341,6 @@
 			path = ToDoGeoUITests;
 			sourceTree = "<group>";
 		};
-		A4D3D67F2C1D873E00FC8EA7 /* Todo */ = {
-			isa = PBXGroup;
-			children = (
-				A4D3D6802C1D875000FC8EA7 /* ToDo.swift */,
-			);
-			path = Todo;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -520,17 +358,8 @@
 			);
 			name = ToDoGeo;
 			packageProductDependencies = (
-				A4AA82952BCA7A2F00800468 /* RxCocoa */,
-				A4AA82982BCA7A4100800468 /* ReactorKit */,
-				A4AA82A72BD4FC2D00800468 /* RxFlow */,
-				A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */,
-				A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */,
-				A48D48C12BE5D895004867C6 /* FirebaseAuth */,
-				A48D48D02BECDEC3004867C6 /* PinLayout */,
-				A48D48D32BECDEF4004867C6 /* FlexLayout */,
-				A48D48B02BE13168004867C6 /* Alamofire */,
-				05DF3D1B2C353B380046E8FB /* FirebaseDatabase */,
 				A4546BAF2C4FDCD900C48D96 /* Shared */,
+				A4546BB52C4FDF8600C48D96 /* Domain */,
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -658,41 +487,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A40B662B2C34440400A093AF /* StubAddToDoUseCase.swift in Sources */,
 				A4AA82B42BD52ADC00800468 /* AddToDoViewController.swift in Sources */,
 				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
-				A4546BA62C4CF98100C48D96 /* CompleteToDoUseCase.swift in Sources */,
-				05FB0CBD2C3D550000F1D94A /* GetToDoUseCase.swift in Sources */,
 				A48460822C4265C60030E165 /* ToDoMapsViewController.swift in Sources */,
 				A48D48B72BE131B4004867C6 /* APIService.swift in Sources */,
 				A48D48B52BE131AC004867C6 /* Target.swift in Sources */,
 				A40B66312C344BFC00A093AF /* ToDoRepository.swift in Sources */,
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
-				A40B662F2C3448F300A093AF /* AddToDoUseCase.swift in Sources */,
 				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
 				A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */,
 				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
 				A48460802C425AD20030E165 /* ToDoMapsReactor.swift in Sources */,
-				A4355BF82C19CF2A002B210D /* SignInUseCaseProtocol.swift in Sources */,
-				A4355BFF2C19E244002B210D /* StubSignInUseCase.swift in Sources */,
-				A40B662D2C34441B00A093AF /* ToDoRepositoryProtocol.swift in Sources */,
-				A4355C012C19E26F002B210D /* SignInRepositoryProtocol.swift in Sources */,
 				A4671B502C1F082A00AFE7B2 /* LocationManger.swift in Sources */,
 				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
-				A4355C042C19E28E002B210D /* SignInUseCase.swift in Sources */,
 				A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */,
-				A4D3D6812C1D875000FC8EA7 /* ToDo.swift in Sources */,
 				A48D48B32BE1319D004867C6 /* API.swift in Sources */,
 				A4AA82B82BD52FE700800468 /* AddToDoReactor.swift in Sources */,
-				05FB0CBB2C3D54B100F1D94A /* GetToDoUseCaseProtocol.swift in Sources */,
-				A4355BFB2C19DCB5002B210D /* SignInUser.swift in Sources */,
 				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
 				A4546BA82C4D248800C48D96 /* ToDoAnnotation.swift in Sources */,
 				A484607E2C41497D0030E165 /* ToDoResponseDto.swift in Sources */,
-				A4546BA42C4CF96600C48D96 /* CompleteToDoUseCaseProtocol.swift in Sources */,
-				A40B66292C3443C800A093AF /* AddToDoUseCaseProtocol.swift in Sources */,
 				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,
 				A48D48B92BE131CB004867C6 /* NetworkEventLogger.swift in Sources */,
 			);
@@ -1134,59 +949,13 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		05DF3D1B2C353B380046E8FB /* FirebaseDatabase */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseDatabase;
-		};
 		A4546BAF2C4FDCD900C48D96 /* Shared */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Shared;
 		};
-		A48D48B02BE13168004867C6 /* Alamofire */ = {
+		A4546BB52C4FDF8600C48D96 /* Domain */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A48D48AF2BE13168004867C6 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		A48D48BD2BE5D895004867C6 /* FirebaseAnalytics */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalytics;
-		};
-		A48D48BF2BE5D895004867C6 /* FirebaseAnalyticsSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAnalyticsSwift;
-		};
-		A48D48C12BE5D895004867C6 /* FirebaseAuth */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
-			productName = FirebaseAuth;
-		};
-		A48D48D02BECDEC3004867C6 /* PinLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A48D48CF2BECDEC3004867C6 /* XCRemoteSwiftPackageReference "PinLayout" */;
-			productName = PinLayout;
-		};
-		A48D48D32BECDEF4004867C6 /* FlexLayout */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A48D48D22BECDEF4004867C6 /* XCRemoteSwiftPackageReference "FlexLayout" */;
-			productName = FlexLayout;
-		};
-		A4AA82952BCA7A2F00800468 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4AA82942BCA7A2F00800468 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxCocoa;
-		};
-		A4AA82982BCA7A4100800468 /* ReactorKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */;
-			productName = ReactorKit;
-		};
-		A4AA82A72BD4FC2D00800468 /* RxFlow */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A4AA82A62BD4FC2D00800468 /* XCRemoteSwiftPackageReference "RxFlow" */;
-			productName = RxFlow;
+			productName = Domain;
 		};
 /* End XCSwiftPackageProductDependency section */
 
