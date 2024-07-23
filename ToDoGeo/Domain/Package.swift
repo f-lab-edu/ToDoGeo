@@ -14,7 +14,8 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/firebase/firebase-ios-sdk", .upToNextMajor(from: "10.25.0")),
-        .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "6.6.0"))
+        .package(url: "https://github.com/ReactiveX/RxSwift", .upToNextMajor(from: "6.6.0")),
+        .package(path: "../Shared"),
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -26,7 +27,8 @@ let package = Package(
                            .product(name: "FirebaseDatabase", package: "firebase-ios-sdk"),
                            .product(name: "FirebaseDatabaseSwift", package: "firebase-ios-sdk"),
                            .product(name: "RxSwift", package: "RxSwift"),
-                           .product(name: "RxCocoa", package: "RxSwift")
+                           .product(name: "RxCocoa", package: "RxSwift"),
+                           .product(name: "Shared", package: "Shared"),
                        ]),
         .testTarget(
             name: "DomainTests",

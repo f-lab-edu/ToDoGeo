@@ -9,22 +9,22 @@ import CoreLocation
 import UserNotifications
 import Shared
 
-final class LocationManger: NSObject {
-    static let shared = LocationManger()
+final public class LocationManger: NSObject {
+    public static let shared = LocationManger()
     
     private override init() {
         locationManager.allowsBackgroundLocationUpdates = true
         locationManager.pausesLocationUpdatesAutomatically = false
     }
     
-    var locationManager = CLLocationManager()
+    public var locationManager = CLLocationManager()
     
-    var authorizationStatus: CLAuthorizationStatus {
+    public var authorizationStatus: CLAuthorizationStatus {
         return locationManager.authorizationStatus
     }
 }
 
-extension LocationManger {
+public extension LocationManger {
     /// 모니터링 할 위치 등록
     /// - Parameters:
     ///   - id: 위치 id
@@ -71,7 +71,7 @@ extension LocationManger {
 
 // MARK: - CLLocationManagerDelegate
 extension LocationManger: CLLocationManagerDelegate {
-    func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
+    public func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager.startUpdatingLocation()
@@ -84,7 +84,7 @@ extension LocationManger: CLLocationManagerDelegate {
         }
     }
     
-    func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
+    public func locationManager(_ manager: CLLocationManager, didDetermineState state: CLRegionState, for region: CLRegion) {
         switch state {
         case .inside:
             pushLocationNotification(id: region.identifier, body: "해야 할 일이 있어요!")

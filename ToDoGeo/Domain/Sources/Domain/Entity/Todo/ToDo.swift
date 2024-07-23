@@ -7,16 +7,16 @@
 
 import CoreLocation
 
-struct ToDo {
-    var id: UUID
+public struct ToDo {
+    public var id: UUID
     /// 제목
-    var title: String
+    public var title: String
     /// 알림 받을 위치
-    var location: CLLocationCoordinate2D
+    public  var location: CLLocationCoordinate2D
     /// 위치 이름
-    var locationName: String
+    public var locationName: String
     
-    init(id: UUID = UUID(),
+    public init(id: UUID = UUID(),
          title: String = "",
          location: CLLocationCoordinate2D = .init(),
          locationName: String = "") {
@@ -28,7 +28,7 @@ struct ToDo {
 }
 
 extension ToDo {
-    func toDic() -> [String: Any] {
+    public func toDic() -> [String: Any] {
         return [
             "id": id.uuidString,
             "title": title,

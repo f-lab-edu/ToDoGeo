@@ -14,4 +14,12 @@ public struct SignInUser {
     public var email: String
     /// 사용자 이름
     public var name: String
+    
+    public init(id: String, 
+                email: String,
+                name: String) {
+        self.id = id
+        self.email = email
+        self.name = name
+    }
 }
