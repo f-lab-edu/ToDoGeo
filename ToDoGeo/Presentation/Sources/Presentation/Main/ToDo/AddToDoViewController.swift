@@ -11,6 +11,7 @@ import PinLayout
 import ReactorKit
 import RxSwift
 import MapKit
+import GeoLocationManager
 
 final class AddToDoViewController: UIViewController, View {
     var disposeBag = DisposeBag()
@@ -252,7 +253,7 @@ extension AddToDoViewController {
             .bind { [weak self] isValid in
                 if isValid {
                     self?.addButton.isEnabled = true
-                    self?.addButton.backgroundColor = .mainBackground
+                    self?.addButton.backgroundColor = UIColor(named: "mainBackground")
                 } else {
                     self?.addButton.backgroundColor = .systemGray3
                     self?.addButton.isEnabled = false

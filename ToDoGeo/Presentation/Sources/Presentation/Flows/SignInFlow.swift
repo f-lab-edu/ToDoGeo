@@ -6,11 +6,12 @@
 //
 
 import UIKit
-
+import Domain
+import Data
 import RxFlow
 
-final class SignInFlow: Flow {
-    var root: Presentable {
+final public class SignInFlow: Flow {
+    public var root: Presentable {
         return rootViewController
     }
     
@@ -18,7 +19,7 @@ final class SignInFlow: Flow {
         return UINavigationController()
     }()
     
-    func navigate(to step: Step) -> FlowContributors {
+    public func navigate(to step: Step) -> FlowContributors {
         guard let step = step as? AppStep else {
             return .none
         }

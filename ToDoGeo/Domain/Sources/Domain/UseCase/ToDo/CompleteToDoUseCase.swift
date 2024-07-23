@@ -7,16 +7,16 @@
 
 import RxSwift
 
-final class CompleteToDoUseCase {
+final public class CompleteToDoUseCase {
     private let toDoRepository: ToDoRepositoryProtocol
     
-    init(toDoRepository: ToDoRepositoryProtocol) {
+    public init(toDoRepository: ToDoRepositoryProtocol) {
         self.toDoRepository = toDoRepository
     }
 }
 
 extension CompleteToDoUseCase: CompleteToDoUseCaseProtocol {
-    func completeToDo(_ item: ToDo) -> Observable<Void> {
+    public func completeToDo(_ item: ToDo) -> Observable<Void> {
         return toDoRepository.remove(item)
     }
 }

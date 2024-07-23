@@ -13,15 +13,17 @@ import Domain
 import Shared
 import GeoLocationManager
 
-final class ToDoRepository {
+final public class ToDoRepository {
     private let ref = Database.database().reference()
+    
+    public init() {}
 }
 
 extension ToDoRepository: ToDoRepositoryProtocol {
     /// ToDo 등록
     /// - Parameter todo: 등록할 ToDo
     /// - Returns: 등록 결과
-    func add(_ todo: ToDo) -> Observable<Void> {
+    public func add(_ todo: ToDo) -> Observable<Void> {
         Observable.create { [weak self] observer -> Disposable in
             guard let userId = Auth.auth().currentUser?.uid  else {
                 observer.onError(FireBaseAuthError.invalidUserId)
@@ -44,7 +46,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
     
     /// todo 목록 불러오기
     /// - Returns: todo 목록
-    func getList() -> Observable<[ToDo]> {
+    public func getList() -> Observable<[ToDo]> {
         Observable.create { [weak self] observer -> Disposable in
             guard let userId = Auth.auth().currentUser?.uid else {
                 observer.onError(FireBaseAuthError.invalidUserId)
@@ -67,7 +69,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
     /// todo 삭제
     /// - Parameter item: 삭제할 todo
     /// - Returns: 결과
-    func remove(_ item: ToDo) -> Observable<Void> {
+    public func remove(_ item: ToDo) -> Observable<Void> {
         Observable.create { [weak self] observer -> Disposable in
             guard let userId = Auth.auth().currentUser?.uid else {
                 observer.onError(FireBaseAuthError.invalidUserId)

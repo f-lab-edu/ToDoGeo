@@ -1,16 +1,17 @@
 //
 //  ToDoMapsViewController.swift
-//  ToDoGeo
 //
-//  Created by SUN on 7/13/24.
+//
+//  Created by SUN on 7/23/24.
 //
 
 import MapKit
 import UIKit
-
+import Domain
 import PinLayout
 import ReactorKit
 import RxCocoa
+import GeoLocationManager
 
 final class ToDoMapsViewController: UIViewController, View {
     var disposeBag = DisposeBag()
@@ -26,7 +27,7 @@ final class ToDoMapsViewController: UIViewController, View {
         button.setImage(image, for: .normal)
         button.tintColor = .white
         button.layer.cornerRadius = 24
-        button.backgroundColor = .mainBackground
+        button.backgroundColor = UIColor(named: "mainBackground")
         return button
     }()
     
@@ -75,7 +76,7 @@ final class ToDoMapsViewController: UIViewController, View {
     }
     
     private func showCompleteToDoAlert(_ todo: ToDo) {
-        let alertController = UIAlertController(title: "ToDo 완료", 
+        let alertController = UIAlertController(title: "ToDo 완료",
                                                 message: "\(todo.title)을 완료 하시겠습니까?",
                                                 preferredStyle: .alert)
         

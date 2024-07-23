@@ -9,18 +9,18 @@ import UIKit
 
 import RxFlow
 
-final class AppFlow: Flow {
-    var root: Presentable {
+final public class AppFlow: Flow {
+    public var root: Presentable {
         return rootWindow
     }
     
     private let rootWindow: UIWindow
 
-    init(withWindow window: UIWindow) {
+    public init(withWindow window: UIWindow) {
         self.rootWindow = window
     }
     
-    func navigate(to step: Step) -> RxFlow.FlowContributors {
+    public func navigate(to step: Step) -> RxFlow.FlowContributors {
         guard let step = step as? AppStep else {
             return .none
         }

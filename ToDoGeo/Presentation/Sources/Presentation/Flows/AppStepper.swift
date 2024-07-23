@@ -11,12 +11,13 @@ import RxSwift
 import RxCocoa
 import Shared
 
-final class AppStepper: Stepper {
+final public class AppStepper: Stepper {
+    public init() {}
     
-    let steps = PublishRelay<Step>()
+    public let steps = PublishRelay<Step>()
     let disposeBag = DisposeBag()
     
-    var initialStep: Step {
+    public var initialStep: Step {
         if let userId = Auth.auth().currentUser?.uid,
            userId == Utility.load(key: Constant.userID) {
             return AppStep.toDoRequired

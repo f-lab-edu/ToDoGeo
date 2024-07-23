@@ -12,8 +12,10 @@ import FirebaseAuth
 import Domain
 import Shared
 
-final class SignInRepository: SignInRepositoryProtocol {
-    func appleSignUp(credential: ASAuthorizationAppleIDCredential, nonce: String?) -> Observable<SignInUser> {
+final public class SignInRepository: SignInRepositoryProtocol {
+    public init() {}
+    
+    public func appleSignUp(credential: ASAuthorizationAppleIDCredential, nonce: String?) -> Observable<SignInUser> {
         return createAppleCredential(credential: credential, nonce: nonce)
             .flatMap { oauthCredential in
                 return Observable<SignInUser>.create { observer in

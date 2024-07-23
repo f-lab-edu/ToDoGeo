@@ -7,25 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A40B66312C344BFC00A093AF /* ToDoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40B66302C344BFC00A093AF /* ToDoRepository.swift */; };
-		A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4355C052C19E67F002B210D /* SignInRepository.swift */; };
-		A4546BA82C4D248800C48D96 /* ToDoAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4546BA72C4D248800C48D96 /* ToDoAnnotation.swift */; };
-		A4546BB62C4FDF8600C48D96 /* Domain in Frameworks */ = {isa = PBXBuildFile; productRef = A4546BB52C4FDF8600C48D96 /* Domain */; };
-		A484607E2C41497D0030E165 /* ToDoResponseDto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484607D2C41497D0030E165 /* ToDoResponseDto.swift */; };
-		A48460802C425AD20030E165 /* ToDoMapsReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A484607F2C425AD20030E165 /* ToDoMapsReactor.swift */; };
-		A48460822C4265C60030E165 /* ToDoMapsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48460812C4265C60030E165 /* ToDoMapsViewController.swift */; };
 		A48460862C4561A50030E165 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A48460852C4561A50030E165 /* GoogleService-Info.plist */; };
-		A48A40912C4FF24D000D941B /* ReactorKit in Frameworks */ = {isa = PBXBuildFile; productRef = A48A40902C4FF24D000D941B /* ReactorKit */; };
+		A48A40962C4FF968000D941B /* Presentation in Frameworks */ = {isa = PBXBuildFile; productRef = A48A40952C4FF968000D941B /* Presentation */; };
+		A48A40982C4FF97F000D941B /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = A48A40972C4FF97F000D941B /* FirebaseAuth */; };
+		A48A409A2C4FF999000D941B /* GeoLocationManager in Frameworks */ = {isa = PBXBuildFile; productRef = A48A40992C4FF999000D941B /* GeoLocationManager */; };
 		A4A58CF82C31499C00866A0A /* AddToDoReactorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4A58CF72C31499C00866A0A /* AddToDoReactorTests.swift */; };
-		A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82A92BD500AE00800468 /* AppFlow.swift */; };
-		A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AB2BD5067800800468 /* AppStepper.swift */; };
-		A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AD2BD506D000800468 /* AppStep.swift */; };
-		A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82AF2BD50BB500800468 /* SignInFlow.swift */; };
-		A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B12BD50BBE00800468 /* ToDoFlow.swift */; };
-		A4AA82B42BD52ADC00800468 /* AddToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B32BD52ADC00800468 /* AddToDoViewController.swift */; };
-		A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B52BD52B1D00800468 /* SignInViewController.swift */; };
-		A4AA82B82BD52FE700800468 /* AddToDoReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B72BD52FE700800468 /* AddToDoReactor.swift */; };
-		A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4AA82B92BD5308700800468 /* SignInReactor.swift */; };
 		A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */; };
 		A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */; };
 		A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */; };
@@ -53,28 +39,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A40B66302C344BFC00A093AF /* ToDoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoRepository.swift; path = Repository/ToDoRepository.swift; sourceTree = SOURCE_ROOT; };
-		A4355C052C19E67F002B210D /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInRepository.swift; path = Repository/SignInRepository.swift; sourceTree = SOURCE_ROOT; };
 		A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ToDoGeo.entitlements; sourceTree = "<group>"; };
-		A4546BA72C4D248800C48D96 /* ToDoAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoAnnotation.swift; path = UseCase/ToDo/ToDoAnnotation.swift; sourceTree = SOURCE_ROOT; };
 		A4546BAB2C4FDB9F00C48D96 /* Shared */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Shared; sourceTree = "<group>"; };
 		A4546BB42C4FDF0B00C48D96 /* Domain */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Domain; sourceTree = "<group>"; };
 		A45982492C4FECC4006AD867 /* Data */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Data; sourceTree = "<group>"; };
-		A484607D2C41497D0030E165 /* ToDoResponseDto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoResponseDto.swift; path = Repository/ToDoResponseDto.swift; sourceTree = SOURCE_ROOT; };
-		A484607F2C425AD20030E165 /* ToDoMapsReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoMapsReactor.swift; path = Repository/ToDoMapsReactor.swift; sourceTree = SOURCE_ROOT; };
-		A48460812C4265C60030E165 /* ToDoMapsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ToDoMapsViewController.swift; path = Repository/ToDoMapsViewController.swift; sourceTree = SOURCE_ROOT; };
 		A48460852C4561A50030E165 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A48A40922C4FF2B7000D941B /* GeoLocationManager */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = GeoLocationManager; sourceTree = "<group>"; };
+		A48A40942C4FF591000D941B /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Presentation; sourceTree = "<group>"; };
 		A4A58CF72C31499C00866A0A /* AddToDoReactorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoReactorTests.swift; sourceTree = "<group>"; };
-		A4AA82A92BD500AE00800468 /* AppFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlow.swift; sourceTree = "<group>"; };
-		A4AA82AB2BD5067800800468 /* AppStepper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStepper.swift; sourceTree = "<group>"; };
-		A4AA82AD2BD506D000800468 /* AppStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStep.swift; sourceTree = "<group>"; };
-		A4AA82AF2BD50BB500800468 /* SignInFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInFlow.swift; sourceTree = "<group>"; };
-		A4AA82B12BD50BBE00800468 /* ToDoFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoFlow.swift; sourceTree = "<group>"; };
-		A4AA82B32BD52ADC00800468 /* AddToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoViewController.swift; sourceTree = "<group>"; };
-		A4AA82B52BD52B1D00800468 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
-		A4AA82B72BD52FE700800468 /* AddToDoReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddToDoReactor.swift; sourceTree = "<group>"; };
-		A4AA82B92BD5308700800468 /* SignInReactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInReactor.swift; sourceTree = "<group>"; };
 		A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoGeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B884052BCA1AB2005F79D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A4B884072BCA1AB2005F79D4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A48A40912C4FF24D000D941B /* ReactorKit in Frameworks */,
-				A4546BB62C4FDF8600C48D96 /* Domain in Frameworks */,
+				A48A40962C4FF968000D941B /* Presentation in Frameworks */,
+				A48A40982C4FF97F000D941B /* FirebaseAuth in Frameworks */,
+				A48A409A2C4FF999000D941B /* GeoLocationManager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,41 +95,12 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		05FB0CBE2C3D592700F1D94A /* FireBaseDataBase */ = {
-			isa = PBXGroup;
-			children = (
-				A484607D2C41497D0030E165 /* ToDoResponseDto.swift */,
-			);
-			path = FireBaseDataBase;
-			sourceTree = "<group>";
-		};
 		A48D48C32BE5FB12004867C6 /* ReactorTests */ = {
 			isa = PBXGroup;
 			children = (
 				A4A58CF72C31499C00866A0A /* AddToDoReactorTests.swift */,
 			);
 			path = ReactorTests;
-			sourceTree = "<group>";
-		};
-		A4AA82882BCA75FE00800468 /* Data */ = {
-			isa = PBXGroup;
-			children = (
-				A4AA829F2BCA7E8C00800468 /* Dto */,
-				A4AA829E2BCA7E8000800468 /* Network */,
-				A4AA829D2BCA7E7500800468 /* Repository */,
-			);
-			path = Data;
-			sourceTree = "<group>";
-		};
-		A4AA828A2BCA760D00800468 /* Presenter */ = {
-			isa = PBXGroup;
-			children = (
-				A4AA82A22BCBAA5700800468 /* Flows */,
-				A4AA82912BCA768B00800468 /* Base */,
-				A4AA82902BCA766700800468 /* Main */,
-				A4AA828F2BCA766000800468 /* SignIn */,
-			);
-			path = Presenter;
 			sourceTree = "<group>";
 		};
 		A4AA828B2BCA761A00800468 /* Common */ = {
@@ -186,92 +130,13 @@
 			path = System;
 			sourceTree = "<group>";
 		};
-		A4AA828F2BCA766000800468 /* SignIn */ = {
-			isa = PBXGroup;
-			children = (
-				A4AA82B52BD52B1D00800468 /* SignInViewController.swift */,
-				A4AA82B92BD5308700800468 /* SignInReactor.swift */,
-			);
-			path = SignIn;
-			sourceTree = "<group>";
-		};
-		A4AA82902BCA766700800468 /* Main */ = {
-			isa = PBXGroup;
-			children = (
-				A4AA82A12BCAC38C00800468 /* Map */,
-				A4AA82A02BCAC37E00800468 /* ToDo */,
-			);
-			path = Main;
-			sourceTree = "<group>";
-		};
-		A4AA82912BCA768B00800468 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Base;
-			sourceTree = "<group>";
-		};
-		A4AA829D2BCA7E7500800468 /* Repository */ = {
-			isa = PBXGroup;
-			children = (
-				A4355C052C19E67F002B210D /* SignInRepository.swift */,
-				A40B66302C344BFC00A093AF /* ToDoRepository.swift */,
-			);
-			path = Repository;
-			sourceTree = "<group>";
-		};
-		A4AA829E2BCA7E8000800468 /* Network */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Network;
-			sourceTree = "<group>";
-		};
-		A4AA829F2BCA7E8C00800468 /* Dto */ = {
-			isa = PBXGroup;
-			children = (
-				05FB0CBE2C3D592700F1D94A /* FireBaseDataBase */,
-			);
-			path = Dto;
-			sourceTree = "<group>";
-		};
-		A4AA82A02BCAC37E00800468 /* ToDo */ = {
-			isa = PBXGroup;
-			children = (
-				A4AA82B32BD52ADC00800468 /* AddToDoViewController.swift */,
-				A4AA82B72BD52FE700800468 /* AddToDoReactor.swift */,
-			);
-			path = ToDo;
-			sourceTree = "<group>";
-		};
-		A4AA82A12BCAC38C00800468 /* Map */ = {
-			isa = PBXGroup;
-			children = (
-				A48460812C4265C60030E165 /* ToDoMapsViewController.swift */,
-				A484607F2C425AD20030E165 /* ToDoMapsReactor.swift */,
-				A4546BA72C4D248800C48D96 /* ToDoAnnotation.swift */,
-			);
-			path = Map;
-			sourceTree = "<group>";
-		};
-		A4AA82A22BCBAA5700800468 /* Flows */ = {
-			isa = PBXGroup;
-			children = (
-				A4AA82A92BD500AE00800468 /* AppFlow.swift */,
-				A4AA82AB2BD5067800800468 /* AppStepper.swift */,
-				A4AA82AD2BD506D000800468 /* AppStep.swift */,
-				A4AA82AF2BD50BB500800468 /* SignInFlow.swift */,
-				A4AA82B12BD50BBE00800468 /* ToDoFlow.swift */,
-			);
-			path = Flows;
-			sourceTree = "<group>";
-		};
 		A4B883F92BCA1AB2005F79D4 = {
 			isa = PBXGroup;
 			children = (
 				A48A40922C4FF2B7000D941B /* GeoLocationManager */,
 				A45982492C4FECC4006AD867 /* Data */,
 				A4546BB42C4FDF0B00C48D96 /* Domain */,
+				A48A40942C4FF591000D941B /* Presentation */,
 				A4546BAB2C4FDB9F00C48D96 /* Shared */,
 				A4B884042BCA1AB2005F79D4 /* ToDoGeo */,
 				A4B8841E2BCA1AB3005F79D4 /* ToDoGeoTests */,
@@ -297,8 +162,6 @@
 				A4355C0D2C1C2A03002B210D /* ToDoGeo.entitlements */,
 				A4AA828D2BCA763200800468 /* System */,
 				A4AA828B2BCA761A00800468 /* Common */,
-				A4AA82882BCA75FE00800468 /* Data */,
-				A4AA828A2BCA760D00800468 /* Presenter */,
 				A4B884132BCA1AB2005F79D4 /* LaunchScreen.storyboard */,
 				A4B8840E2BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld */,
 			);
@@ -339,8 +202,9 @@
 			);
 			name = ToDoGeo;
 			packageProductDependencies = (
-				A4546BB52C4FDF8600C48D96 /* Domain */,
-				A48A40902C4FF24D000D941B /* ReactorKit */,
+				A48A40952C4FF968000D941B /* Presentation */,
+				A48A40972C4FF97F000D941B /* FirebaseAuth */,
+				A48A40992C4FF999000D941B /* GeoLocationManager */,
 			);
 			productName = ToDoGeo;
 			productReference = A4B884022BCA1AB2005F79D4 /* ToDoGeo.app */;
@@ -467,24 +331,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4AA82B42BD52ADC00800468 /* AddToDoViewController.swift in Sources */,
-				A4AA82AA2BD500AE00800468 /* AppFlow.swift in Sources */,
-				A48460822C4265C60030E165 /* ToDoMapsViewController.swift in Sources */,
-				A40B66312C344BFC00A093AF /* ToDoRepository.swift in Sources */,
 				A4B884102BCA1AB2005F79D4 /* ToDoGeo.xcdatamodeld in Sources */,
-				A4AA82AC2BD5067900800468 /* AppStepper.swift in Sources */,
-				A4355C062C19E67F002B210D /* SignInRepository.swift in Sources */,
-				A4AA82AE2BD506D000800468 /* AppStep.swift in Sources */,
 				A4B884062BCA1AB2005F79D4 /* AppDelegate.swift in Sources */,
-				A48460802C425AD20030E165 /* ToDoMapsReactor.swift in Sources */,
-				A4AA82B62BD52B1D00800468 /* SignInViewController.swift in Sources */,
-				A4AA82BA2BD5308700800468 /* SignInReactor.swift in Sources */,
-				A4AA82B82BD52FE700800468 /* AddToDoReactor.swift in Sources */,
-				A4AA82B22BD50BBE00800468 /* ToDoFlow.swift in Sources */,
 				A4B884082BCA1AB2005F79D4 /* SceneDelegate.swift in Sources */,
-				A4546BA82C4D248800C48D96 /* ToDoAnnotation.swift in Sources */,
-				A484607E2C41497D0030E165 /* ToDoResponseDto.swift in Sources */,
-				A4AA82B02BD50BB500800468 /* SignInFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -917,14 +766,18 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		A4546BB52C4FDF8600C48D96 /* Domain */ = {
+		A48A40952C4FF968000D941B /* Presentation */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Domain;
+			productName = Presentation;
 		};
-		A48A40902C4FF24D000D941B /* ReactorKit */ = {
+		A48A40972C4FF97F000D941B /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = A4AA82972BCA7A4100800468 /* XCRemoteSwiftPackageReference "ReactorKit" */;
-			productName = ReactorKit;
+			package = A48D48BC2BE5D895004867C6 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		A48A40992C4FF999000D941B /* GeoLocationManager */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GeoLocationManager;
 		};
 /* End XCSwiftPackageProductDependency section */
 

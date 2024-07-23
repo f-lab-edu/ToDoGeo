@@ -7,7 +7,7 @@
 
 import RxSwift
 
-protocol CompleteToDoUseCaseProtocol {
+public protocol CompleteToDoUseCaseProtocol {
     
     /// todo 완료
     /// - Parameter item: 완료할 todo

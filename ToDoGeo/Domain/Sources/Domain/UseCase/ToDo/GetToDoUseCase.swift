@@ -7,10 +7,10 @@
 
 import RxSwift
 
-final class GetToDoUseCase {
+final public class GetToDoUseCase {
     private let toDoRepository: ToDoRepositoryProtocol
     
-    init(toDoRepository: ToDoRepositoryProtocol) {
+    public init(toDoRepository: ToDoRepositoryProtocol) {
         self.toDoRepository = toDoRepository
     }
 }
@@ -18,7 +18,7 @@ final class GetToDoUseCase {
 extension GetToDoUseCase: GetToDoUseCaseProtocol {
     /// todo 목록 불러오기
     /// - Returns: todo 목록
-    func getList() -> Observable<[ToDo]> {
+    public func getList() -> Observable<[ToDo]> {
         toDoRepository.getList()
             .asObservable()
     }
