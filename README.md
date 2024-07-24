@@ -4,6 +4,7 @@
 할 일과 알림을 받을 위치를 등록 후 등록된 위치 근처에 접근했을 때 알림을 받을 수 있는 앱
 
 ## 사용기술
+![제목 없음-2024-05-07-1453](https://github.com/user-attachments/assets/f522e43b-f4e5-48c6-a8d8-574f8be0fd42)
 ### Clean Architecture
 Data Layer
 - Repository 구현부
