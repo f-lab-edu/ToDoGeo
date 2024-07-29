@@ -30,9 +30,7 @@ extension ToDoRepository: ToDoRepositoryProtocol {
                 if let error = error {
                     observer.onError(error)
                 } else {
-                    if let id = autoId {
-                        LocationManger.shared.registerLocationForGeofence(id: id, location: todo.location)
-                    }
+                    LocationManger.shared.registerLocationForGeofence(id: todo.id.uuidString, location: todo.location)
                     observer.onNext(())
                 }
             }
@@ -59,6 +57,29 @@ extension ToDoRepository: ToDoRepositoryProtocol {
                     observer.onError(error)
                 }
             }
+            return Disposables.create()
+        }
+    }
+    
+    /// todo 삭제
+    /// - Parameter item: 삭제할 todo
+    /// - Returns: 결과
+    func remove(_ item: ToDo) -> Observable<Void> {
+        Observable.create { [weak self] observer -> Disposable in
+            guard let userId = Auth.auth().currentUser?.uid else {
+                observer.onError(FireBaseAuthError.invalidUserId)
+                return Disposables.create()
+            }
+            
+            self?.ref.child("users").child(userId).child("todos/\(item.id)").removeValue { (error: Error?, ref: DatabaseReference) in
+                if let error = error {
+                    observer.onError(error)
+                } else {
+                    LocationManger.shared.removeMoniteredLocationFromGeofence(id: item.id.uuidString)
+                    observer.onNext(())
+                }
+            }
+            
             return Disposables.create()
         }
     }
